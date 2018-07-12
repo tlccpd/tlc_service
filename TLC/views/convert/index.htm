@@ -1,0 +1,1324 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]>
+    <html class="ie6 no-js oldie">
+<![endif]-->
+<!--[if IE 7 ]>
+    <html class="ie7 no-js oldie">
+<![endif]-->
+<!--[if IE 8 ]>
+    <html class="ie8 no-js oldie">
+<![endif]-->
+<!--[if IE 9 ]>
+    <html class="ie9 no-js">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="ko">
+<!--<![endif]-->
+<head>
+<title> TRWTh Literature Contents [TLC]  </title>
+
+<meta charset="utf-8" content="text/html">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+<link rel="apple-touch-icon" href="favicon.png" />
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script src="Jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/dist/modernizr.js"></script>
+<script type="text/javascript" src="js/dist/swipe.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+<link rel="stylesheet" href="css/new/Base.css">
+<link rel="stylesheet" href="css/new/common.css">
+<link rel="stylesheet" href="css/new/layout.css">
+<link rel="stylesheet" href="css/new/layout.main.css"> 
+
+
+<script type="text/javascript" src="js/new/hansei.func.datetime.js"></script>
+<script type="text/javascript" src="js/new/hansei.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/new/jquery.ui.touch.js"></script>
+
+<script type="text/javascript">
+	var global = {
+		contextPath : ''
+	};
+</script>
+</head>
+<body class="indexNew indexNewviews sub views indexNew  main" >
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/new/swipe.js"></script>
+
+<style type="text/css">
+
+#mobile_header {
+  z-index: 100;
+  background: #FFF url(/resources/application/images/topbg.png) top left repeat;
+     
+  border-bottom: 3px solid #125081;
+}
+
+#mobile_menu ul.title {
+	list-style: none;
+	padding: 20px 10px 10px 10px;
+	background: #343138;
+	height: 40px;
+}
+
+.sub #mobile_header ul li.mh-left {
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.sub #mobile_header ul li.mh-right {
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+.sub #mobile_header ul li.mh-logo {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bgBlur:before {
+	content: '';
+	position: absolute;
+	top: 0; left:0; right:0; bottom:0;
+	background: inherit;
+	z-index:-1;
+	filter: blur(6px); 
+	-webkit-filter: blur(6px); 
+	-moz-filter: blur(6px);
+	-o-filter: blur(6px);
+	filter:url(#blur);
+}
+
+.bgBlur {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px); 
+	-o-filter: blur(2px); 
+	-ms-filter:blur(2px); 
+	filter: blur(2px);
+}
+
+.bgBlur2 {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px); 
+	-o-filter: blur(3px); 
+	-ms-filter:blur(3px); 
+	filter: blur(3px);
+}
+
+#mobile_menu dl dt.over {
+	background: url('images/new/menu/arrow_b.png') 97% 50% no-repeat;
+	background-size: 28px 28px;
+}
+
+#mobile_menu dl dt {
+	padding: 5px 10px 5px 10px;
+	background: url('images/new/menu/arrow_r.png') 97% 50% no-repeat;
+	background-size: 28px 28px;
+	border-top: 1px solid #46434A;
+	border-bottom: 1px solid #46434A;
+}
+
+#mobile_header ul li {
+	padding: 5px;
+}
+</style>
+
+<script>
+	function hoo2Click() {
+		var frm = document.getElementById("hooForm2");
+		frm.id.value = "kr_070303060000";
+		frm.action = "/intro/06/indexNew.do";
+		frm.submit();
+	}
+	
+	function loginGoNew() {
+		alert("로그인하셔야 합니다.");
+		location.href = "/auth/loginNew.do"; 
+		return;
+	}
+
+	function myPageViewMenu() {
+    	if($("#viewMyPageMenu").css("display") == "none") {
+    		$("#viewMyPageMenu").css("display", "block");
+    	} else {
+    		$("#viewMyPageMenu").css("display", "none");
+    	}
+    }
+	
+	function myPageViewNothingMenu() {
+		alert("설정한 메뉴가 존재하지 않습니다.");
+		return;
+	}
+	
+	function goCheckLogin() {
+    //	alert("로그인하셔야 합니다.");
+    	location.href = "/auth/loginNew.do";
+    	return;
+    }
+    
+    function goCheckProStuLogin() {
+    	alert("교수나 학생만 이용할 수 있습니다.");
+    	return;
+    }
+    
+    function goCheckStuLogin() {
+    	alert("학생만 이용할 수 있습니다.");
+    	return;
+    }
+
+	function jobAppGo() {
+		try{
+			var agt = navigator.userAgent.toLowerCase();
+			if(agt.indexOf("android") > -1) {
+				location.href = "market://details?id=com.appromobile.gwnu_ver";
+				return;
+			} else if((agt.indexOf("chrome") > -1) || (agt.indexOf("safafi") > -1) || (agt.indexOf("opera") > -1) || (agt.indexOf("firefox") > -1) || (agt.indexOf("ie") > -1)) {
+				location.href = "https://play.google.com/store/apps/details?id=com.appromobile.gwnu_ver";
+				return;
+			} else if((agt.indexOf("iPhone") > -1) || (agt.indexOf("iPad") > -1)) {
+				location.href = "https://itunes.apple.com/kr/app/gangleung-wonjudaehaggyo-plus/id991240900?mt=8";
+				return;
+			} else {
+				location.href = "https://play.google.com/store/apps/details?id=com.appromobile.gwnu_ver";
+				return;
+			}
+		}catch(ErrObj){
+			
+		}
+	}
+</script>
+
+<div id="mobile_menu">
+	<ul class="title" style="background:url('/resources/images/sub/sub_back/submenu_logo.png'); background-repeat:no-repeat; background-size:70px 75px; background-position:right top;">
+		<li class="close" style="padding-bottom:20px"><a href="javascript:jsMenu();" title="CLOSE"><img src="/resources/images/main/main_back/new/sub/close.png" align="absmiddle"></a></li>
+		<li class="logo" style="padding-top:10px"><a href="/indexNew.do" title="GWNU MENU"><span style="letter-spacing:-1px">TLC MENU</span></a></li>
+	</ul>
+	
+	<ul style="clear:both;">
+		<li class="hl home" style="background:#383838"><a href="/indexNew.do" title="HOME" style="font-family:'dotum'; font-size:15px;">HOME</a></li>
+		
+		<li class="hl login" style="background:#383838">
+		
+		<a href="/auth/loginNew.do" title="LOGIN" style="font-family:'dotum'; font-size:15px;">LOGIN</a>
+		
+		</li>
+		
+	</ul>
+	
+	<dl>
+		<dt>
+			<a href='#' title='TLC 소개' />
+			<img src='/resources/images/new/icon_01.png' title='TLC 소개'> TLC 소개
+			</a>
+		</dt>
+		<dd>
+			<ul>
+				<li><a href="/intro/tlc/indexNew.do"> INTRO </a></li>
+				<li><a href="/intro/service/indexNew.do"> SERVICES </a></li>
+				<li><a href="/intro/membership/indexNew.do"> TLC MEMBERSHIP </a></li>
+				<li><a href="/intro/card/indexNew.do"> MEMBERSHIP CARD </a></li>
+				<li><a href="/intro/contact/indexNew.do"> CONTACTS </a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>
+			<a href='#' title='회원 가입안내' />
+				<img src='/new/icon_02.png' title='회원 가입안내'> 
+			</a>
+		</dt>
+		<dd>
+			<ul>
+				<li><a href="/appBbsList.brd?sub_title=inform&re_bbs_setup_seq=25"> INFORMATION </a></li>
+				<li><a href="/ibsi/02/indexNew.do"> SERVICES </a></li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<a href='#' title='준회원 / 정회원' />
+				<img src='/resources/images/new/icon_03.png' title='대학 / 대학원'> 준회원 /정회원
+			</a>
+		</dt>
+		<dd>
+			<ul>
+				<li><a href="/school/01/indexNew.do" target='_self' />  준회원</a></li>
+				<li><a href="/school/02/indexNew.do" target='_self' />  정회원(TLC 회원)</a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>
+			<a href='#' title='컨텐츠 정보' />
+				<img src='/resources/images/new/icon_04.png' title='작품 정보'> MY PAGE
+			</a>
+		</dt>
+		
+		<dd>
+	        <ul>
+			    <li><a href="/auth/loginNew.do"> 프로필 관리</a></li>
+				<li><a href="/auth/loginNew.do"> 작품등록</a></li>
+	            <li><a href="/auth/loginNew.do"> 스크랩 작품</a></li>
+            	<li><a href="/auth/loginNew.do"> 이벤트 예약</a></li>
+	            <li><a href="/auth/loginNew.do"> 시설 대관 </a></li>
+	            <li><a href="/auth/loginNew.do"> 강좌 등록</a></li>
+			</ul>
+	    </dd>
+		
+	</dl>
+	
+	<dl>
+		<dt>
+			<a href='#' title='작품 구매' />
+				<img src='/resources/images/new/icon_05.png' title='작품 구매'> 
+			</a>
+		</dt>
+		<dd>
+			<ul>
+
+				<li><a href="/info/list_noticeNew.do?sub_title=event" target='_self' />  맞춤 추천작 </a></li>
+				<li><a href="/info/list_infoNew.do?sub_title=정보광장" target='_self' />  이달의 작품</a></li>			
+				<li><a href="/boardListNew.brd?sub_title=정보화 TIP&re_board_id=232"> 창작 TIP</a></li>
+				<li><a href="/info/wifiNew.do"> 전체보기</a></li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<dl>
+		<dt>
+			
+			<a href="/auth/loginNew.do" title='TLC PnD' />
+				<img src='/resources/images/new/icon_06.png' title='TLC다락방'> TLC 디지털 도서관
+			</a>
+					
+		</dt>
+	</dl>
+	
+	<dl>
+		<dt>
+			<a href="/schedule/appSchdulList.do" title='일정' />
+				<img src='/resources/images/new/icon_07.png' title='일정'> 강좌 일정
+			</a>
+		</dt>
+	</dl>
+	
+	
+	<dl>
+		<dt>
+			<a href="javascript:jobAppGo();" title='정보' style="padding-left:2px; padding-right:3px">
+				<img src='/resources/images/new/icon_09.png' title='정보' style="width:26px; height:28px"> 둘러보기
+			</a>
+		</dt>
+	</dl>
+	
+	<dl>
+		<dt>
+			<a href="/intro/03/indexNew.do" title='찾아오시는길' style="padding-left:2px; padding-right:3px">
+				<img src='/resources/images/new/icon_10.png' title='찾아오시는길' style="width:26px; height:35px"> 찾아오시는길
+			</a>
+		</dt>
+	</dl>
+	
+	
+		<form method="post">
+			<ul class="etc">
+				<li style="padding:3px">
+					<a href="/main/sitemapNew.do"><img src="/resources/images/new/main_menu_3.png" alt="사이트맵" style="width:100%; height:32px;" /></a>
+				</li>
+				<li style="padding:3px">
+				 	<a href="/tutorial.jsp"><img src="/resources/images/new/main_menu_5.png" alt="브로슈어 보기" style="width:100%; height:32px;" /></a>
+				</li>
+				<li style="padding:3px">
+				 	<a href="http://www.gwnu.ac.kr"><img src="/resources/images/new/main_menu_7.png" alt="pc 버전" style="width:100%; height:32px;" /></a>
+				</li>
+			</ul>
+		</form>
+	
+
+	<form id="hooForm2" name="hooForm2" method="post">
+	<input type="hidden" name="id">
+	</form>
+</div>
+
+<div id="mobile_bg" class="main" style="border:none;" >
+	<img src="/resources/images/new/main_background.png" alt="tlc_img" />
+</div>
+
+<div id="mobile_area">	
+	<div id="mobile_header" style="background:url('/resources/images/main/main_back/new/top_background.png'); height:70px;">
+		<ul>
+			<li class="mh-left" >
+				<img src="/resources/images/main/main_back/btn_back_newA.png" alt="BACK" onclick="location.href='#';" class="h30" style="cursor:pointer; width:30px; height:30px;">
+			</li>
+			<li class="mh-right">
+				<img src="/resources/images/main/main_back/btn_menu_newA.png" alt="MENU" id="btnAllMenu" class="h30" style="cursor:pointer; width:30px; height:30px;">
+			</li>
+			<li class="mh-logo">
+				<img src="/resources/images/main/main_back/main_logo.png" alt="LOGO" onclick="location.href='/indexNew.do';" class="h50" style="cursor:pointer; width:168px; height:40px">
+			</li>
+		</ul>
+	</div>
+	<section id="m-section">
+
+
+<style>
+    .mypageSlides img {
+        height: 90px;
+        display: inline-block;
+        text-align: center;
+    }
+	
+    .mypageSlides .item {
+        float: left;
+        display: inline-block;
+        margin-bottom: 8px;
+        width: 25%;
+        text-align: center;
+    }
+	
+    .mypageSlides .item input[type="checkbox"] {
+        display: block;
+        clear: both;
+        text-align: center;
+        width: 12px;
+        height: 12px;
+        vertical-align: middle;
+        margin: 5px auto 0;
+    }
+	
+    .mypageSlides {
+        position: relative;
+    }
+	
+    .mypageSlides .mypageSideItems {
+        height: 600px;
+    }
+	
+    .swipe-wrap .mypageSideItems {
+        float: left;
+        width: 100%;
+        min-height:100%;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+	
+    .hidden {
+        display: none !important;
+    }
+    
+    .item img {
+		width:58px;
+    	height:66px;
+	}
+    
+    #mobile_header ul li.mh-left {
+		float: left;
+		margin-top: 17px;
+	}
+	
+	#mobile_header ul li.mh-right {
+		float: right;
+		margin-top: 17px;
+	}
+	
+	#mobile_header ul li.mh-logo {
+		text-align: center;
+		padding-top: 13px;
+	}
+
+	#position {
+	  clear: both;
+	  text-align: center;
+	  list-style: none;
+	  margin:0px;
+	  width:100%;
+	  padding:2px 0px 2px 0px;
+	}
+	
+	#position a.on {
+	/*
+		box-shadow: inset 0 1px 3px #aa396e,0 1px 2px rgba(0,0,0,.5);
+		background-color: #aa396e;
+		background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#aa396e),color-stop(100%,#aa396e));
+		background-image: -webkit-linear-gradient(top,#aa396e,#aa396e);
+		background-image: -moz-linear-gradient(top,#aa396e,#aa396e);
+		background-image: -ms-linear-gradient(top,#aa396e,#aa396e);
+		background-image: -o-linear-gradient(top,#aa396e,#aa396e);
+		background-image: linear-gradient(top,#aa396e,#aa396e);
+		width: 9px;
+		height: 9px;
+		border-radius: 9px;
+	*/
+		width: 10px;
+		height: 10px;
+		border: 0px;
+		background: url('/resources/images/main/slide_on.png') no-repeat;
+		background-size: 100% 100%;
+		margin: 0 2px;
+	}
+	
+	#position a {
+		display: inline-block;
+		/*
+		width: 8px;
+		height: 8px;
+		border-radius: 9px;
+		background: #ffffff;
+		box-shadow: inset 0 1px 3px #ffffff,0 0 1px 1px #ffffff;
+		margin: 0 2px;
+		*/
+		width: 10px;
+		height: 10px;
+		border: 0px;
+		background: url('/resources/images/main/slide_off.png') no-repeat;
+		background-size: 100% 100%;
+		margin: 0 2px;
+		cursor: pointer;
+
+	}
+	
+	.gangreung {
+		float:left; padding-left:5px; padding-top:17px; padding-right:10px;
+		text-align:right;
+	}
+	
+	.wonju {
+		clear:both; float:left; padding-left:7px; padding-top:10px; padding-right:10px;
+	}
+	
+	.campus_line {
+		font-size:17pt; font-weight:bold; color:#373737; letter-spacing:-1px
+	}
+	
+	.campus_name {
+		font-size:11pt; font-weight:bold; color:#373737; letter-spacing:-1px
+	}
+	
+	.temperature_result {
+		font-size:20pt; font-weight:bold; padding-top:10px; color:#373737; margin-left:3px;
+	}
+	
+	.nalssi {
+		font-size:9pt; font-weight:bold; padding-left:3px; padding-top:10px; color:#373737; letter-spacing:-1px;
+	}
+	
+	.li_icon {
+		padding-top:1px; padding-bottom:1px;
+		width:100%; 
+		height:100%;
+	}
+	
+	#iconDateTime {
+		float: right;
+		font-size: 16pt;
+		font-weight: bold;
+		margin-top: 10px;
+		padding: 5px 10px 0px 0px;
+		letter-spacing:-1px;
+		color:#373737;
+	}
+	
+	.sub #m-section {
+	  padding:0px;
+	}
+	
+	#main_iconArea {
+		background:url('/resources/images/main/main_back/new/content_background_new.png');
+		background-size:100% 100%;
+	}
+	
+	#main_iconArea2 {
+		background:url('/resources/images/main/main_back/new/content_background_new.png');
+		background-size:100% 100%;
+	}
+	
+	.positionClass {
+		background:url('/resources/images/main/main_back/new/content_background_new.png');
+		background-size:100% 100%;
+	}
+	
+	#slider_wrapper {
+		background:url('/resources/images/main/main_back/new/background_icon.png');
+		background-size:100% 100%;
+	}
+	
+	#mobile_main_notice ul {
+		list-style: none;
+		margin:0px;
+		padding:0px;
+	}
+	
+	#mobile_main_notice {
+		opacity:2;
+		background: #eeeeee;
+		margin:0px;
+		padding:9px 8px 6px 8px;
+		height:100%;
+	}
+	
+	#mobile_main_notice ul li {
+		padding:8px 0px 8px 0px; 
+		margin-left:10px;
+		margin-right:10px;
+		margin-bottom:0px; 
+	}
+
+	.positionBackground {
+		width:100%; height:30px; padding:30px 30px 30px 10px; bottom:0px;
+	}
+</style>
+
+
+<script>
+    $(document).ready(function () {
+    	var bullets = document.getElementById('position').getElementsByTagName('a');
+    	
+        var slider = new Swipe(document.getElementById('slider'), {
+            continuous: true,
+            callback: function (pos) {
+				var i = bullets.length;
+				while (i--) {
+					bullets[i].className = '';
+				}
+				bullets[pos].className = 'on';
+				
+				if(pos == 1 || pos == 2) {
+					$("#position").css("background", "");
+					$("#position").css("width", "100%");
+					$("#position").css("height", "22px");
+					$("#position").css("padding", "2px 0px 2px 0px");
+					$("#position").css("bottom", "0px");
+					$("#position").css("position", "fixed");
+					$("#slider").css("height", "100%");
+					$("#slider .swipe-wrap").height($(window).height()-99);
+				} else {
+					$("#position").css("width", "100%");
+					$("#position").css("height", "22px");
+					$("#position").css("padding", "2px 0px 2px 0px");
+					$("#position").css("bottom", "0px");
+					$("#position").css("position", "fixed");
+					$("#slider").height($(window).height()-73);
+					$("#mobileBoardArea").height($(window).height()-219);
+					$("#mobileBoardArea").css("overflow-y", "auto");
+				}
+            }
+        });
+
+     // carousel end
+		$("#position a").bind("click", function() {
+			var tmp = $("#position a").index(this);
+			
+			for(var i=0; i<bullets.length; i++) {
+				if(i == tmp) {
+					bullets[i].className = 'on';
+				} else {
+					bullets[i].className = '';
+				}
+			}
+			if(tmp == 1 || tmp == 2) {
+				$("#position").css("background", "");
+				$("#position").css("width", "100%");
+				$("#position").css("height", "22px");
+				$("#position").css("padding", "2px 0px 2px 0px");
+				$("#position").css("bottom", "0px");
+				$("#position").css("position", "fixed");
+				$("#slider").css("height", "100%");
+				$("#slider .swipe-wrap").height($(window).height()-73);
+				slider.slide(tmp);
+			} else {
+				$("#position").css("width", "100%");
+				$("#position").css("height", "22px");
+				$("#position").css("padding", "2px 0px 2px 0px");
+				$("#position").css("bottom", "0px");
+				$("#position").css("position", "fixed");
+				//$("#slider").height($(window).height()-94);
+				$("#slider").height($(window).height()-73);
+				$("#mobileBoardArea").height($(window).height()-219);
+				$("#mobileBoardArea").css("overflow-y", "auto");
+				slider.slide(tmp);
+			}
+			
+		});
+     	
+
+        var SliderCreator = {
+            init: function (options) {
+                var o = {
+                    'myPageItem': [],
+                    'notInMyPageItem': [],
+                    'isLogin': false
+                };
+				
+                options = $.extend(o, options);
+				
+                var self = this;
+				
+                self.myPageItems = options.myPageItem;
+                self.notInMyPageItems = options.notInMyPageItem;
+                self.isLogin = options.isLogin;
+                //self.myPageIsData = options.myPageIsData;
+				
+                self.drawMyPageView();
+            },
+			completeInit: function (options) {
+                var o = {
+                    'myPageItem': [],
+                    'notInMyPageItem': [],
+                    'myPageDBItem': [],
+                    'isLogin': false
+                };
+				
+                options = $.extend(o, options);
+				
+                var self = this;
+				
+                self.myPageItems = options.myPageItem;
+                self.notInMyPageItems = options.notInMyPageItem;
+                self.isLogin = options.isLogin;
+                
+                self.drawSettingCompleteView();
+            },
+            clearView: function () {
+                $('.mypageSideItems').remove();
+            },
+            drawMyPageView: function () {
+                var self = this;
+                var output = '';
+				
+				self.clearView();
+                
+                output += '<div class="mypageSideItems mypageSideItems" data-index="0" style="width:'+($(window).width())+'px; left: 0px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(-'+($(window).width())+'px, 0px) translateZ(0px);">';
+
+				output += '<div style="width:100%; height:80px;">   ';
+
+				output += 	'<div style="float:left; width:80%; padding-top:10px; padding-left:10px;">';
+                output += 		'<ul style="list-style-type:none">';
+                output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                output += 			'<li class="gangreung">';
+                output += 				'<span class="temperature_result">1.0˚</span>';
+                output += 			'</li>';
+                output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                output += 			'</li>';
+                output += 		'</ul>';
+                output += 	'</div>';
+                output += 	'<div style="float:left; width:20%; text-align:right;">';
+                output += 		'<ul>';
+                output += 			'<li class="time" id="iconDateTime2"></li>';
+                output += 		'</ul>';
+                output += 	'</div>';
+                output += '</div>';
+                output += '<div id="tabArea" style="width:100%; height:41px; background:#ffffff; text-align:center; padding:0px; border:1px solid #eeeeee;">';
+                
+				output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
+				output += '<tr height="41px">';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px; height:41px;">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">NEWS</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">행사정보</a></nobr></td>';
+								
+				output += '</tr>';
+				output += '</table>';
+                
+                output += '';
+                output += '</div>';
+                output += '<div id="mobile_main_notice">';
+                output += '	<div id="mobileBoardArea">';
+                
+				output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25571' style='color:#000000; font-size:14px; margin-left:3px'>수산물 가공품 관련 실무인력양성 이론 및 실습교육 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25566' style='color:#000000; font-size:14px; margin-left:3px'>원주캠퍼스 동계방학 시내통학 버스 결행알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25556' style='color:#000000; font-size:14px; margin-left:3px'>[여대생커리어개발센터] 한국관광공사와 함께하는 올림픽 방문객 환영 캠페인 참여자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25553' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 교양교과목 시간강사 공개채용 공고 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25551' style='color:#000000; font-size:14px; margin-left:3px'>2017 지역연고산업육성사업 산업체 전문가 양성 교육</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25550' style='color:#000000; font-size:14px; margin-left:3px'>[LINC+]강릉 지역사회혁신 컨퍼런스에 초대합니다.(2018.01.17)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25549' style='color:#000000; font-size:14px; margin-left:3px'>[취업] 공공기관 취업준비 지원을 위한 &quot;NCS 역량강화 캠프&quot; 참가자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25539' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관분관 계약직 직원 채용 서류전형 합격자 공고</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25561' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(금오공과대, 한국해양대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25537' style='color:#000000; font-size:14px; margin-left:3px'>2017학년도 겨울 계절학기 성적확인 및 정정기간 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25525' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 휴학 및 복학 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25517' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(서울과학기술대, 순천대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25482' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(한밭대, 안동대, 창원대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25476' style='color:#000000; font-size:14px; margin-left:3px'>[이러닝] 2017학년도 겨울계절학기 기말고사 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25384' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(강원대, 부경대, 제주대, 충북대, 충남대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25346' style='color:#000000; font-size:14px; margin-left:3px'>[전체] 2018학년도 9월 파견 중국 하얼빈공업대학교 정부초청 장학생 후보자 추가  모집</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25548' style='color:#000000; font-size:14px; margin-left:3px'>원주 지역 소통·협력 교류회 열려 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25546' style='color:#000000; font-size:14px; margin-left:3px'>치과병원, 공공의료기관 청렴도 평가 1등급</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25542' style='color:#000000; font-size:14px; margin-left:3px'>김향일 강의전담교수, 마르퀴즈 후즈 후 평생공로상</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25541' style='color:#000000; font-size:14px; margin-left:3px'>박서희 학생, 한국장학재단 홍보대사 장려상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25505' style='color:#000000; font-size:14px; margin-left:3px'> LINC+사업단, ‘Knitting for you’ 캠페인 지원</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25492' style='color:#000000; font-size:14px; margin-left:3px'>지역 친화적 국립대학 모델 구축으로 지역사회와 상생 협력</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25357' style='color:#000000; font-size:14px; margin-left:3px'>강릉원주대학교 과학영재교육원, SCI 논문 게재 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25333' style='color:#000000; font-size:14px; margin-left:3px'>법학과 학생회, 연탄 천장 배달 봉사  </a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25579' style='color:#000000; font-size:14px; margin-left:3px'>[교육부] 정책 월간지 &quot;행복한 교육&quot; 명예기자단 모집 협조</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25578' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인단체총연맹]2018 장애대학생 아람코 등록금 지원사업(이공계) 신청 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25577' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인재활협회] 열정!도전!개척! 장애청년드림팀(장애,비장애청년 연합) 6대륙에 도전하다! 14번째 도전자를 모집합니다.</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25509' style='color:#000000; font-size:14px; margin-left:3px'>MBN Y 포럼 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25504' style='color:#000000; font-size:14px; margin-left:3px'>[국립수산과학원]국립수산과학원 블로그 기자단(10기) 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25503' style='color:#000000; font-size:14px; margin-left:3px'>[소방청]제30차 의무소방원 선발 계획 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25245' style='color:#000000; font-size:14px; margin-left:3px'>[국토교통부]주거복지 사용설명서(주거복지 로드맵) 온라인 게시</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25075' style='color:#000000; font-size:14px; margin-left:3px'>[한국철도공사]제2회 초단편 철도영화 공모전 안내</a>	</li></ul>";
+                
+                output += '	</div>';
+                output += '</div>';
+				
+                output += '</div>';
+
+				//alert(self.myPageItems.length);
+				
+                for (var i = 0; i < self.myPageItems.length; i++) {
+                    var mypageItem = self.myPageItems[i];
+
+                    if (i % 14 == 0) {                    
+                        output += '<div class="mypageSideItems mypageSideItems">';
+
+						output += '<div style="width:100%; height:80px;">   ';
+
+                        output += 	'<div style="float:left; width:75%; padding-top:10px; padding-left:10px;">';
+                        output += 		'<ul style="list-style-type:none">';
+                        output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                        output += 			'<li class="gangreung">';
+                        output += 				'<span class="temperature_result">1.0˚</span>';
+                        output += 			'</li>';
+                        output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                        output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                        output += 			'</li>';
+                        output += 		'</ul>';
+                        output += 	'</div>';
+                        output += 	'<div style="float:left; width:20%; padding-top:25px; text-align:right;">';
+                        output += 		'<div class="btnMyPageSetting"><img src="/resources/images/main/main_back/new/setting_button_new.png" align="right" style="width:60px; height:24px;" /></div>';
+                        output += 	'</div>';
+                        output += '</div>';
+
+                        output += '<div id="main_iconArea" style="width:100%; min-height:90%; padding-top:15px; background:#eeeeee;">';
+
+                    }
+                    
+                    output += '<div class="item"><a href="'+mypageItem.link+'"><img src="' + mypageItem.icon + '" /></a>';
+                    output += '<input type="checkbox" name="mypage_id" value="' + mypageItem.id + '" class="hidden mypage_id" />';
+                    output += '</div>';
+					
+                    if (i % 14 == 13) {
+                        output += '</div></div>';
+                        output += '</div>';
+                    }
+                }
+				
+                $('.swipe-wrap').html(output);
+                if(self.myPageItems.length <= 14) {
+                	$("#position a:eq(2)").css("display", "none");
+                }
+                
+                self.bindButton();
+				
+				slider = new Swipe(document.getElementById('slider'), {
+					callback: function (pos) {
+						var i = bullets.length;
+						while (i--) {
+							bullets[i].className = '';
+						}
+						bullets[pos].className = 'on';
+						
+						if(pos == 1 || pos == 2) {
+							$("#position").css("background", "");
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").css("height", "100%");
+							$("#slider .swipe-wrap").height($(window).height()-70);
+						} else {
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").height($(window).height()-73);
+							$("#mobileBoardArea").height($(window).height()-219);
+							$("#mobileBoardArea").css("overflow-y", "auto");
+						}
+					}
+				});
+            },
+            drawSettingView: function () {
+                var self = this;
+                var output = '';
+				
+                self.clearView();
+                
+                output += '<div class="mypageSideItems mypageSideItems" data-index="0" style="width:'+($(window).width())+'px; left: 0px; transition-duration: 0ms; -webkit-transition-duration: 0ms; -webkit-transform: translate(-'+($(window).width())+'px, 0px) translateZ(0px);">';
+                
+				output += '<div style="width:100%; height:80px;">   ';
+				
+                output += 	'<div style="float:left; width:75%; padding-top:10px; padding-left:10px;">';
+                output += 		'<ul style="list-style-type:none">';
+                output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                output += 			'<li class="gangreung">';
+                output += 				'<span class="temperature_result">1.0˚</span>';
+                output += 			'</li>';
+                output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                output += 			'</li>';
+                output += 		'</ul>';
+                output += 	'</div>';
+                output += 	'<div style="float:left; width:20%; padding-top:25px; text-align:right;">';
+                output += 		'&nbsp;';
+                output += 	'</div>';
+                output += '</div>';
+                output += '<div id="tabArea" style="width:100%; height:41px; background:#ffffff; text-align:center; padding:0px; border:1px solid #eeeeee;">';
+                
+                output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
+				output += '<tr height="41px">';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">장학정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">NEWS</a></nobr></td>';
+				output += '</tr>';
+				output += '</table>';
+                
+                
+                output += '</div>';
+                output += '<div id="mobile_main_notice">';
+                output += '	<div id="mobileBoardArea">';
+                
+                output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25571' style='color:#000000; font-size:14px; margin-left:3px'>수산물 가공품 관련 실무인력양성 이론 및 실습교육 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25566' style='color:#000000; font-size:14px; margin-left:3px'>원주캠퍼스 동계방학 시내통학 버스 결행알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25556' style='color:#000000; font-size:14px; margin-left:3px'>[여대생커리어개발센터] 한국관광공사와 함께하는 올림픽 방문객 환영 캠페인 참여자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25553' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 교양교과목 시간강사 공개채용 공고 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25551' style='color:#000000; font-size:14px; margin-left:3px'>2017 지역연고산업육성사업 산업체 전문가 양성 교육</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25550' style='color:#000000; font-size:14px; margin-left:3px'>[LINC+]강릉 지역사회혁신 컨퍼런스에 초대합니다.(2018.01.17)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25549' style='color:#000000; font-size:14px; margin-left:3px'>[취업] 공공기관 취업준비 지원을 위한 &quot;NCS 역량강화 캠프&quot; 참가자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25539' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관분관 계약직 직원 채용 서류전형 합격자 공고</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25561' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(금오공과대, 한국해양대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25537' style='color:#000000; font-size:14px; margin-left:3px'>2017학년도 겨울 계절학기 성적확인 및 정정기간 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25525' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 휴학 및 복학 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25517' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(서울과학기술대, 순천대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25482' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(한밭대, 안동대, 창원대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25476' style='color:#000000; font-size:14px; margin-left:3px'>[이러닝] 2017학년도 겨울계절학기 기말고사 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25384' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(강원대, 부경대, 제주대, 충북대, 충남대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25346' style='color:#000000; font-size:14px; margin-left:3px'>[전체] 2018학년도 9월 파견 중국 하얼빈공업대학교 정부초청 장학생 후보자 추가  모집</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25548' style='color:#000000; font-size:14px; margin-left:3px'>원주 지역 소통·협력 교류회 열려 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25546' style='color:#000000; font-size:14px; margin-left:3px'>치과병원, 공공의료기관 청렴도 평가 1등급</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25542' style='color:#000000; font-size:14px; margin-left:3px'>김향일 강의전담교수, 마르퀴즈 후즈 후 평생공로상</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25541' style='color:#000000; font-size:14px; margin-left:3px'>박서희 학생, 한국장학재단 홍보대사 장려상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25505' style='color:#000000; font-size:14px; margin-left:3px'> LINC+사업단, ‘Knitting for you’ 캠페인 지원</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25492' style='color:#000000; font-size:14px; margin-left:3px'>지역 친화적 국립대학 모델 구축으로 지역사회와 상생 협력</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25357' style='color:#000000; font-size:14px; margin-left:3px'>강릉원주대학교 과학영재교육원, SCI 논문 게재 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25333' style='color:#000000; font-size:14px; margin-left:3px'>법학과 학생회, 연탄 천장 배달 봉사  </a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25579' style='color:#000000; font-size:14px; margin-left:3px'>[교육부] 정책 월간지 &quot;행복한 교육&quot; 명예기자단 모집 협조</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25578' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인단체총연맹]2018 장애대학생 아람코 등록금 지원사업(이공계) 신청 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25577' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인재활협회] 열정!도전!개척! 장애청년드림팀(장애,비장애청년 연합) 6대륙에 도전하다! 14번째 도전자를 모집합니다.</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25509' style='color:#000000; font-size:14px; margin-left:3px'>MBN Y 포럼 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25504' style='color:#000000; font-size:14px; margin-left:3px'>[국립수산과학원]국립수산과학원 블로그 기자단(10기) 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25503' style='color:#000000; font-size:14px; margin-left:3px'>[소방청]제30차 의무소방원 선발 계획 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25245' style='color:#000000; font-size:14px; margin-left:3px'>[국토교통부]주거복지 사용설명서(주거복지 로드맵) 온라인 게시</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25075' style='color:#000000; font-size:14px; margin-left:3px'>[한국철도공사]제2회 초단편 철도영화 공모전 안내</a>	</li></ul>";
+                
+                output += '	</div>';
+                output += '</div>';
+				
+                output += '</div>';
+                
+                var mypageItems = $.extend(self.myPageItems, self.notInMyPageItems);
+                var sortedMyPageItems = [];
+				
+                $.each(mypageItems, function (i, item) {
+                    if (item.myPage) {
+                        sortedMyPageItems.push(item);
+                    }
+                });
+				
+                $.each(mypageItems, function (i, item) {
+                    if (!item.myPage) {
+                        sortedMyPageItems.push(item);
+                    }
+                });
+				
+                for (var i = 0; i < sortedMyPageItems.length; i++) {
+                    var mypageItem = sortedMyPageItems[i];
+					
+                    if (i % 14 == 0) {
+                    	//output += '<div class="mypageSideItems mypageSideItems">';
+						if(i == 0) {
+                    		output += '<div class="mypageSideItems mypageSideItems" style="width: '+($(document).width())+'px; left: -'+($(document).width())+'px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(0px, 0px) translateZ(0px);">';
+                    	}
+                    	
+                    	if(i == 14) {
+                    		output += '<div class="mypageSideItems mypageSideItems" style="width: '+($(document).width())+'px; left: -'+($(document).width() * 2)+'px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(0px, 0px) translateZ(0px);">';
+                    	}
+
+                        
+						output += '<div style="width:100%; height:80px;">   ';
+						
+                        output += 	'<div style="float:left; width:75%; padding-top:10px; padding-left:10px;">';
+                        output += 		'<ul style="list-style-type:none">';
+                        output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                        output += 			'<li class="gangreung">';
+                        output += 				'<span class="temperature_result">1.0˚</span>';
+                        output += 			'</li>';
+                        output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                        output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                        output += 			'</li>';
+                        output += 		'</ul>';
+                        output += 	'</div>';
+                        output += 	'<div style="float:left; width:20%; padding-top:25px; text-align:right;">';
+                        output += 		'<div class="btnMyPageSettingOk"><img src="/resources/images/main/main_back/new/complete_button_new.png" align="right" style="width:60px; height:24px;" /></div>';
+                        output += 	'</div>';
+                        output += '</div>';
+
+                        output += '<div id="main_iconArea" style="width:100%; min-height:90%; padding-top:15px; background:#eeeeee;">';
+
+                    }
+                    
+                    var checked = "";
+                    
+
+					checked = 'checked="checked"';
+
+                    
+                    output += '<div class="item"><img src="' + mypageItem.icon + '" onclick="javascript:iconThisCheck('+mypageItem.id+');" />';
+                    output += '<input type="checkbox" id="chk_'+mypageItem.id+'" name="mypage_id" value="' + mypageItem.id + '" class="mypage_id" ' + checked + '/>';
+					output += '</div>';
+                    if (i % 14 == 13) {
+                        output += '</div></div>';
+                        output += '</div>';
+                    }
+                }
+				
+                $('.swipe-wrap').html(output);
+                self.bindButton();
+				
+				if($("#position a:eq(2)").css("display") == "none") {
+                	$("#position a:eq(2)").css("display", "inline-block");
+                }
+                
+                $("#position a:eq(0)").removeClass("on");
+            	$("#position a:eq(1)").addClass("on");
+            	$("#position a:eq(2)").removeClass("on");
+				
+                slider = new Swipe(document.getElementById('slider'), {
+					callback: function (pos) {
+						var i = bullets.length;
+						while (i--) {
+							bullets[i].className = '';
+						}
+						bullets[pos].className = 'on';
+						
+						if(pos == 1 || pos == 2) {
+							$("#position").css("background", "");
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").css("height", "100%");
+							$("#slider .swipe-wrap").height($(window).height()-70);
+						} else {
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").height($(window).height()-73);
+							$("#mobileBoardArea").height($(window).height()-219);
+							$("#mobileBoardArea").css("overflow-y", "auto");
+						}
+					}
+				});
+                slider.slide(1); // 설정 버튼 클릭시 메인2단화면으로 이동함!
+            },
+			drawSettingCompleteView: function () {
+                var self = this;
+                var output = '';
+				
+				self.clearView();
+                
+                output += '<div class="mypageSideItems mypageSideItems" data-index="0" style="width:'+($(window).width())+'px; left: 0px; transition-duration: 0ms; -webkit-transition-duration: 0ms; -webkit-transform: translate(-'+($(window).width())+'px, 0px) translateZ(0px);">';
+                
+						output += '<div style="width:100%; height:80px;">   ';
+				
+                output += 	'<div style="float:left; width:75%; padding-top:10px; padding-left:10px;">';
+                output += 		'<ul style="list-style-type:none">';
+                output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                output += 			'<li class="gangreung">';
+                output += 				'<span class="temperature_result">1.0˚</span>';
+                output += 			'</li>';
+                output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                output += 			'</li>';
+                output += 		'</ul>';
+                output += 	'</div>';
+                output += 	'<div style="float:left; width:20%; padding-top:25px; text-align:right;">';
+                output += 		'&nbsp;';
+                output += 	'</div>';
+                output += '</div>';
+                output += '<div id="tabArea" style="width:100%; height:41px; background:#ffffff; text-align:center; padding:0px; border:1px solid #eeeeee;">';
+                
+                output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
+				output += '<tr height="41px">';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">장학정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">NEWS</a></nobr></td>';
+				output += '</tr>';
+				output += '</table>';
+                
+                
+                output += '</div>';
+                output += '<div id="mobile_main_notice">';
+                output += '	<div id="mobileBoardArea">';
+                
+                output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25571' style='color:#000000; font-size:14px; margin-left:3px'>수산물 가공품 관련 실무인력양성 이론 및 실습교육 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25566' style='color:#000000; font-size:14px; margin-left:3px'>원주캠퍼스 동계방학 시내통학 버스 결행알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25556' style='color:#000000; font-size:14px; margin-left:3px'>[여대생커리어개발센터] 한국관광공사와 함께하는 올림픽 방문객 환영 캠페인 참여자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25553' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 교양교과목 시간강사 공개채용 공고 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25551' style='color:#000000; font-size:14px; margin-left:3px'>2017 지역연고산업육성사업 산업체 전문가 양성 교육</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25550' style='color:#000000; font-size:14px; margin-left:3px'>[LINC+]강릉 지역사회혁신 컨퍼런스에 초대합니다.(2018.01.17)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25549' style='color:#000000; font-size:14px; margin-left:3px'>[취업] 공공기관 취업준비 지원을 위한 &quot;NCS 역량강화 캠프&quot; 참가자 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=25539' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관분관 계약직 직원 채용 서류전형 합격자 공고</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25561' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(금오공과대, 한국해양대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25537' style='color:#000000; font-size:14px; margin-left:3px'>2017학년도 겨울 계절학기 성적확인 및 정정기간 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25525' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 휴학 및 복학 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25517' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(서울과학기술대, 순천대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25482' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(한밭대, 안동대, 창원대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25476' style='color:#000000; font-size:14px; margin-left:3px'>[이러닝] 2017학년도 겨울계절학기 기말고사 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25384' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 1학기 타 대학 수학 안내(강원대, 부경대, 제주대, 충북대, 충남대)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=25346' style='color:#000000; font-size:14px; margin-left:3px'>[전체] 2018학년도 9월 파견 중국 하얼빈공업대학교 정부초청 장학생 후보자 추가  모집</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25548' style='color:#000000; font-size:14px; margin-left:3px'>원주 지역 소통·협력 교류회 열려 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25546' style='color:#000000; font-size:14px; margin-left:3px'>치과병원, 공공의료기관 청렴도 평가 1등급</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25542' style='color:#000000; font-size:14px; margin-left:3px'>김향일 강의전담교수, 마르퀴즈 후즈 후 평생공로상</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25541' style='color:#000000; font-size:14px; margin-left:3px'>박서희 학생, 한국장학재단 홍보대사 장려상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25505' style='color:#000000; font-size:14px; margin-left:3px'> LINC+사업단, ‘Knitting for you’ 캠페인 지원</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25492' style='color:#000000; font-size:14px; margin-left:3px'>지역 친화적 국립대학 모델 구축으로 지역사회와 상생 협력</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25357' style='color:#000000; font-size:14px; margin-left:3px'>강릉원주대학교 과학영재교육원, SCI 논문 게재 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=25333' style='color:#000000; font-size:14px; margin-left:3px'>법학과 학생회, 연탄 천장 배달 봉사  </a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25579' style='color:#000000; font-size:14px; margin-left:3px'>[교육부] 정책 월간지 &quot;행복한 교육&quot; 명예기자단 모집 협조</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25578' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인단체총연맹]2018 장애대학생 아람코 등록금 지원사업(이공계) 신청 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25577' style='color:#000000; font-size:14px; margin-left:3px'>[한국장애인재활협회] 열정!도전!개척! 장애청년드림팀(장애,비장애청년 연합) 6대륙에 도전하다! 14번째 도전자를 모집합니다.</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25509' style='color:#000000; font-size:14px; margin-left:3px'>MBN Y 포럼 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25504' style='color:#000000; font-size:14px; margin-left:3px'>[국립수산과학원]국립수산과학원 블로그 기자단(10기) 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25503' style='color:#000000; font-size:14px; margin-left:3px'>[소방청]제30차 의무소방원 선발 계획 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25245' style='color:#000000; font-size:14px; margin-left:3px'>[국토교통부]주거복지 사용설명서(주거복지 로드맵) 온라인 게시</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=25075' style='color:#000000; font-size:14px; margin-left:3px'>[한국철도공사]제2회 초단편 철도영화 공모전 안내</a>	</li></ul>";
+                
+                output += '	</div>';
+                output += '</div>';
+				
+                output += '</div>';
+				
+                for (var i = 0; i < self.myPageItems.length; i++) {
+                    var mypageItem = self.myPageItems[i];
+					
+                    if (i % 14 == 0) {
+						if(i == 0) {
+                    		output += '<div class="mypageSideItems mypageSideItems" style="width: '+($(document).width())+'px; left: -'+($(document).width())+'px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(0px, 0px) translateZ(0px);">';
+                    	}
+                    	
+                    	if(i == 14) {
+                    		output += '<div class="mypageSideItems mypageSideItems" style="width: '+($(document).width())+'px; left: -'+($(document).width() * 2)+'px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(0px, 0px) translateZ(0px);">';
+                    	}
+
+                        
+						output += '<div style="width:100%; height:80px;">   ';
+						
+                        output += 	'<div style="float:left; width:75%; padding-top:10px; padding-left:10px;">';
+                        output += 		'<ul style="list-style-type:none">';
+                        output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
+                        output += 			'<li class="gangreung">';
+                        output += 				'<span class="temperature_result">1.0˚</span>';
+                        output += 			'</li>';
+                        output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
+                        output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
+                        output += 			'</li>';
+                        output += 		'</ul>';
+                        output += 	'</div>';
+                        output += 	'<div style="float:left; width:20%; padding-top:25px; text-align:right;">';
+                        output += 		'<div class="btnMyPageSetting"><img src="/resources/images/main/main_back/new/setting_button_new.png" align="right" style="width:60px; height:24px;" /></div>';
+                        output += 	'</div>';
+                        output += '</div>';
+
+                        output += '<div id="main_iconArea" style="width:100%; min-height:90%; padding-top:15px; background:#eeeeee;">';
+
+                    }
+                    
+                    var checked = "";
+                    
+					
+					checked = 'checked="checked"';
+					
+                    
+                    output += '<div class="item"><a href="'+mypageItem.link+'"><img src="' + mypageItem.icon + '" /></a>';
+                    output += '<input type="checkbox" id="chk_'+mypageItem.id+'" name="mypage_id" value="' + mypageItem.id + '" class="hidden mypage_id" ' + checked + '/>';
+					output += '</div>';
+                    if (i % 14 == 13) {
+                        output += '</div></div>';
+                        output += '</div>';
+                    }
+                }
+				
+                $('.swipe-wrap').html(output);
+                if(self.myPageItems.length <= 12) {
+                	$("#position a:eq(2)").css("display", "none");
+                }
+                
+                self.bindButton();
+				
+				slider = new Swipe(document.getElementById('slider'), {
+					callback: function (pos) {
+						var i = bullets.length;
+						while (i--) {
+							bullets[i].className = '';
+						}
+						bullets[pos].className = 'on';
+						
+						if(pos == 1 || pos == 2) {
+							$("#position").css("background", "");
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").css("height", "100%");
+							$("#slider .swipe-wrap").height($(window).height()-70);
+						} else {
+							$("#position").css("width", "100%");
+							$("#position").css("height", "22px");
+							$("#position").css("padding", "2px 0px 2px 0px");
+							$("#position").css("bottom", "0px");
+							$("#position").css("position", "fixed");
+							$("#slider").height($(window).height()-73);
+							$("#mobileBoardArea").height($(window).height()-219);
+							$("#mobileBoardArea").css("overflow-y", "auto");
+						}
+					}
+				});
+                slider.slide(1); // 설정 버튼 클릭시 메인2단화면으로 이동함!
+            },
+            bindButton: function () {
+                var self = this;
+				
+                $('.btnMyPageSettingOk').click(function (e) {
+                    e.preventDefault();					
+					var mypage_id = $(".mypage_id:checked");
+					var arr = new Array();
+					
+					for(var i=0; i<mypage_id.length; i++) {
+						arr.push(mypage_id[i].value);
+					}
+					
+					$.ajax({
+						type: 'post',
+						url: '/mypage/settingEdit.do',
+						dataType : 'json',
+						data: {
+							"mypage_id" : "" + arr.join(",") + "",
+							"action" : "edit"
+						},
+						success:function(data){
+							var viewMyPageMenuArea = document.getElementById("viewMyPageMenu");
+							
+							if(data.success == "true") {
+								$.get('/mypageView.jsp', function (response) {									
+									SliderCreator.completeInit(response);
+								}); 
+								
+								if(data.myPageAllMenu != "") {
+									$("#myPageViewArea").html(data.myPageAllMenu);
+									
+									if(viewMyPageMenuArea.style.display == "none") {
+										viewMyPageMenuArea.style.display = "block";
+									} else {
+										viewMyPageMenuArea.style.display = "block";										
+									}								
+								}
+								return;
+							}
+							
+							if(data.success == "false"){
+								alert("적용 실패!");
+								return;
+							}
+						}, error:function(data){
+							alert("적용 실패!");
+							return;
+						}
+					});
+                });
+				
+                $('.btnMyPageSetting').click(function () {
+                    $('.mypage_id').removeClass('hidden');
+					
+                    SliderCreator.drawSettingView();
+
+					$('.mypageSlides .item').css("float", "left");
+					$('.mypageSlides .item').css("display", "inline-block");
+					$('.mypageSlides .item').css("margin-bottom", "2px");
+					$('.mypageSlides .item').css("width", "25%");
+					$('.mypageSlides .item').css("text-align", "center");
+
+					$('.mypageSlides .item input[type="checkbox"]').css("display", "block");
+					$('.mypageSlides .item input[type="checkbox"]').css("clear", "both");
+					$('.mypageSlides .item input[type="checkbox"]').css("text-align", "center");
+					$('.mypageSlides .item input[type="checkbox"]').css("width", "12px");
+					$('.mypageSlides .item input[type="checkbox"]').css("height", "12px");
+					$('.mypageSlides .item input[type="checkbox"]').css("vertical-align", "middle");
+					$('.mypageSlides .item input[type="checkbox"]').css("margin", "2px auto 0");
+                });
+				
+                if (self.isLogin == false) {
+                    $('.btnMyPageSetting').remove();
+                }
+            }
+        }
+		
+        $.get('/mypageView.jsp', function (response) {
+            SliderCreator.init(response);
+			$("#position a:eq(0)").click();
+        });
+		
+		$(window).resize(function () { funcSliderResize(); });
+		funcSliderResize();
+    });
+
+	function isCommUseAbleCheck() {
+		alert("해람인의 e참뜰에 대한 이용권한이 없습니다.");
+		return;
+	}
+
+	function funcSliderResize() {
+		var h = $(window).height();
+		$("#slider").height(h-73);
+		$("#slider .swipe-wrap").height(h-73);
+		$("#mobileBoardArea").height(h-219);
+		$("#mobileBoardArea").css("overflow-y", "auto");
+		$("#position").css("width", "100%");
+		$("#position").css("padding", "2px 0px 2px 0px");
+		$("#position").css("bottom", "0px");
+		$("#position").css("position", "fixed");
+	}
+
+    function tabOnOff(num) {
+    	for(var i=0; i<4; i++) {
+    		if(i == num) {
+    			$(".mobileTab" + i + " a").css("border-bottom", "3px solid #ae0059");
+    			$(".mobileTab" + i + " a").css("padding", "9px 11px 10px 11px");
+    			$(".mobileTab" + i + " a").css("color", "#ae0059");
+    			$("#board" + i).css("display", "block");
+    		} else {
+    			$(".mobileTab" + i + " a").css("border-bottom", "");
+    			$(".mobileTab" + i + " a").css("padding", "9px 11px 12px 11px");
+    			$(".mobileTab" + i + " a").css("color", "#5b5b5b");
+    			$("#board" + i).css("display", "none");
+    		}
+    	}
+    }
+    
+    function mobileTabOnOff(num) {
+    	for(var i=1; i<=3; i++) {
+    		if(i == num) {
+    			$("#tab0"+i+"_tab").attr("src", "../images/main/main_back/new_tab0"+i+"_on.png");
+    			$("#board" + (i-1)).css("display", "block");    			
+    		} else {
+    			$("#tab0"+i+"_tab").attr("src", "../images/main/main_back/new_tab0"+i+"_off.png");
+    			$("#board" + (i-1)).css("display", "none");
+    		}
+    	}
+    }
+	
+	function getJobLogin() {
+		try{
+			var agt=navigator.userAgent.toLowerCase();
+			if(agt.indexOf("android") != -1) {
+				window.android.receivedAndroid();
+			} else {
+				location.href = "https://play.google.com/store/apps/details?id=com.tlcpub";
+				return;
+			}
+		}catch(ErrObj){
+			
+		}
+    }
+
+	function iconThisCheck(num) {
+		var chk = document.getElementById("chk_" + num);
+		if(chk.checked) {
+			chk.checked = false;
+		} else {
+			chk.checked = true;
+		}
+	}
+</script>
+
+<div id="slider" class="swipe mypageSlides" style="height:100%;">
+    <div class="swipe-wrap">
+    </div>
+</div>
+
+<div id="position">
+	<a href="#" class="on"></a>
+	<a href="#" ></a>
+	<a href="#" ></a>
+</div>
+
+
+
+
+
+			</section><!-- m-section -->
+			<footer id="m-footer">
+				<article id="service">
+					
+				</article>
+			</footer>
+		</div><!-- page -->
+	</div><!-- vieport -->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var errormessage = "";
+			if(errormessage != ""){alert(errormessage);}
+		});
+	</script>
+</body>
+</html>

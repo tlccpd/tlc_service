@@ -1,0 +1,56 @@
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/common/include/directives.jsp"%>
+
+   
+   1. 기본 메뉴
+   <ul>
+      <li><a href="/main.html">메인</a></li>
+   <security:authorize ifNotGranted="MEMBER,OPERATOR,ADMIN,SUPER">
+      <li><a href="/user/subscribe.html">가입</a></li>
+      <li><a href="/login.html">로그인</a></li>
+   </security:authorize>
+   </ul>
+   
+   <security:authorize ifAnyGranted="MEMBER,OPERATOR,ADMIN,SUPER">
+   2. 회원
+   <ul>   
+      <li><a href="/user/profile.html">회원 정보 조회</a></li>
+      <li><a href="/logout.html">로그아웃</a></li>
+   </ul>
+   3. 환경 설정
+   <ul>
+      <li><a href="/config/view.html">설정 조회 테스트</a></li>
+   </ul>   
+   4. 파일
+   <ul>
+      <li><a href="/file/list.html">파일 조회</a></li>   
+      <li><a href="/file/upload.html">파일 등록</a></li>
+   </ul>   
+   </security:authorize>   
+      
+   <security:authorize ifAnyGranted="ADMIN,SUPER">
+   5. 운영자 관리
+   <ul>
+      <li><a href="/user/manager/list.html">운영자 조회</a></li>
+      <li><a href="/user/manager/register.html">운영자 등록</a></li>
+   </ul>
+   </security:authorize>
+   
+   <security:authorize ifAnyGranted="SUPER">
+   6. 코드 관리
+   <ul>
+      <li><a href="/cache/code/manage.html">코드 조회</a></li>
+      <li><a href="/cache/code/add.html">코드 추가</a></li>
+      <!--li><a href="/cache/reload.html">캐쉬 리로딩</a></li-->
+   </ul>
+   7. 스케쥴 관리
+   <ul>
+      <li><a href="/scheduler/list.html">스케쥴 조회</a></li>
+      <li><a href="/scheduler/new.html">스케쥴 등록</a></li>
+   </ul>   
+   8. 서버 제어
+   <ul>
+      <li><a href="/control/main.html">제어 센터</a></li>
+      <li><a href="/control/delivery.html">서버 파일 전송</a></li>
+   </ul>
+   </security:authorize>   
