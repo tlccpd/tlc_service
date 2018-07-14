@@ -12,9 +12,31 @@ const MOVED = debug('HTTP:301');
 const FOUND = debug('HTTP:302');
 const UNAUTOHORIZED = debug('HTTP:403');
 const NOTFOUND = debug('HTTP:404');
+const DBCONNECTION = debug('HTTP:500');
 
 
-var tlc = require(
+const admin = debug('app:admin');
+
+const login = debug('app:login');
+const logout = debug('app:logout');
+
+const users = debug('app:users');
+const board = debug('app:board');
+const contact = debug('app:contact');
+const convert = debug('app:convert');
+
+const index = debug('app:index');
+const intro = debug('app:intro');
+const layout= debug('app:layout');
+const member= debug('app:member'); 
+const notice= debug('app:notice');
+
+const register=debug('app:register');
+
+const db = debug('app:database');
+const HTTP = debug('app:http');
+
+const LOG = debug('*:*');
 
 /**
  * Get port from environment and store in Express.
@@ -104,7 +126,7 @@ function onListening() {
 const express = require('express');
 
 const PORT = 3000;
-const HOST = 'http://tlccpd.co.kr';
+const HOST = '192.168.43.1';
 
 
 app.get('/', (req, res) => {
@@ -113,3 +135,26 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
+
+module.exports = { 
+  admin,
+  board,
+  contact,
+  convert,
+  index,
+  intro,
+  layout,  
+  login,
+  logout,
+  member,
+  notice,
+  register,
+  users,   
+  HTTP,
+  LOG,
+  db,
+  http_log
+
+};
+  
+  
