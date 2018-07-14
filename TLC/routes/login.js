@@ -13,13 +13,13 @@ module.exports =
 	// define the home page route
 	router.get('/', /* @callback */ function(req, res) {
 		res.send('[LOGIN]TLC');
-		res.render('index.jsp');
+		res.render('index.html');
 	});
 	router.get('/check', /* @callback */ function(req, res,id,pass) {
 		u_id = id;
 		u_pass= pass;
 		res.send('[LOGIN/CHECK]TLC');
-		res.render('../login/process.jsp')
+		res.render('../login/process.html')
 		 .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
@@ -33,7 +33,7 @@ module.exports =
 	// define the about route
 	router.get('/admin', /* @callback */ function(req, res) {
 		res.send('[LOGIN]ADMIN');
-		res.render('../admin/index.jsp')
+		res.render('../admin/index.html')
 				 .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
