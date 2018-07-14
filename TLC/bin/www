@@ -137,6 +137,7 @@ app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
 
 module.exports = { 
+  app,
   admin,
   board,
   contact,
@@ -152,9 +153,7 @@ module.exports = {
   users,   
   HTTP,
   LOG,
-  db,
-  http_log
-
+  db
 };
   
   
