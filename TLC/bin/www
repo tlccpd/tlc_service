@@ -3,10 +3,18 @@
 /**
  * Module dependencies.
  */
-
-var app = require('../app');
-var debug = require('debug')('TLC:app');
+const app = express();
+var debug = require('debug');
 var http = require('http');
+
+const OK = debug('HTTP:200');
+const MOVED = debug('HTTP:301');
+const FOUND = debug('HTTP:302');
+const UNAUTOHORIZED = debug('HTTP:403');
+const NOTFOUND = debug('HTTP:404');
+
+
+var tlc = require(
 
 /**
  * Get port from environment and store in Express.
@@ -96,7 +104,7 @@ const express = require('express');
 const PORT = 3000;
 const HOST = 'tlccpd.co.kr';
 
-const app = express();
+
 app.get('/', (req, res) => {
   res.send('server connected...\n');
 });
