@@ -7,31 +7,31 @@ module.exports =
        next();
 	});
 	// define the home page route
-	router.get('/', /* @callback */ function(req, res) {
+	router.get('/', /* @callback */ function(req, res,id) {
 		res.send('TLC index');		
-		res.render('/index.jsp')
+		res.render('/index.html')
         .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
          })
         .post(function(req, res){
-               var id = req.param('testValue');
+               u_id = req.param(id);
                //여기에 동작 구현
-               res.send('[id]'+id.toString());
+               res.send('[id]'+u_id.toString());
          });
 	});
 	
 	// define the about route
-	router.get('../admin', /* @callback */ function(req, res) {
+	router.get('../admin', /* @callback */ function(req, res,id,pass) {
 		res.send('ADMIN index');
-		res.render('/index.jsp')
+		res.render('/admin/index.jsp')
         .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
          })
         .post(function(req, res){
-               var id = req.param('testValue');
+               m_id = req.param(id);
                //여기에 동작 구현
-               res.send('[id]'+id.toString());
+               res.send('[id]'+m_id.toString());			
          });
 	}); 
