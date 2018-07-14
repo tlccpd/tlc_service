@@ -7,7 +7,7 @@ module.exports =
         next();		
 	});
 	// define the home page route
-	router.get('/', /* @callback */ function(req, res) {
+	router.get('/', /* @callback */ function(req, res,id) {
 		res.send('TLC index');
 		res.render('indexNew.html')
 		 .get(/* @callback */ function(req, res){
@@ -29,8 +29,8 @@ module.exports =
                res.send('OK GET!');
          })
         .post(function(req, res){
-               var id = req.param('testValue');
+               u_id = req.param(id,'default_entrance');
                //여기에 동작 구현
-               res.send('[id]'+id.toString());
+               res.send('[id]'+u_id.toString());
          });
 	});
