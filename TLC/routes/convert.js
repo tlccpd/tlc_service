@@ -10,12 +10,12 @@ module.exports =
 	// define the home page route
 	router.get('/', function(req, res) {
 		res.send('TLC index');
-		res.render('index.jsp');
+		res.render('/convert/index.html');
 	});
 	// define the about route
 	router.get('../admin', function(req, res) {
 		res.send('ADMIN index');
-		res.render('index.jsp');
+		res.render('/admin/index.html');
 	});
 
 
