@@ -18,13 +18,14 @@ module.exports =
                u_id = req.param(id);
                u_pass = req.param(pass);
                //여기에 동작 구현
-               res.send("[ ID ]"+id.toString());
+               res.send("[ ID ]"+u_id.toString());
+	       res.send("[ PW ]"+u_pass.toString());
          });
 	});
 	// define the about route
-	router.get('../admin', /* @callback */ function(req, res,id,pass) {
+	router.get('/admin', /* @callback */ function(req, res,id,pass) {
 		res.send('ADMIN index');
-		res.render('index.html')
+		res.render('/admin/index.html')
 		.get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
@@ -33,6 +34,7 @@ module.exports =
                m_id = req.param(id);
                m_pass = req.param(pass);
                //여기에 동작 구현
-               res.send("[ ID ]"+id.toString());
+               res.send("[ ID ]"+m_id.toString());
+	       res.send("[ PW ]"+m_pass.toString());
          });
 	});
