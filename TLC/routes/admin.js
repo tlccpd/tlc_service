@@ -9,7 +9,7 @@ module.exports =
 });
 	router.get('/', /* @callback */ function(req, res) {
 		res.send('TLC index');
-		res.render('/index.jsp')
+		res.render('/index.html')
         .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
@@ -23,7 +23,7 @@ module.exports =
 	// define the about route
 	router.get('/login', /* @callback */ function(req, res) {
 		res.send('ADMIN index');
-		res.render('login.jsp')
+		res.render('login.html')
 		.get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
@@ -36,20 +36,20 @@ module.exports =
 	});
 	router.get('/logout', /* @callback */ function(req, res) {
 		res.send('ADMIN index');
-		res.render('logout.jsp')
-		.get(/* @callback */ function(req, res){
+		res.render('logout.html')
+		.get(/* @callback */ function(req, res,id,pass){
                //여기에 동작 구현
                res.send('OK GET!');
          })
         .post(function(req, res){
-               var id = req.param('tlc_admin');
+               u_id = req.param(id);
                //여기에 동작 구현
-               res.send("[ ID ]"+id.toString());
+               res.send("[ ID ]"+u_id.toString());
          });
 	});
 	router.get('/users', /* @callback */ function(req, res) {
 		res.send('ADMIN index');
-		res.render('user.jsp')
+		res.render('/users/index.html')
 		.get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
