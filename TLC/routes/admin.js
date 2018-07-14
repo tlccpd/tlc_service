@@ -21,7 +21,7 @@ module.exports =
          });
 	});
 	// define the about route
-	router.get('/login', /* @callback */ function(req, res) {
+	router.get('/login', /* @callback */ function(req, res,id) {
 		res.send('ADMIN index');
 		res.render('login.html')
 		.get(/* @callback */ function(req, res){
@@ -29,9 +29,9 @@ module.exports =
                res.send('OK GET!');
          })
         .post(function(req, res){
-               var id = req.param('tlc_admin');
+               m_id = req.param(id);
                //여기에 동작 구현
-               res.send("[ ID ]"+id.toString());
+               res.send("[ ID ]"+m_id.toString());
          });
 	});
 	router.get('/logout', /* @callback */ function(req, res) {
