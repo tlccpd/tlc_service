@@ -1,63 +1,46 @@
-var express = require('express');
-var router = express.Router();
-var u_pw;
+/* globals router 
+	u_id:true 
+	u_pass:true
+
+*/
 
 module.exports = 
 // middleware that is specific to this router
-	router.use(function (req, res, next) {
+	router.use(/* @callback */ function (req, res, next) {
 		console.log('[ Date ] : ', Date.now());
 		next();
 	});
 	// define the home page route
-	router.get('/', function(req, res) {
+	router.get('/', /* @callback */ function(req, res) {
 		res.send('[LOGIN]TLC');
 		res.render('index.jsp');
 	});
-	router.get('/check', function(req, res,id,pass) {
-
+	router.get('/check', /* @callback */ function(req, res,id,pass) {
+		u_id = id;
+		u_pass= pass;
 		res.send('[LOGIN/CHECK]TLC');
-		res.render('../login/process.jsp');
+		res.render('../login/process.jsp')
+		 .get(/* @callback */ function(req, res){
+               //여기에 동작 구현
+               res.send('OK GET!');
+         })
+        .post(/* @callback */ function(req, res){
+               u_id = req.param(id);
+               //여기에 동작 구현
+               res.send('[id]'+id.toString());
+         });
 	});
 	// define the about route
-	router.get('/admin', function(req, res) {
+	router.get('/admin', /* @callback */ function(req, res) {
 		res.send('[LOGIN]ADMIN');
-		res.render('../admin/index.jsp');
-	});
-
-
-
-/*
-function(app)
-{
-     app.get('/',function(req,res){
-        res.render('indexNew.jsp')
-     });     
+		res.render('../admin/index.jsp')
+				 .get(/* @callback */ function(req, res){
+               //여기에 동작 구현
+               res.send('OK GET!');
+         })
+        .post(/* @callback */ function(req, res){               
+               //여기에 동작 구현
+               res.send('[id]'+u_id.toString());
+         });
 		
-     app.get('/admin',function(req,res){
-        res.render('indexNew.jsp');
-     });
-	 app.get('/board',function(req,res){
-        res.render('about.jsp');
-     });
-	 app.get('/contact',function(req,res){
-        res.render('about.jsp');
-     });
-	 app.get('/convert',function(req,res){
-        res.render('about.jsp');
-     });
-	 app.get('/intro',function(req,res){
-        res.render('about.jsp');
-     });
-	 app.get('/login',function(req,res){
-        res.render('about.jsp');
-     });
-	 app.get('/logout',function(req,res){
-       res.render('about.jsp');
-     });
-	 app.get('/member',function(req,res){
-       res.render('about.jsp');
-     });
-	 app.get('/register',function(req,res){
-       res.render('about.jsp');
-     });
-	 */
+	});
