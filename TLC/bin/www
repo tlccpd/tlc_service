@@ -27,6 +27,9 @@ app.set('port', port);
  * Create HTTP server.
  */
 
+
+'use strict';
+
 var server = http.createServer(app);
 
 /**
@@ -97,12 +100,11 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-'use strict';
 
 const express = require('express');
 
 const PORT = 3000;
-const HOST = 'tlccpd.co.kr';
+const HOST = 'http://tlccpd.co.kr';
 
 
 app.get('/', (req, res) => {
