@@ -3,14 +3,14 @@ module.exports =
  router.use(/* @callback */ function(req, res, next) {
         // log each request to the console
         console.log('[ Date ] : ', Date.now());
-        console.log(req.method, req.url);
-     
+        console.log(req.method, req.url);     
        next();
    });
 	// define the home page route
 	router.get('/', /* @callback */ function(req, res) {
 		res.send('TLC index');
-		render.get(/* @callback */ function(req, res){
+		res.render('/index.jsp')
+		.get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
          })
@@ -23,7 +23,8 @@ module.exports =
 	// define the about route
 	router.get('../admin', /* @callback */ function(req, res) {
 		res.send('ADMIN index');
-		render.get(/* @callback */ function(req, res){
+		res.render('/index.jsp')
+		.get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
          })
