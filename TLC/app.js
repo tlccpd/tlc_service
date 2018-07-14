@@ -1,13 +1,27 @@
-var express = require('express');
+/*globals socket head*/
+	var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var router = express.Router();
 
+var app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+router.use(/* @callback */ function(req, res, next) {
+        // log each request to the console
+        console.log(req.method, req.url);
+        // continue doing what we were doing and go to the route
+       next();
+});
+ 
 const http = require('http');
 
-const op = {port: 3000, hostname: 'tlc.co.kr'};
+const options = {port: 3000, hostname: 'tlccpd.co.kr'};
 
 var layout = require('./routes/layout');     //layout.js 
 
@@ -28,32 +42,54 @@ var convert = require('./routes/convert'); //convert.js
 
 var contact = require('./routes/contact'); //contact.js
 
-var app = express();
+app.route('/admin.html')
+        .get(/* @callback */ function(req, res) {        
+                res.send('&lt;h1&gt;TLC SERVICE &lt;/h1&gt;');
+        })
+// process the form (POST http://localhost:8080/admin)
+        .post(function(req, res) {
+                console.log('POST call');
+                var product = req.param('product');
+                var id = req.param('id');
+ 
+                if (product === '1' && id === '2'){
+                        res.send('ok');
+                }else{
+                        res.send('Fail!');
+        }
+});
+ 
+
 
 /*
-const srv = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('okay');
-});
+const srv = 
 */
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-//app.engine('html', require('jade').renderFile);
+app.engine('html', require('jade').renderFile);
 
-var server = app.listen(3000,'tlccpd.co.kr',function(){
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+ 
+//서버 동작은 대충 여기에 들어간다.
+ 
+
+var server = http.createServer(app).listen(3000,'tlccpd.co.kr',/* @callback */ function(req, res){
     console.log("Express server has started on port 3000");
+    this.req = http.request(options);
+    
 });
 //app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express(path.join(__dirname, 'public')));
 
 app.use('/layout', layout);
 
@@ -71,17 +107,29 @@ app.use('/notice', notice);
 app.use('/conv', convert);
 app.use('/contact', contact);
 
+ 
+
+
+
+server.on('start', /* @callback */ function(req, socket){
+  socket.write('HTTP/1.1 101 Web Socket Protocol Handshake\r\n' +
+               'Start: WebSocket\r\n' +
+               'Connection: Start\r\n' +
+               '\r\n');
+
+  socket.pipe(socket); // echo back
+});
 
 // catch 404 and forward to error handler
 
-app.use(function(req, res, next) {
+app.use(/* @callback */ function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(/* @callback */ function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -91,33 +139,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//const req = http.request(options);
-
 module.exports = app;
-/*
-// Create an HTTP server
-
-
-srv.on('start', (req, socket, head){
-  socket.write('HTTP/1.1 101 Web Socket Protocol Handshake\r\n' +
-               'Start: WebSocket\r\n' +
-               'Connection: Start\r\n' +
-               '\r\n');
-
-  socket.pipe(socket); // echo back
-});
-
-// now that server is running
-
-
-
-req.end();
-
-
-
-  req.on('upgrade', (res, socket, upgradeHead){
-    console.log('got upgraded!');
-    socket.end();
-    process.exit(0);
-  });
-*/
