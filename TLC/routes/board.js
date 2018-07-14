@@ -17,7 +17,7 @@ module.exports =
 	// define the home page route
 	router.get('/', /* @callback */ function(req, res) {
 		res.send('TLC index');
-		res.render('/index.jsp')
+		res.render('/index.html')
         .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
@@ -31,7 +31,7 @@ module.exports =
 	// define the about route
 	router.get('../admin', /* @callback */ function(req, res) {
 		res.send('ADMIN index');
-		res.render('/index.jsp')
+		res.render('/index.html')
         .get(/* @callback */ function(req, res){
                //여기에 동작 구현
                res.send('OK GET!');
