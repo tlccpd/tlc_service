@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+   <definition name="main" template="/i18n_en/layout.jsp">
+      <put-attribute name="title" value="Welcome to Store"/>
+      <put-attribute name="banner" value="/i18n_en/banner.jsp" />
+      <put-attribute name="menu" value="/i18n_en/menu.jsp" />
+      <put-attribute name="main" value="/i18n_en/main.jsp" />
+      <put-attribute name="banner" value="/i18n_en/banner.jsp" />
+      <put-attribute name="footer" value="/i18n_en/footer.jsp" />
+   </definition>
+
+   <definition name="board" extends="main">
+      <put-attribute name="main" value="/i18n_en/board.jsp" />
+   </definition>
+
+  <!-- Error Page -->
+  
+   <definition name="exception.unexpected" extends="main">
+      <put-attribute name="title" value="Error"/>
+      <put-attribute name="main" value="/i18n_en/error/exception/unexpected.jsp"/>
+   </definition>
+   
+   <definition name="exception.message" extends="main">
+      <put-attribute name="title" value="Attention"/>
+      <put-attribute name="main" value="/i18n_en/error/exception/message.jsp"/>
+   </definition>   
+
+   <definition name="forbidden" extends="main">
+      <put-attribute name="title" value="Forbidden"/>
+      <put-attribute name="main" value="/i18n_en/error/exception/forbidden.jsp"/>
+   </definition>    
+   
+</tiles-definitions>

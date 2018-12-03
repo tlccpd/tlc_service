@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+   <!-- AuthenticationManager -->
+
+   <bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+      <property name="providers">
+         <list>
+            <ref bean="daoAuthenticationProvider"/>
+         </list>
+      </property>
+   </bean>
+
+   <bean id="daoAuthenticationProvider" class="org.springframework.security.providers.dao.DaoAuthenticationProvider">
+      <property name="userDetailsService" ref="authenticationDao"/>
+      <property name="passwordEncoder">
+         <bean class="org.springframework.security.providers.encoding.Md5PasswordEncoder"/>
+      </property>
+      <property name="hideUserNotFoundExceptions" value="false"/>
+   </bean>
+
+   <bean id="authenticationDao" class="org.springframework.security.userdetails.jdbc.JdbcDaoImpl">
+      <property name="dataSource" ref="dataSource"/>
+      <property name="usersByUsernameQuery">
+         <value>
+            SELECT ID USERNAME, PASSWD PASSWORD, ENABLED
+             FROM USER WHERE ID=?
+         </value>
+      </property>
+      <property name="authoritiesByUsernameQuery">
+         <value>
+            SELECT U.ID USERNAME, C.CODE_NAME AUTHORITY
+            FROM USER U, CODE C
+            WHERE U.ID=? AND U.ROLE=C.CODE_ID AND C.GROUP_ID='USR'
+         </value>
+      </property>
+   </bean>
+
+  <!-- AccessDecisionManager -->
+
+   <bean id="accessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+      <property name="allowIfAllAbstainDecisions" value="false"/>
+      <property name="decisionVoters">
+         <list>
+            <bean class="org.springframework.security.vote.RoleVoter">
+               <property name="rolePrefix" value=""/>
+            </bean>
+         </list>
+      </property>
+   </bean>
+
+  <!-- FilterChainProxy -->
+
+   <bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+      <property name="filterInvocationDefinitionSource">
+         <value>
+            PATTERN_TYPE_APACHE_ANT
+            /**=logoutFilter,httpSessionContextIntegrationFilter,authenticationProcessingFilter,exceptionTranslationFilter,filterSecurityInterceptor
+         </value>
+      </property>
+   </bean>
+
+ <!-- Filters -->
+
+    <!-- LogoutFilter -->
+
+    <bean id="logoutFilter" class="org.springframework.security.ui.logout.LogoutFilter">
+      <constructor-arg value="/main.html"/>
+        <constructor-arg>
+         <list>
+            <bean class="com.store.comp.user.web.listener.LogoutListener"/>
+         </list>
+        </constructor-arg>
+        <property name="filterProcessesUrl" value="/logout.html"/>
+    </bean>
+
+   <!-- HttpSessionContextIntegrationFilter -->
+
+   <bean id="httpSessionContextIntegrationFilter" class="org.springframework.security.context.HttpSessionContextIntegrationFilter"/>
+
+   <!-- AuthenticationProcessingFilter -->
+
+   <bean id="authenticationProcessingFilter" class="org.springframework.security.ui.webapp.AuthenticationProcessingFilter">
+      <property name="filterProcessesUrl" value="/auth.html"/>
+      <property name="authenticationFailureUrl" value="/login.html?reason=FAIL"/>
+      <property name="defaultTargetUrl" value="/main.html"/>
+      <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="exceptionMappings">
+           <props>
+              <prop key="org.springframework.security.userdetails.UsernameNotFoundException">/login.html?reason=NOT_FOUND</prop>
+              <prop key="org.springframework.security.BadCredentialsException">/login.html?reason=DISMATCHING</prop>
+           </props>
+        </property>
+   </bean>
+
+   <!-- ExceptionTranslationFilter -->
+
+   <bean id="exceptionTranslationFilter" class="org.springframework.security.ui.ExceptionTranslationFilter">
+      <property name="authenticationEntryPoint">
+         <bean class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+            <property name="forceHttps" value="false"/>
+            <property name="loginFormUrl" value="/login.html"/>
+         </bean>
+      </property>
+      <property name="accessDeniedHandler">
+         <bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+            <property name="errorPage" value="/forbidden.html"/>
+         </bean>
+      </property>
+   </bean>
+
+   <!-- FilterSecurityInterceptor -->
+
+   <bean id="filterSecurityInterceptor" class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+      <property name="authenticationManager" ref="authenticationManager"/>
+      <property name="accessDecisionManager" ref="accessDecisionManager"/>
+      <property name="observeOncePerRequest" value="true"/>
+      <property name="objectDefinitionSource">
+         <value>
+            PATTERN_TYPE_APACHE_ANT
+            /user/profile.html=MEMBER,OPERATOR,ADMIN,SUPER
+            /file/**/*.html=MEMBER,OPERATOR,ADMIN,SUPER
+            /cache/**/*.html=SUPER
+            /user/manager/**/*.html=ADMIN,SUPER
+            /scheduler/**/*.html=SUPER
+            /control/**/*.html=SUPER
+         </value>
+      </property>
+   </bean>
+
+  <!-- ChannelProcessingFilter -->
+
+   <!--
+   <bean id="channelProcessingFilter" class="org.springframework.security.securechannel.ChannelProcessingFilter">
+      <property name="filterInvocationDefinitionSource">
+         <value>
+            PATTERN_TYPE_APACHE_ANT
+            /login.html=REQUIRES_SECURE_CHANNEL
+            /auth.html=REQUIRES_SECURE_CHANNEL
+         </value>
+      </property>
+      <property name="channelDecisionManager">
+         <bean class="org.springframework.security.securechannel.ChannelDecisionManagerImpl">
+            <property name="channelProcessors">
+               <list>
+                  <bean class="org.springframework.security.securechannel.SecureChannelProcessor"/>
+                  <bean class="org.springframework.security.securechannel.InsecureChannelProcessor"/>
+               </list>
+            </property>
+         </bean>
+      </property>
+   </bean>
+   -->
+
+  <!-- BeanNameAutoProxyCreator & MethodSecurityInterceptor -->
+
+   <!--
+   <bean id="autoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+      <property name="interceptorNames">
+         <list>
+            <value>securityInterceptor</value>
+         </list>
+      </property>
+      <property name="beanNames">
+         <list>
+            <idref bean="testService"/>
+         </list>
+      </property>
+      <property name="proxyTargetClass" value="true"/>
+   </bean>
+   -->
+
+  <!-- MethodSecurityInterceptor -->
+
+   <!--
+   <bean id="securityInterceptor" class="org.springframework.security.intercept.method.aopalliance.MethodSecurityInterceptor">
+      <property name="validateConfigAttributes" value="true"/>
+      <property name="authenticationManager" ref="authenticationManager"/>
+      <property name="accessDecisionManager" ref="accessDecisionManager"/>
+      <property name="objectDefinitionSource">
+         <bean class="org.springframework.security.intercept.method.MethodDefinitionAttributes">
+            <property name="attributes">
+               <bean class="org.acegisecurity.annotation.SecurityAnnotationAttributes"/>
+               <bean class="org.springframework.metadata.commons.CommonsAttributes"/>
+               <bean class="org.springframework.metadata.commons.CommonsAttributes"/>
+            </property>
+         </bean>
+      </property>
+   </bean>
+   -->
+
+</beans>

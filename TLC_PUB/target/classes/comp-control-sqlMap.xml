@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="EUC-KR" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+   "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="control">
+
+   <typeAlias alias="code" type="com.tlcpub.net.ctl.dto.Code"/>
+   <typeAlias alias="group" type="com.tlcpub.net.ctl.dto.Group"/>
+   <typeAlias alias="schedule" type="com.tlcpub.net.ctl.dto.Schedule"/>
+   <typeAlias alias="server" type="com.tlcpub.net.ctl.dto.Server"/>
+   <typeAlias alias="switch" type="com.tlcpub.net.core.type.Switch"/>
+   
+
+<!-- Cache -->
+   
+  <!-- INSERT -->
+  
+   <insert id="insertCode" parameterClass="code">
+      INSERT INTO
+         CODE(GROUP_ID, CODE_ID, CODE_NAME, SEQ_NUM, IS_USE, DESCR)
+      VALUES
+         (#groupId#, #codeId#, #codeName#, #seqNum#, #isUse#, #descr#)
+   </insert>
+
+  <!-- SELECT:GROUP -->
+  
+   <select id="selectEntireGroups" resultClass="group">
+      SELECT 
+         GROUP_ID groupId, GROUP_NAME groupName, IS_USE isUse, DESCR descr
+      FROM 
+         CODE_GROUP         
+   </select>
+   
+   <select id="selectAvailableGroups" resultClass="group">
+      SELECT 
+         GROUP_ID groupId, GROUP_NAME groupName, IS_USE isUse, DESCR descr
+      FROM 
+         CODE_GROUP
+      WHERE
+         IS_USE='Y'
+   </select>
+   
+   <select id="selectGroup" resultClass="group" parameterClass="string">
+      SELECT 
+         GROUP_ID groupId, GROUP_NAME groupName, IS_USE isUse, DESCR descr
+      FROM 
+         CODE_GROUP
+      WHERE
+         GROUP_ID = #groupId#
+   </select>   
+   
+  <!-- SELECT:CODE -->   
+
+   <select id="selectEntireCodes" resultClass="code">
+      SELECT 
+         GROUP_ID groupId, CODE_ID codeId, CODE_NAME codeName, SEQ_NUM seqNum, IS_USE isUse, DESCR descr 
+      FROM 
+         CODE
+      ORDER BY 
+         groupId ASC, seqNum ASC   
+   </select>
+   
+   <select id="selectAvailableCodes" resultClass="code">
+      SELECT 
+         G.GROUP_ID groupId, I.CODE_ID codeId, I.CODE_NAME codeName, I.SEQ_NUM seqNum, I.IS_USE isUse, I.DESCR descr
+      FROM 
+         CODE_GROUP G, CODE I
+      WHERE 
+         G.GROUP_ID = I.GROUP_ID 
+         AND G.IS_USE='Y'
+         AND I.IS_USE='Y'
+      ORDER BY
+         groupId ASC, 
+         seqNum ASC
+   </select>
+
+   <select id="selectCode" parameterClass="code">
+      SELECT
+         GROUP_ID groupId, CODE_ID codeId, CODE_NAME codeName, SEQ_NUM seqNum, IS_USE isUse, DESCR descr 
+      FROM 
+         CODE
+      WHERE
+         GROUP_ID = #groupId# AND CODE_ID= #codeId#   
+   </select>
+      
+   <select id="selectAvailableCodesFromGroup" resultClass="code" parameterClass="string">
+      SELECT 
+         CODE_ID codeId, CODE_NAME codeName, SEQ_NUM seqNum, IS_USE isUse, DESCR descr
+      FROM 
+         CODE
+      WHERE 
+         GROUP_ID = #groupId# 
+         AND IS_USE='Y'
+      ORDER BY
+         seqNum ASC
+   </select>
+
+  <!-- UPDATE -->
+
+   <update id="updateCode" parameterClass="code">
+      UPDATE
+         CODE
+      SET
+         CODE_NAME=#codeName#, SEQ_NUM=#seqNum#, IS_USE=#isUse#, DESCR=#descr#
+      WHERE 
+         GROUP_ID=#groupId# AND CODE_ID=#codeId#
+   </update>
+     
+  <!-- DELETE -->
+   
+   <delete id="deleteEntireGroup">
+      DELETE FROM CODE_GROUP
+   </delete>   
+      
+   <delete id="deleteEntireCodes">
+      DELETE FROM CODE
+   </delete>   
+      
+   <delete id="deleteCode" parameterClass="code">
+      DELETE FROM
+         CODE
+      WHERE
+         GROUP_ID = #groupId# AND CODE_ID = #codeId#
+   </delete>
+   
+   
+   
+<!-- Schedule -->   
+
+  <!-- INSERT -->
+  
+   <insert id="insertSchedule">
+      INSERT INTO SCHEDULE(MONTH, DAY, HOUR, MINUTE, BEAN_ID, DESCR, CREATOR, REG_DT) 
+      VALUES(#month#, #day#, #hour#, #minute#, #beanId#, #descr#, #creator#, NOW())
+   </insert>
+     
+  <!-- SELECT -->
+
+   <select id="selectEntireSchedules" resultClass="schedule">
+      SELECT SCH_ID schId, MONTH month, DAY DAY, HOUR HOUR, MINUTE MINUTE, BEAN_ID beanId, DESCR descr, ENABLED enabled, CREATOR creator, EDITOR editor, REG_DT regDt, UPD_DT updDt
+      FROM SCHEDULE ORDER BY REG_DT ASC
+   </select>
+
+   <select id="selectScheduleById" resultClass="schedule" parameterClass="string">
+      SELECT SCH_ID schId, MONTH month, DAY DAY, HOUR HOUR, MINUTE MINUTE, BEAN_ID beanId, DESCR descr, ENABLED enabled, CREATOR creator, EDITOR editor, REG_DT regDt, UPD_DT updDt
+      FROM SCHEDULE WHERE SCH_ID = #schId#
+   </select>
+   
+   <select id="selectSchedulingByServerName" resultClass="switch">
+      SELECT SCHEDULING FROM SERVER WHERE NAME=#name#
+   </select>
+   
+   <select id="selectServerList" resultClass="server">
+      SELECT 
+         NAME, IP, SCHEDULING
+      FROM 
+         SERVER
+      ORDER BY 
+         NAME ASC
+   </select>   
+   
+  <!-- UPDATE -->
+
+   <update id="updateSchedule" parameterClass="schedule">
+      UPDATE SCHEDULE SET
+         MONTH=#month#, DAY=#day#, HOUR=#hour#, MINUTE=#minute#, BEAN_ID=#beanId#, ENABLED=#enabled#, DESCR=#descr#, EDITOR=#editor#
+      WHERE SCH_ID = #schId#
+   </update>
+
+  <!-- DELETE -->
+  
+   <delete id="deleteSchedule" parameterClass="string">
+      DELETE FROM SCHEDULE WHERE SCH_ID = #schId# 
+   </delete>
+   
+</sqlMap>
