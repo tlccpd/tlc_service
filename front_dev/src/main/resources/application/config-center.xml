@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <system/>
+   <properties fileName="sample.properties"></properties>
+   <xml fileName="sample.xml"/>
+</configuration>

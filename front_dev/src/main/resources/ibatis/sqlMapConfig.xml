@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+    <settings
+        cacheModelsEnabled="true"
+        enhancementEnabled="true"
+        lazyLoadingEnabled="true"
+        maxRequests="${ibatis.maxRequests}"
+        maxSessions="${ibatis.maxSessions}"
+        maxTransactions="${ibatis.maxTransactions}"
+        useStatementNamespaces="true"
+        defaultStatementTimeout="${ibatis.defaultStatementTimeout}"
+    />
+
+   <typeAlias alias="string" type="java.lang.String"/>
+   <typeAlias alias="integer" type="java.lang.Integer"/>
+   <typeAlias alias="float" type="java.lang.Float"/>
+   <typeAlias alias="map" type="java.util.Map"/>
+   <typeAlias alias="resultMap" type="java.util.HashMap"/>
+
+   <typeHandler javaType="com.company.core.type.State" callback="com.company.core.type.handler.StateTypeHandler"/>
+   <typeHandler javaType="com.company.core.type.Sex" callback="com.company.core.type.handler.SexTypeHandler"/>
+   <typeHandler javaType="com.company.core.type.Switch" callback="com.company.core.type.handler.SwitchTypeHandler"/>
+   <typeHandler javaType="com.company.core.type.Bolean" callback="com.company.core.type.handler.BoleanTypeHandler"/>
+   <typeHandler javaType="com.company.core.type.YesNo" callback="com.company.core.type.handler.YesNoTypeHandler"/>
+   <typeHandler javaType="com.store.comp.user.type.Role" callback="com.store.comp.user.type.handler.RoleTypeHandler"/>
+
+   <sqlMap resource="config/ibatis/front-sqlMap.xml"/>
+   <sqlMap resource="comp-user-sqlMap.xml"/>
+   <sqlMap resource="comp-control-sqlMap.xml"/>
+
+</sqlMapConfig>

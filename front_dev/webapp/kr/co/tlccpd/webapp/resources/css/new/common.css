@@ -1,0 +1,299 @@
+/* 공통 css 부분 */
+
+/* 공통 사이즈 */
+.layoutArea {padding:10px;}
+
+
+/* 아이콘넣기 */
+.icon-list1 {
+	width:90%;padding-left:25px;
+	background:url(/resources/application/images/icon/icon_list1.png) 5px 50% no-repeat;
+	background-size: 13px 13px;
+}
+.icon-arrow-r {
+	width:90%;padding-right:20px;
+	background:url(/resources/application/images/icon/icon_arrow_r.png) 97% 50% no-repeat;
+	background-size: 13px 20px;
+}
+.icon-arrow1 {
+	width:90%;padding-left:25px;
+	background:url(/resources/application/images/icon/icon_arrow1.png) 5px  50% no-repeat;
+	background-size: 11px 11px;
+}
+
+/* ul 에 border 주기 */
+.list-border1 {border:0px;padding:0px;}
+.list-border2 {
+	margin:0px 10px;
+	border:2px solid #F30;border-radius:5px;
+}
+
+/* ul li 에 배경넣기 */
+.list-bg0 {background:none;}
+.list-bg1 li {
+	background:url(/resources/application/images/icon/icon_list1.png) 10px 50% no-repeat,
+		url(/resources/application/images/icon/icon_arrow_r.png) 97% 50% no-repeat;
+	background-size:13px 13px,13px 20px;
+}
+.list-bg2 li {}
+.list-bg2-over li {}
+
+/* ul 타입 1 */
+.list-type11 {}
+.list-type11 li {
+	padding:20px 20px;
+	border-bottom:2px solid #e0dfdf;
+}
+.list-type11 li.noborder {border:0px;}
+.list-type11 li a {
+	display:block;margin-left:20px;
+	font-size:1em;font-weight:bold;
+	white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+
+/* ul 타입 2 */
+.list-type21 {}
+.list-type21 li {
+	padding:5px 20px;
+	border-bottom:2px solid #e0dfdf;
+}
+.list-type21 li.reply {background:#EFEFEF;}	/* 답변일때 */
+
+	.list-type21 li dl {margin:0px 20px;}
+	.list-type21 li dl dt {
+		font-size:1em;font-weight:bold;
+		width:95%;/*border:1px solid #F30;*/
+		white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;			
+	}
+	.list-type21 li dl dd {
+		padding-top:2px;/*height:37px;*/
+		font-size;0.8em;
+		overflow:hidden;white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;
+	}
+	.list-type21 li dl dd.date {
+		float:right;height:20px;
+		padding:0px 5px;margin:0px 5px;
+		font-size:0.7em;color:#666;
+	}
+
+/* ul 타입 2 */
+.list-type22 {}
+.list-type22 li {
+	padding:5px 0px 5px 20px;
+	border-bottom:2px solid #e0dfdf;
+}
+.list-type22 li dl {
+	clear:both;width:90%;
+	margin:0px 10px;height:20px;padding:15px 0px;
+}
+.list-type22 li dl dt  {}
+.list-type22 li dl dd  {
+	float:left; height:20px;
+	font-size:1em;font-weight:bold;
+	white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;			
+}
+.list-type22 li dl dd.building {
+	float:left;width:65%;height:20px;
+	font-size:1em;font-weight:bold;
+	white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;			
+}
+.list-type22 li dl dd.date {
+	float:right;height:20px;
+	font-size:0.7em;color:#666;text-align:right;
+	margin:0px 10px 0 0;
+}
+
+
+/* dl 리스트 타입 3 */
+.list-type31 {}
+.list-type31 li {
+	border-bottom:2px solid #e0dfdf;
+}
+.list-type31 li dl {}
+.list-type31 li dl dt {
+	font-size:1em;font-weight:bold;		
+	padding:20px 35px 20px 20px;
+	white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;
+	background:url(/resources/application/images/icon/btn_arrow_r21.png) 97% 50% no-repeat;
+	background-size:20px 20px;
+}
+.list-type31 li dl dt.over {
+	background:url(/resources/application/images/icon/btn_arrow_r22.png) 97% 50% no-repeat;
+	border-bottom:2px solid #e0dfdf;
+	background-size:20px 20px;
+}
+.list-type31 li dl dd {
+	display:none;
+	margin:10px 20px;
+	/* background:#F4F4F4; */
+	border:1px solid #E2E2E2;
+}
+
+/* dl 리스트 타입 32 */
+.list-type32 {}
+.list-type32 li {
+	border-bottom:2px dotted #e0dfdf;
+}
+.list-type32 li dl {}
+.list-type32 li dl dt {
+	font-size:1em;font-weight:bold;		
+	padding:11px 0px 10px 25px;
+	background:url(/resources/application/images/icon/icon_list1.png) 0px 50% no-repeat;
+	background-size: 13px 13px;
+	white-space:nowrap;word-break:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.list-type32 li dl dd {
+	margin-bottom:20px;
+	/* background:#F4F4F4; */
+	border:1px solid #E2E2E2;
+}
+
+
+/* 탭 스타일 */
+.tab-type1 {width:100%;float:left;}
+.tab-type1 li {float:left;}
+.tab-type1 li a {
+	display:block;padding:10px 0px;
+	font-size:1em;text-align:center;
+}
+
+.tab-type3 {width:100%;float:left;}
+.tab-type3 li {float:left;}
+.tab-type3 li a {
+	display:block;padding:10px 0px;
+	font-size:1em;text-align:center;
+}
+
+.tab-font1 {}
+.tab-font1 li a {color:#FFF;}
+.tab-font1 li a:hover {color:#FFF;}
+
+.tab-font2 {}
+.tab-font2 li a {color:#000;}
+.tab-font2 li a:hover {color:#FFF;}
+
+.tab-font3 {}
+.tab-font3 li a {color:#000;}
+.tab-font3 li a:hover {color:#FFF;}
+
+.tab-bg1 {background:#42485B;}
+.tab-bg1 li {background:#42485B;}
+.tab-bg1 li:hover {background:#616C8F;}
+
+.tab-bg2 {background:#EFEFEF;}
+.tab-bg2 li {background:#EFEFEF;}
+.tab-bg2 li:hover {background:#666666;}
+
+.tab-bg3 {background:#efefef;}
+.tab-bg3 li {background:#efefef;}
+.tab-bg3 li:hover {background:#666666;}
+
+.tab-num2 {}	/* 탭 2개 */
+.tab-num2 li {width:50%;}
+.tab-num3 {} 	/* 탭 3개 */
+.tab-num3 li {width:33%;}
+.tab-num4 {}	/* 탭 4개 */
+.tab-num4 li {width:25%;}
+.tab-num5 {}	/* 탭 5개 */
+.tab-num5 li {width:20%;}
+.tab-num6 {}	/* 탭 6개 */
+.tab-num6 li {width:16%;}
+.tab-num7 {}	/* 탭 7개 */
+.tab-num7 li {width:14%;}
+	
+	
+/* 테이블 타입 */
+/* 테이블 타입 1 */
+.table-type1-div {border:1px solid #E2E2E2;}
+.table-type1 {
+	width:100%;
+	border:5px solid #F4F4F4;	
+}
+.table-type1 tr {}
+.table-type1 tr th {
+	padding:3px 5px;text-align:center;
+	color:#125081;font-size:0.8em;
+	background:#ecf1f5;
+	border:1px solid #E3E3E3;
+}
+.table-type1 tr td {
+	padding:3px 5px;
+	font-size:0.8em;
+	border:1px solid #E3E3E3;
+}
+
+.table-th90 {}	/* th의 사이즈 지정하기 */
+.table-th90 th {width:90px;}
+.table-th100 {}	/* th의 사이즈 지정하기 */
+.table-th100 th {width:100px;}
+.table-th110 {}	/* th의 사이즈 지정하기 */
+.table-th110 th {width:110px;}
+.table-th120 {}	/* th의 사이즈 지정하기 */
+.table-th120 th {width:120px;}
+.table-th130 {}	/* th의 사이즈 지정하기 */
+.table-th130 th {width:130px;}
+.table-th140 {}	/* th의 사이즈 지정하기 */
+.table-th140 th {width:140px;}
+.table-th150 {}	/* th의 사이즈 지정하기 */
+.table-th150 th {width:150px;}
+.table-th170 {}	/* th의 사이즈 지정하기 */
+.table-th170 th {width:170px;}
+.table-th190 {}	/* th의 사이즈 지정하기 */
+.table-th190 th {width:190px;}
+.table-th200 {}	/* th의 사이즈 지정하기 */
+.table-th200 th {width:200px;}
+.table-th300 {}	/* th의 사이즈 지정하기 */
+.table-th300 th {width:300px;}
+
+
+/* 게시판의 view 화면타입 1 */
+.board-view1 {word-break:break-all;white-space:normal;}
+.board-view1 dl {	
+	padding:10px;
+	background:#EFEFEF;
+	border-bottom:2px solid #CCC;
+}
+	.board-view1 dl dt {font-size:1em;font-weight:bold;}
+	.board-view1 dl dd {display:inline;font-size:0.8em;}
+	
+.board-view1 div {
+	padding:10px;
+}
+
+/* 박스스타일 */
+.box-nodata {
+	padding:20px 0px;
+	text-align:center;
+}
+
+
+
+/* 컨텐츠용 스타일 */
+
+/* 총장인사말 */
+.cont-dl1 {}
+.cont-dl1 dt {float:left;padding-right:10px;}
+.cont-dl1 dt img {width:100px;}
+.cont-dl1 dd {padding:5px;}
+.cont-dl1 dd.title {border-bottom:2px solid #CCC;padding-bottom:10px;margin-left:105px;}
+.cont-dl1 dd.title img {width:200px;}
+/* CSS 추가 - 2014.04.28(월) */
+.cont-dl1 dd.title .img_class {width:300px;}
+.cont-dl1 dd.end {float:right;padding:20px 20px 20px 0px;}
+
+
+/* 한세이념 */
+.cont-dl2 {}
+.cont-dl2 dt {font-weight:bold;}
+.cont-dl2 dd {margin-top:10px;}
+.cont-dl2 dd.img img {text-align:center;}
+
+/* 지도보기 */
+.cont-dl3 {}
+.cont-dl3 dt {}
+.cont-dl3 dt.icon-list1 {font-weight:bold;padding-top:10px;}
+.cont-dl3 dt.icon-arrow1 {font-size:0.9em;}
+.cont-dl3 dd {font-size:0.8em;}
+.cont-dl3 dd.end {padding-bottom:10px;border-bottom:2px dotted #CCC;}
+

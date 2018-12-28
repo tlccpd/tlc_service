@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+ 
+  <!-- DATASOURCE -->
+
+   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+      <property name="driverClassName" value="${jdbc.driver}"/>
+      <property name="url" value="${jdbc.url}"/>
+      <property name="username" value="${jdbc.user}"/>
+      <property name="password" value="${jdbc.password}"/>
+      <property name="initialSize" value="${dbcp.initialSize}"/>
+      <property name="maxActive" value="${dbcp.maxActive}"/>
+      <property name="maxIdle" value="${dbcp.maxIdle}"/>
+      <property name="maxWait" value="${dbcp.maxWait}"/>
+      <property name="poolPreparedStatements" value="${dbcp.poolPreparedStatements}"/>
+      <property name="validationQuery" value="select 1 from dual"/>
+      <property name="testOnBorrow" value="${dbcp.testOnBorrow}"/>
+      <property name="maxOpenPreparedStatements" value="${dbcp.maxOpenPreparedStatements}"/>
+      <property name="logAbandoned" value="${dbcp.logAbandoned}"/>
+      <property name="removeAbandoned" value="${dbcp.removeAbandoned}"/>
+      <property name="removeAbandonedTimeout" value="${dbcp.removeAbandonedTimeout}"/>
+   </bean>
+
+  <!-- IBATIS -->
+
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocations" value="classpath:/config/ibatis/sqlMapConfig.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+      <property name="sqlMapClient" ref="sqlMapClient"/>
+    </bean>
+
+  <!-- TRANSACTION -->
+
+   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+      <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+   <tx:advice id="txControlAdvice">
+      <tx:attributes>
+         <tx:method name="*" propagation="REQUIRED" isolation="READ_COMMITTED"/>
+      </tx:attributes>
+   </tx:advice>
+
+   <aop:config>
+      <aop:advisor advice-ref="txControlAdvice" pointcut="execution(public * com.store.web.front.controller.*Controller.*(..))"/>
+   </aop:config>
+
+</beans>

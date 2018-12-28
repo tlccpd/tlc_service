@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+  <!-- Configuration -->
+
+   <bean id="configurationFactory" class="org.apache.commons.configuration.ConfigurationFactory">
+      <property name="configurationURL" value="classpath:/config/application/config-center.xml"/>
+   </bean>
+
+   <bean id="configuration" factory-bean="configurationFactory" factory-method="getConfiguration"/>
+
+  <!-- PropertyPlaceholderConfigurer -->
+
+   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="properties">
+         <bean class="org.springmodules.commons.configuration.CommonsConfigurationFactoryBean">
+            <property name="configurations">
+               <list>
+                  <ref bean="configuration"/>
+               </list>
+            </property>
+         </bean>
+      </property>
+      <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_NEVER"/>
+      <property name="ignoreUnresolvablePlaceholders" value="false"/>
+   </bean>
+
+  <!-- Tiles -->
+
+   <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+      <property name="definitions">
+         <list>
+            <value>/WEB-INF/tiles/tiles-def.xml</value>
+         </list>
+      </property>
+   </bean>
+
+  <!-- ViewResolver -->
+
+   <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+      <property name="order" value="1" />
+   </bean>
+
+   <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+      <property name="order" value="2" />
+      <property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView"/>
+   </bean>
+
+  <!-- LocaleResolver -->
+
+   <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+
+  <!-- Interceptor -->
+
+   <bean id="localeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+      <property name="paramName" value="i18n"/>
+   </bean>
+
+  <!-- HandlerMapping -->
+
+   <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+      <property name="order" value="1"/>
+      <property name="interceptors">
+         <list>
+            <ref bean="localeInterceptor"/>
+         </list>
+      </property>
+   </bean>
+
+	<!--
+   <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+      <property name="order" value="2"/>
+      <property name="interceptors">
+         <list>
+            <ref bean="localeInterceptor"/>
+         </list>
+      </property>
+   </bean>
+   -->
+
+  <!-- ExceptionResolver -->
+
+   <bean id="exceptionMapping" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+      <property name="defaultErrorView" value="exception.unexpected" />
+      <property name="exceptionMappings">
+         <map>
+            <entry key="com.company.core.exception.MessageException" value="exception.message"/>
+         </map>
+      </property>
+   </bean>
+
+  <!-- MultipartResolver -->
+
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+      <property name="defaultEncoding" value="ISO-8859-1"/>
+      <property name="maxUploadSize" value="${multipartResolver.maxUploadSize}"/>
+      <property name="maxInMemorySize" value="${multipartResolver.maxInMemorySize}"/>
+      <property name="uploadTempDir" ref="uploadTempDir"/>
+   </bean>
+
+  <!-- MessageSource -->
+
+   <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+      <property name="basenames">
+         <list>
+            <value>classpath:/config/message/validator-message</value>
+            <value>classpath:/config/message/system-message</value>
+         </list>
+      </property>
+      <!--property name="cacheSeconds" value="5"/-->
+   </bean>
+
+   <bean id="messageSourceAccessor" class="org.springframework.context.support.MessageSourceAccessor">
+      <constructor-arg ref="messageSource"/>
+   </bean>
+
+  <!-- Validator -->
+
+   <bean id="validator" class="org.springmodules.validation.bean.BeanValidator">
+      <property name="configurationLoader">
+         <bean class="org.springmodules.validation.bean.conf.loader.annotation.AnnotationBeanValidationConfigurationLoader"/>
+      </property>
+   </bean>
+
+  <!-- View -->
+
+   <bean id="fileDownloadView" class="com.store.web.front.view.FileDownloadView"/>
+
+  <!-- Component Scanning -->
+
+   <context:component-scan base-package="com.store"/>
+
+  <!-- Event & Handler -->
+
+   <bean class="com.company.core.event.listener.ApplicationEventListener">
+      <property name="eventMappings">
+         <map>
+            <entry>
+               <key><value>org.springframework.context.event.ContextRefreshedEvent</value></key>
+               <ref bean="contextRefreshedHandler"/>
+            </entry>
+            <entry>
+               <key><value>com.store.comp.user.event.LoginEvent</value></key>
+               <ref bean="loginHandler"/>
+            </entry>
+            <entry>
+               <key><value>com.store.comp.user.event.LogoutEvent</value></key>
+               <ref bean="logoutHandler"/>
+            </entry>
+            <entry>
+               <key><value>com.store.comp.control.event.CacheReloadEvent</value></key>
+               <ref bean="cacheReloadHandler"/>
+            </entry>
+            <entry>
+               <key><value>com.store.comp.control.event.ReschedulingEvent</value></key>
+               <ref bean="reschedulingHandler"/>
+            </entry>
+         </map>
+      </property>
+   </bean>
+
+   <bean id="loginHandler" class="com.store.comp.user.event.handler.LoginEventHandler"/>
+   <bean id="logoutHandler" class="com.store.comp.user.event.handler.LogoutEventHandler"/>
+   <bean id="cacheReloadHandler" class="com.store.comp.control.event.handler.CacheReloadEventHandler"/>
+   <bean id="reschedulingHandler" class="com.store.comp.control.event.handler.ReschedulingEventHandler"/>
+   <bean id="contextRefreshedHandler" class="com.company.core.event.handler.EventHandlerAggregator">
+      <property name="handlerList">
+         <list>
+            <ref bean="cacheReloadHandler"/>
+            <ref bean="reschedulingHandler"/>
+         </list>
+      </property>
+   </bean>
+
+  <!-- BeanFinder -->
+
+   <bean class="com.company.core.util.BeanFinder"/>
+
+</beans>

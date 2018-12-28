@@ -1,0 +1,127 @@
+
+/*
+	Basic Style --------------------------------
+*/
+
+body{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	LINE-HEIGHT: 15pt;
+}
+
+div, form, center, option, pre, blockquote{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+}
+
+img{
+	border:5;
+}
+
+/*
+	Table Style --------------------------------
+*/
+
+table{
+	border-top:1px solid #AAAAAA;
+	padding-left: 2;
+	padding-right: 2;
+	padding-top: 2;
+	padding-bottom: 2;
+}
+
+td{
+	border-bottom:1px solid #AAAAAA;
+	padding-left:5;
+	padding-right:5;
+	padding-top:5;
+	padding-bottom:5;
+	font-family:±¼¸²;
+	font-size:9pt;
+}
+
+th{
+	border-bottom:1px solid #AAAAAA;
+	padding-left:5;
+	padding-right:5;
+	padding-top:5;
+	padding-bottom:5;
+	background-color: #F0F0F0;
+	text-align: center;
+	font-family:±¼¸²;
+	font-size:9pt;
+}
+
+/*
+	Form Style --------------------------------
+*/
+
+input{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	border-color:#c5c5c5 e5e5e5 e5e5e5 c5c5c5;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-width:1px
+}
+
+select{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:white;
+	border:1px solid #808080;
+	background-color:white
+}
+
+textarea{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	border-color:#c5c5c5 e5e5e5 e5e5e5 c5c5c5;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-left-width:1px;
+	border-right-width:1px;
+	overflow-x:hidden;
+	overflow-y:auto
+}
+
+/*
+	Link Style --------------------------------
+*/
+
+A:link{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	text-decoration:none;
+}
+
+A:visited{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	text-decoration:none;
+}
+
+A:active{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:#000000;
+	text-decoration:none;
+}
+
+A:hover{
+	font-family:±¼¸²;
+	font-size:9pt;
+	color:BLUE;
+	text-decoration:underline
+}
+
+/*
+	ETC Style --------------------------------
+*/
