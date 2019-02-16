@@ -15,10 +15,10 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.FrameworkServlet;
 
-import com.company.core.web.servlet.ParameterInjectionServlet;
-import com.store.comp.control.command.ControlCommand;
-import com.store.comp.control.command.ControlResult;
-import com.store.comp.control.key.WebParamKey;
+import com.tlcpub.net.core.web.servlet.ParameterInjectionServlet;
+import com.tlcpub.net.ctl.command.ControlCommand;
+import com.tlcpub.net.ctl.command.ControlResult;
+import com.tlcpub.net.ctl.key.WebParamKey;
 
 
 public class ControlServlet extends ParameterInjectionServlet {

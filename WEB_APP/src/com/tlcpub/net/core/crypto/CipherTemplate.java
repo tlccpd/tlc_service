@@ -9,7 +9,9 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.apache.commons.codec.binary.Hex;
 import org.springframework.beans.factory.InitializingBean;
+
 
 
 public class CipherTemplate implements InitializingBean{

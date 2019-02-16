@@ -1,7 +1,7 @@
 package com.tlcpub.net.usr.type;
 
 
-import com.company.core.type.Symbolic;
+import com.tlcpub.net.core.type.Symbolic;
 
 
 public enum Role implements Symbolic {

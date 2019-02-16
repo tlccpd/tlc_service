@@ -5,15 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.store.web.front.dao.FileAttachDao;
-import com.store.web.front.dto.FileUpload;
+import com.tlcpub.net.web.front.dao.FileAttachDao;
+import com.tlcpub.net.web.front.dto.FileUpload;
 
 
 @Service
 public class FileService {
 
 
-   @Autowired
+   @SuppressWarnings("rawtypes")
+@Autowired
    protected FileAttachDao attachDao;
 
 
@@ -21,11 +22,12 @@ public class FileService {
       attachDao.insertAttach(model);
    }
 
+   @SuppressWarnings("unchecked")
    public List<FileUpload> getEntireFileList(){
       return attachDao.selectEntireFiles();
    }
 
    public FileUpload getFileByPhysicalName(String pname){
-      return attachDao.selectAttachByPhysicalName(pname);
+      return (FileUpload)attachDao.selectAttachByPhysicalName(pname);
    }
 }

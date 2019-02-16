@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.company.core.exception.AlreadyExistException;
-import com.company.core.exception.NotFoundException;
-import com.company.core.util.MessageUtil;
-import com.company.core.util.SessionUtil;
-import com.store.comp.user.dto.User;
-import com.store.comp.user.service.UserService;
-import com.store.comp.user.type.Role;
-import com.store.web.front.dto.LoginResult;
+import com.tlcpub.net.core.exception.AlreadyExistException;
+import com.tlcpub.net.core.exception.NotFoundException;
+import com.tlcpub.net.core.util.MessageUtil;
+import com.tlcpub.net.core.util.SessionUtil;
+import com.tlcpub.net.usr.dto.User;
+import com.tlcpub.net.usr.service.UserService;
+import com.tlcpub.net.usr.type.Role;
+import com.tlcpub.net.web.front.dto.LoginResult;
 
 
 @Controller
@@ -96,7 +96,7 @@ public class UserController {
    @RequestMapping(value="/user/profile.html")
    public ModelAndView profileView(HttpServletRequest request) {
 
-      UserDetails userDetails = SessionUtil.getUserDetails(request);
+      UserDetails userDetails = (UserDetails)SessionUtil.getUserDetails(request);
       if(userDetails == null)
          return new ModelAndView("login.form");
 

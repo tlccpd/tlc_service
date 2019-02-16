@@ -16,19 +16,19 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.multipart.FilePart;
 import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
 import org.apache.commons.httpclient.methods.multipart.Part;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
 
-import com.company.core.key.Constant;
-import com.company.core.util.BeanFinder;
-import com.company.core.util.ShellCommander;
-import com.company.core.web.servlet.ParameterInjectionServlet;
-import com.store.comp.control.dto.Server;
-import com.store.comp.control.service.SchedulerService;
+import com.tlcpub.net.core.key.Constant;
+import com.tlcpub.net.core.util.BeanFinder;
+import com.tlcpub.net.core.util.ShellCommander;
+import com.tlcpub.net.core.web.servlet.ParameterInjectionServlet;
+import com.tlcpub.net.ctl.dto.Server;
+import com.tlcpub.net.ctl.service.SchedulerService;
 
 
 public class FileDeliveryServlet extends ParameterInjectionServlet{
@@ -145,7 +145,7 @@ public class FileDeliveryServlet extends ParameterInjectionServlet{
                 Part[] parts = {new FilePart(fileName, file)};
                 postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
                 
-                HttpClient client = new HttpClient();
+                org.apache.commons.httpclient.HttpClient client = new org.apache.commons.httpclient.HttpClient();
                 client.getHttpConnectionManager().getParams().setConnectionTimeout(5000);
                 
                 int statusCode = client.executeMethod(postMethod);

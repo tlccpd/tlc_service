@@ -2,9 +2,8 @@ package com.tlcpub.net.web.front.dto;
 
 
 import org.springframework.web.multipart.MultipartFile;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.MaxLength;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.NotBlank;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.NotNull;
+//import org.springmodules.validation.bean.conf.loader.annotation.handler.NotBlank;
+//import org.springmodules.validation.bean.conf.loader.annotation.handler.NotNull;
 
 import com.tlcpub.net.core.dto.AbstractModel;
 
@@ -19,12 +18,12 @@ public class FileUpload extends AbstractModel{
    
    private String physicalName;
 
-   @NotNull
-   @NotBlank
-   @MaxLength(value=50)
+   //@NotNull
+   //@NotBlank
+   //@MaxLength(value=50)
    private String logicalName;
 
-   @MaxLength(value=100)
+   //@MaxLength(value=100)
    private String descr;
 
 

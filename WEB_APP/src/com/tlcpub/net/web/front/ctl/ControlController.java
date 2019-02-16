@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.store.comp.control.command.ControlResult;
-import com.store.comp.control.dto.Server;
-import com.store.comp.control.service.SchedulerService;
-import com.store.web.front.dto.Cache;
-import com.store.web.front.key.WebParamKey;
+import com.tlcpub.net.ctl.command.ControlResult;
+import com.tlcpub.net.ctl.dto.Server;
+import com.tlcpub.net.ctl.service.SchedulerService;
+import com.tlcpub.net.web.front.dto.Cache;
+import com.tlcpub.net.web.front.key.WebParamKey;
 
 
 @Controller

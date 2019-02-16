@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+  <!-- Crypto -->
+
+   <bean id="cipherAES" class="com.company.core.crypto.CipherTemplate">
+      <property name="algorithm" value="AES"/>
+      <property name="secretKey" value="lf0hr1aercdl8vlzitunhm200"/>
+   </bean>
+
+   <bean id="digesterMD5" class="com.company.core.crypto.DigesterTemplate">
+      <property name="algorithm" value="MD5"/>
+   </bean>
+
+  <!-- File -->
+
+   <bean id="uploadTempDir" class="org.springframework.core.io.FileSystemResource">
+      <constructor-arg value="${multipartResolver.uploadTempDir}"/>
+   </bean>
+
+   <bean id="storage" class="java.io.File">
+      <constructor-arg value="${file.storage.location}"/>
+   </bean>
+
+  <!-- Form Template -->
+
+   <bean id="calendar" class="com.company.core.web.form.CalendarOptionTemplate">
+      <property name="startYear" value="1999"/>
+      <property name="endYear" value="2011"/>
+   </bean>
+
+   <bean id="options" class="com.store.web.front.form.EnumOptionTemplate"/>
+
+   <bean id="codeOrder" class="com.company.core.web.form.IntegerRangeOptionTemplate">
+      <property name="from" value="1"/>
+      <property name="to" value="10"/>
+   </bean>
+
+   <bean id="charRange" class="com.company.core.web.form.CharRangeOptionTemplate">
+      <property name="from" value="A"/>
+      <property name="to" value="F"/>
+   </bean>
+
+   <bean id="mapOptions" class="com.company.core.web.form.ObjectOptionTemplate">
+        <property name="options">
+           <map>
+               <entry>
+                   <key><value>I</value></key>
+                   <value>IPhone</value>
+               </entry>
+               <entry>
+                   <key><value>G</value></key>
+                   <value>Galaxy</value>
+               </entry>
+               <entry>
+                   <key><value>O</value></key>
+                   <value>Optimus</value>
+               </entry>
+               <entry>
+                   <key><value>V</value></key>
+                   <value>Vega</value>
+               </entry>
+               <entry>
+                   <key><value>D</value></key>
+                   <value>Desire</value>
+               </entry>
+            </map>
+        </property>
+   </bean>
+
+  <!-- Cache -->
+
+     <bean id="cacheDictionary" class="java.util.HashMap"/>
+
+  <!-- Control -->
+
+   <bean id="remoteControlUri" class="java.lang.String">
+      <constructor-arg value="${control.uri}"/>
+   </bean>
+
+   <bean id="remoteControlPort" class="java.lang.Integer">
+      <constructor-arg value="${remote.port}"/>
+   </bean>
+
+</beans>

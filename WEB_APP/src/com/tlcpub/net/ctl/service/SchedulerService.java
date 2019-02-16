@@ -25,6 +25,7 @@ import com.tlcpub.net.core.util.ShellCommander;
 import com.tlcpub.net.ctl.dao.SchedulerDao;
 import com.tlcpub.net.ctl.dto.Schedule;
 import com.tlcpub.net.ctl.dto.Server;
+import com.tlcpub.net.usr.dto.User;
 
 
 @Service
@@ -57,8 +58,8 @@ public class SchedulerService {
       return schedulerDao.selectEntireSchedules();
    }
 
-   public Schedule getScheduleById(String schId) throws NotFoundException{
-      Schedule schedule =  schedulerDao.selectScheduleById(schId);
+   public User getScheduleById(String schId) throws NotFoundException{
+      User schedule =  schedulerDao.selectScheduleById(schId);
       if(schedule == null)
          throw new NotFoundException(schId);
       return schedule;
@@ -104,7 +105,7 @@ public class SchedulerService {
          hostName = commander.getResultString().trim();
       }
 
-      Switch switchState = schedulerDao.selectSchedulingByServerName(hostName);
+      Switch switchState = (Switch) schedulerDao.selectSchedulingByServerName(hostName);
       logger.info("  > Host("+hostName+") scheduling state : "+switchState);
 
       if(switchState == Switch.OFF)

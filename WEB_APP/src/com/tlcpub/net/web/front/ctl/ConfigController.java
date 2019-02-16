@@ -33,22 +33,22 @@ public class ConfigController<Config> {
       log("");
       log("# System Properties Test");
       log("");
-      log("user.dir="+configuration.getString("user.dir"));
-      log("java.io.tmpdir="+configuration.getString("java.io.tmpdir"));
+      //log("user.dir="+configuration.getString("user.dir"));
+      //log("java.io.tmpdir="+configuration.getString("java.io.tmpdir"));
       
       log("");
       log("");
       log("# Property Config Test");
       log("");
 
-      log("colors.background="+((configuration) configuration).getString("colors.background"));
-      log("colors.foreground="+((Configuration) configuration).getString("colors.foreground"));
+      //log("colors.background="+configuration.getString("colors.background"));
+      //log("colors.foreground="+configuration.getString("colors.foreground"));
 
       // Array 형태 조회      
-      String[] strArr = ((Object) configuration).getStringArray("colors.pie");
-      for(int i=0; i<strArr.length; i++){
-         log("colors.pie["+i+"]="+strArr[i]);
-      }
+     // String[] strArr =  configuration.getStringArray("colors.pie");
+      //for(int i=0; i<strArr.length; i++){
+        // log("colors.pie["+i+"]="+strArr[i]);
+     // }
 
       // List 형태 조회
 //      List<String> list = configuration.getList("colors.pie");
@@ -57,23 +57,23 @@ public class ConfigController<Config> {
 //         log("colors.pie["+(index++)+"]="+str);
 //      }
 
-      log("key="+((configuration) configuration).getString("key"));
+      //log("key="+((configuration) configuration).getString("key"));
 
       log("");
       log("");
       log("# XML Config Test");
       log("");
 
-      log("colors.text="+((configuration) configuration).getString("colors.text"));
-      log("colors.link[@normal]="+configuration.getString("colors.link[@normal]"));
-      log("colors.default="+configuration.getString("colors.default"));
-      log("rowsPerPage="+configuration.getInt("rowsPerPage"));
+      //log("colors.text="+((configuration) configuration).getString("colors.text"));
+      //log("colors.link[@normal]="+configuration.getString("colors.link[@normal]"));
+      //log("colors.default="+configuration.getString("colors.default"));
+      //log("rowsPerPage="+configuration.getInt("rowsPerPage"));
 
       // Array 형태 조회   
-      strArr = configuration.getStringArray("buttons.name");
-      for(int i=0; i<strArr.length; i++){
-         log("buttons.name["+i+"]="+strArr[i]);
-      }
+      //strArr = configuration.getStringArray("buttons.name");
+      //for(int i=0; i<strArr.length; i++){
+         //log("buttons.name["+i+"]="+strArr[i]);
+     // }
 
       // List 형태 조회   
 //      list = configuration.getList("buttons.name");
@@ -82,17 +82,17 @@ public class ConfigController<Config> {
 //         log("buttons.name["+(index++)+"]="+str);
 //      }
 
-      log("numberFormat[@pattern]="+((Object) configuration).getString("numberFormat[@pattern]"));
+      //log("numberFormat[@pattern]="+((Object) configuration).getString("numberFormat[@pattern]"));
 
       log("");
       log("");
       log("# Configuration Keys");
       log("");
       
-      Iterator<String> iter = ((Config) configuration).getKeys();
-      for(int i=1; iter.hasNext(); i++){
-         log(i+"> "+iter.next());
-      }
+      //Iterator<String> iter = ((Config) configuration).getKeys();
+      //for(int i=1; iter.hasNext(); i++){
+      //   log(i+"> "+iter.next());
+      //}
 
       return new ModelAndView("config.view", "result", buffer.toString());
    }

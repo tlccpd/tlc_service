@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -16,12 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.company.core.exception.NotFoundException;
-import com.company.core.util.MessageUtil;
-import com.company.core.util.SessionUtil;
-import com.company.core.util.StringUtil;
-import com.store.comp.control.dto.Schedule;
-import com.store.comp.control.service.SchedulerService;
+import com.tlcpub.net.core.exception.NotFoundException;
+import com.tlcpub.net.core.util.MessageUtil;
+import com.tlcpub.net.core.util.SessionUtil;
+import com.tlcpub.net.core.util.StringUtil;
+import com.tlcpub.net.ctl.dto.Schedule;
+import com.tlcpub.net.ctl.service.SchedulerService;
+import com.tlcpub.net.usr.dto.User;
 
 
 @Controller
@@ -81,7 +82,7 @@ public class ScheduleController{
       if(StringUtil.isEmptyOrWhitespace(schId))
          return listSchedule(request);
       
-      Schedule schedule = null;
+      User schedule = null;
       try{
          schedule = schedulerService.getScheduleById(schId);
       }catch(NotFoundException nfe){

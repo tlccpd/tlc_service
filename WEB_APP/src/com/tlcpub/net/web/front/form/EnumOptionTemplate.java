@@ -12,8 +12,8 @@ import com.tlcpub.net.core.type.State;
 import com.tlcpub.net.core.type.Switch;
 import com.tlcpub.net.core.type.YesNo;
 import com.tlcpub.net.core.web.form.AbstractOptionTemplate;
-import com.tlcpub.net.net.comp.control.command.ControlCommand;
-import com.tlcpub.net.net.comp.user.type.Role;
+import com.tlcpub.net.ctl.command.ControlCommand;
+import com.tlcpub.net.usr.type.Role;
 
 
 public class EnumOptionTemplate extends AbstractOptionTemplate implements InitializingBean{

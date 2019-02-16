@@ -5,8 +5,8 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import org.apache.commons.codec.binary.Hex;
 import org.springframework.beans.factory.InitializingBean;
-
 import com.tlcpub.net.core.key.Constant;
 
 

@@ -7,8 +7,8 @@ import org.apache.commons.logging.Log;
 import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import com.tlcpub.net.core.util.BeanFinder;
 import com.tlcpub.net.JobController;
+import com.tlcpub.net.core.util.BeanFinder;
 
 
 public abstract class BaseJobBean extends QuartzJobBean {

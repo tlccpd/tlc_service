@@ -1,9 +1,7 @@
 package com.tlcpub.net.ctl.dto;
 
 
-import org.springmodules.validation.bean.conf.loader.annotation.handler.Expression;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.Length;
-
+import com.sun.istack.internal.NotNull;
 import com.tlcpub.net.core.dto.AbstractModel;
 import com.tlcpub.net.core.type.YesNo;
 
@@ -12,22 +10,22 @@ public class Code extends AbstractModel{
 
 
    @NotNull
-   @Length(min=3, max=3)
-   @Expression(value = "groupId IS UPPERCASE")
+   //@Length(min=3, max=3)
+  // @Expression(value = "groupId IS UPPERCASE")
    private String groupId; 
    
    @NotNull
-   @Length(min=3, max=3)
-   @Expression(value = "codeId IS UPPERCASE")
+   //@Length(min=3, max=3)
+   //@Expression(value = "codeId IS UPPERCASE")
    private String codeId;
    
    @NotNull
-   @Length(min=2, max=30)
+   //@Length(min=2, max=30)
    private String codeName;
 
    private YesNo isUse;
    
-   @Expression(value = "seqNum IS GREATER THAN 0")
+  // @Expression(value = "seqNum IS GREATER THAN 0")
    private int seqNum = 1;
    
    private String descr;

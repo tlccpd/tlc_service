@@ -15,8 +15,8 @@ import org.apache.log4j.Logger;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.servlet.view.AbstractView;
 
-import com.company.core.key.Constant;
-import com.store.web.front.dto.FileUpload;
+import com.tlcpub.net.core.key.Constant;
+import com.tlcpub.net.web.front.dto.FileUpload;
 
 
 public class FileDownloadView extends AbstractView {

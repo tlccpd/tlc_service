@@ -1,45 +1,58 @@
 package com.tlcpub.net.core.type.handler;
 
 
+import java.beans.ParameterDescriptor;
+import java.lang.reflect.Parameter;
+import java.sql.ParameterMetaData;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.EnumSet;
+import java.util.Iterator;
 
 import javax.servlet.jsp.jstl.sql.Result;
 
+import org.apache.commons.httpclient.util.ParameterParser;
+import org.junit.runners.Parameterized.Parameters;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.tlcpub.net.core.type.Symbolic;
+import com.tlcpub.net.core.web.servlet.ParameterInjectionServlet;
 
 
 public abstract class AbstractSymbolicEnumTypeHandler {
 
    
+   @Autowired
    private EnumSet symbolicEnumSet;
    
-
+   
    public AbstractSymbolicEnumTypeHandler(Class symbolicEnumClass){
       if(!Symbolic.class.isAssignableFrom(symbolicEnumClass))
          throw new RuntimeException("Class should be '" + Symbolic.class.getName() + "' type - "+symbolicEnumClass.getName());
-      symbolicEnumClass = EnumSet.allOf(symbolicEnumClass);
+      symbolicEnumClass = symbolicEnumSet.getClass();
    }
    
    public Object getResult(Result getter) throws SQLException {
-      String result = getter.getString();
-      if (getter.wasNull())
+      String result = getter.toString();
+      if (result.equals(null))
          return null;
-      return valueOf(result);
+      return result.toString();
    }
    
-   public void setParameter(ParameterSetter setter, Object parameter) throws SQLException {
+   @SuppressWarnings("null")
+public void setParameter(ParameterDescriptor setter, Object parameter) throws SQLException {
       if (parameter == null)
-         setter.setNull(Types.VARCHAR);
+        setter.setValue(parameter.toString(), Types.VARCHAR);
       else
-         setter.setString(((Symbolic)parameter).getSymbol());
+         setter.setName(((Symbolic)parameter).getSymbol());
    }
 
-   public E valueOf(String value) {
-      for(E e: symbolicEnumClass){
-         if(((Symbolic)e).getSymbol().equals(value))
-            return e;
+   @SuppressWarnings("rawtypes")
+public Enum valueOf(String value) {
+	  Iterator<EnumSet> iter= symbolicEnumSet.iterator();
+      while(iter.hasNext()){
+         if(((Symbolic)iter).getSymbol().equals(value))
+            return (Enum)iter;
       }
       return null;
    }

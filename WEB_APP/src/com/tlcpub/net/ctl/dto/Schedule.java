@@ -3,15 +3,15 @@ package com.tlcpub.net.ctl.dto;
 
 import java.sql.Date;
 
-import org.springmodules.validation.bean.conf.loader.annotation.handler.MaxLength;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.NotBlank;
-import org.springmodules.validation.bean.conf.loader.annotation.handler.ValidationMethod;
+//import org.springmodules.validation.bean.conf.loader.annotation.handler.NotBlank;
+//import org.springmodules.validation.bean.conf.loader.annotation.handler.ValidationMethod;
 
 import com.sun.istack.internal.NotNull;
 import com.tlcpub.net.core.dto.AbstractModel;
 import com.tlcpub.net.core.type.YesNo;
 
 
+@SuppressWarnings("restriction")
 public class Schedule extends AbstractModel {
 
 
@@ -23,12 +23,12 @@ public class Schedule extends AbstractModel {
    private String minute;
 
    @NotNull
-   @NotBlank
+   //@NotBlank
    private String beanId;
 
    private YesNo enabled;
    
-   @MaxLength(value=100)
+   //@MaxLength(value=100)
    private String descr;
    
    private String creator;
@@ -136,7 +136,7 @@ public class Schedule extends AbstractModel {
       this.updDt = updDt;
    }
    
-   @ValidationMethod(forProperty="month", args="1,12")
+   //@ValidationMethod(forProperty="month", args="1,12")
    public boolean valideMonth(){
       try{
          int temp = Integer.parseInt(month);
@@ -146,7 +146,7 @@ public class Schedule extends AbstractModel {
       }
    }
 
-   @ValidationMethod(forProperty="day", args="1,31")
+   //@ValidationMethod(forProperty="day", args="1,31")
    public boolean valideDay(){
       try{
          int temp = Integer.parseInt(day);
@@ -156,7 +156,7 @@ public class Schedule extends AbstractModel {
       }
    }
    
-   @ValidationMethod(forProperty="hour", args="0,23")
+   //@ValidationMethod(forProperty="hour", args="0,23")
    public boolean valideHour(){
       try{
          int temp = Integer.parseInt(hour);
@@ -166,7 +166,7 @@ public class Schedule extends AbstractModel {
       }
    }
    
-   @ValidationMethod(forProperty="minute", args="0,59")
+   //@ValidationMethod(forProperty="minute", args="0,59")
    public boolean valideMinute(){
       try{
          int temp = Integer.parseInt(minute);

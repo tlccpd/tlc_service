@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.company.core.util.MessageUtil;
-import com.company.core.util.SessionUtil;
-import com.store.web.front.dto.FileUpload;
-import com.store.web.front.service.FileService;
-import com.store.web.front.view.FileDownloadView;
+import com.tlcpub.net.core.util.MessageUtil;
+import com.tlcpub.net.core.util.SessionUtil;
+import com.tlcpub.net.web.front.dto.FileUpload;
+import com.tlcpub.net.web.front.service.FileService;
+import com.tlcpub.net.web.front.view.FileDownloadView;
 
 
 @Controller

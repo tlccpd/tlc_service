@@ -1,7 +1,7 @@
 package com.tlcpub.net.web.front.key;
 
 
-public class Constant implements com.company.core.key.Constant,
-								 com.store.comp.control.key.Constant{
+public class Constant implements com.tlcpub.net.core.key.Constant,
+								 com.tlcpub.net.ctl.key.Constant{
 
 }

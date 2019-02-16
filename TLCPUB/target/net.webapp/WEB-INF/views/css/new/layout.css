@@ -1,0 +1,126 @@
+
+/* 모바일 배경 백그라운드 넣기, 비율없이 화면에 100% 100% 로 맞추기*/
+#mobile_bg {
+	position:fixed;z-index:-1;
+	top:0px;left:0px;
+	width:100%;height:110%;
+}
+	#mobile_bg img {width:100%;height:100%;}
+
+	
+
+/* 전체메뉴 */
+#mobile_menu {
+	position:absolute;right:0px;padding-bottom:0px;
+	width:0px;height:100%;
+	background:#3A393F;
+	overflow-x:hidden;overflow-y:hidden;
+}
+
+	/* 메뉴 상단 */
+	#mobile_menu ul.title {
+		list-style:none;height:30px;
+		padding:20px 10px 10px 10px;
+		background:#343138;
+		height:100px;
+	}
+	#mobile_menu ul li.logo { margin-top:2px }
+	#mobile_menu ul li.logo a {
+		color:#FFF;font-size:1.3em;font-weight:bold;
+	}
+	#mobile_menu ul li.close {float:right;}
+	#mobile_menu ul li.close a {
+		color:#FFF;font-size:1.3em;font-weight:bold;
+	}
+	
+	#mobile_menu ul li.hl {padding:5px 0px;}
+	#mobile_menu ul li.home {float:left;width:50%;text-align:center;border-right:1px solid #46434A;}
+	#mobile_menu ul li.home a {color:#FFF;}
+	#mobile_menu ul li.login {float:right:width:50%;text-align:center;}
+	#mobile_menu ul li.login a {color:#FFF;}
+	
+	
+	/* 전체메뉴 목록 */
+	#mobile_menu dl {}
+	#mobile_menu dl dt {
+		padding:10px 10px;
+		background:url(/resources/application/images/menu/arrow_r.png) 97% 50% no-repeat;
+		background-size:28px 28px;
+		border-top:1px solid #46434A;border-bottom:1px solid #46434A;
+	}
+	#mobile_menu dl dt.over {
+		background:url(/resources/application/images/menu/arrow_b.png) 97% 50% no-repeat;
+		background-size:28px 28px;
+	}
+	
+	#mobile_menu dl dt a {
+		color:#FFF;font-size:1em;font-weight:bold;
+	}
+	#mobile_menu dl dt a img {width:30px;height:28px;}
+	
+	#mobile_menu dl dd { display:none; }	
+		#mobile_menu dl dd ul {list-style:none;}
+		#mobile_menu dl dd ul li {
+			margin-left:50px;line-height:25px;
+		}
+		#mobile_menu dl dd ul li a {
+			color:#FFF;font-size:0.8em;
+		}
+
+	
+/* 모바일 전체영역 */
+#mobile_area {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+/* 최상단 좌측메뉴, 타이틀, 전체메뉴 */
+/*
+
+#mobile_header {
+	z-index:100;height:60px;
+	background:#FFF url(/resources/application/images/topbg.png) top left repeat;
+	border-bottom:3px solid #125081	;
+}
+
+#mobile_header.main {
+	background:none;
+	border:none;
+	/*border-bottom:none;*/
+}
+*/
+
+	#mobile_header ul {list-style:none;}
+	#mobile_header ul li {
+		padding:5px 10px;
+	}	
+		#mobile_header ul li img {}
+		#mobile_header ul li img.h50 {height:50px;}
+		#mobile_header ul li img.h30 {height:30px;}
+		#mobile_header ul li img.h25 {height:25px;}
+	
+		#mobile_header ul li.mh-left {float:left;margin-top:25px;}
+		#mobile_header ul li.mh-logo {text-align:center; padding-top:20px; color:#194e82; }
+		#mobile_header ul li.mh-right {float:right;margin-top:25px;}
+
+
+
+/* 페이징 class */
+#pagingArea {padding:20px 0px;text-align:center;}
+#pagingArea a {font-size:0.8em;}
+
+#pagingArea a span {padding:5px 10px 5px 10px;border:1px solid #ccc;background:rgba(0,0,0,0.2);}
+#pagingArea .pg_clk, #pagingArea a:hover span {color:#000;background:#FFF;}
+#pagingArea .pg_n_clk {color:#FFF;}
+
+#pagingArea .pg_left_clk {color:#000;background:#FFF;} 
+#pagingArea .pg_right_clk {color:#000;background:#FFF;}
+
+
+
+
+/* 하단 빈영역, 앱에서 겹쳐보여서 여백을 줌 */
+#mobile_footer {clear:both;height:90px;}
+

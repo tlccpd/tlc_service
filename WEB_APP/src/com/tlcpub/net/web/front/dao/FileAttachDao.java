@@ -8,20 +8,21 @@ import com.tlcpub.net.core.dao.AbstractIBatisDao;
 import com.tlcpub.net.web.front.dto.FileUpload;
 
 
+@SuppressWarnings("rawtypes")
 @Repository
-public class FileAttachDao extends AbstractIBatisDao {
-
+public class FileAttachDao<SqlMapClientTemplate> extends AbstractIBatisDao<SqlMapClientTemplate>{
+  
 
    public void insertAttach(FileUpload model){
-      template.insert("front.insertAttach", model);
+       ((AbstractIBatisDao)template).insert("front.insertAttach", model);
    }
 
    @SuppressWarnings("unchecked")
    public List<FileUpload> selectEntireFiles(){
-      return template.queryForList("front.selectEntireFiles");
+      return ((AbstractIBatisDao)template).queryForList("front.selectEntireFiles");
    }
 
-   public FileUpload selectAttachByPhysicalName(String pname){
-      return (FileUpload)template.queryForObject("front.selectAttachByPhysicalName", pname);
+   public Object selectAttachByPhysicalName(String pname){
+      return super.queryForObject("front.selectAttachByPhysicalName", pname);
    }
 }

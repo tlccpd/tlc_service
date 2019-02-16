@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+   <definition name="main" template="/layout.jsp">
+      <put-attribute name="title" value="쇼핑의 명가"/>
+      <put-attribute name="banner" value="/banner.jsp"/>
+      <put-attribute name="menu" value="/menu.jsp"/>
+      <put-attribute name="main" value="/main.jsp"/>
+      <put-attribute name="banner" value="/banner.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+   </definition>
+ 
+  <!-- User -->
+
+   <definition name="user.subscribe.form" extends="main">
+      <put-attribute name="main" value="/user/subscribe.form.jsp"/>
+   </definition>
+
+   <definition name="user.subscribe.result" extends="main">
+      <put-attribute name="main" value="/user/subscribe.result.jsp"/>
+   </definition>
+
+   <definition name="user.unsubscribe.form" extends="main">
+      <put-attribute name="main" value="/user/unsubscribe.form.jsp"/>
+   </definition>
+
+   <definition name="user.unsubscribe.result" extends="main">
+      <put-attribute name="main" value="/user/unsubscribe.result.jsp"/>
+   </definition>
+
+   <definition name="user.profile.view" extends="main">
+      <put-attribute name="main" value="/user/profile.view.jsp"/>
+   </definition>
+
+   <definition name="user.modify.form" extends="main">
+      <put-attribute name="main" value="/user/modify.form.jsp"/>
+   </definition>
+
+   <definition name="user.modify.result" extends="main">
+      <put-attribute name="main" value="/user/modify.result.jsp"/>
+   </definition>
+
+   <definition name="login.form" extends="main">
+      <put-attribute name="main" value="/login.form.jsp"/>
+   </definition>
+   
+   <definition name="user.manager.register.form" extends="main">
+      <put-attribute name="main" value="/user/manager.register.form.jsp"/>
+   </definition>
+   
+   <definition name="user.manager.list" extends="main">
+      <put-attribute name="main" value="/user/manager.list.jsp"/>
+   </definition>   
+
+  <!-- Cache -->
+
+   <definition name="cache.code.manage" extends="main">
+      <put-attribute name="title" value="공통 코드 관리"/>
+      <put-attribute name="main" value="/cache/manage.jsp"/>
+   </definition>   
+   
+   <definition name="cache.code.add" extends="main">
+      <put-attribute name="title" value="공통 코드 추가"/>
+      <put-attribute name="main" value="/cache/add.jsp"/>
+   </definition>      
+
+  <!-- Scheduler -->   
+   
+   <definition name="schedule.list" extends="main">
+      <put-attribute name="title" value="스케쥴러 목록"/>
+      <put-attribute name="main" value="/scheduler/list.jsp"/>
+   </definition>
+
+   <definition name="schedule.edit" extends="main">
+      <put-attribute name="title" value="스케쥴러 수정"/>
+      <put-attribute name="main" value="/scheduler/edit.jsp"/>
+   </definition>
+   
+   <definition name="schedule.new" extends="main">
+      <put-attribute name="title" value="스케쥴러 등록"/>
+      <put-attribute name="main" value="/scheduler/new.jsp"/>
+   </definition>
+   
+  <!-- Control -->   
+
+   <definition name="control.main" extends="main">
+      <put-attribute name="title" value="제어 센터"/>
+      <put-attribute name="main" value="/control/main.jsp"/>
+   </definition>
+   
+   <definition name="control.delivery" extends="main">
+      <put-attribute name="title" value="다중 서버 파일 전송"/>
+      <put-attribute name="main" value="/control/delivery.jsp"/>
+   </definition>   
+
+  <!-- File Upload/Download -->   
+   
+   <definition name="file.upload.form" extends="main">
+      <put-attribute name="title" value="파일 업로드"/>
+      <put-attribute name="main" value="/file/upload.form.jsp"/>
+   </definition>
+
+   <definition name="file.download.list" extends="main">
+      <put-attribute name="title" value="파일 다운로드"/>
+      <put-attribute name="main" value="/file/list.jsp"/>
+   </definition>   
+
+  <!-- Config -->   
+   
+   <definition name="config.view" extends="main">
+      <put-attribute name="title" value="환경 설정 파일 조회"/>
+      <put-attribute name="main" value="/config/configView.jsp"/>
+   </definition>
+ 
+  <!-- Error Page -->
+  
+   <definition name="exception.unexpected" extends="main">
+      <put-attribute name="title" value="예외 발생"/>
+      <put-attribute name="main" value="/error/exception/unexpected.jsp"/>
+   </definition>
+
+   <definition name="exception.message" extends="main">
+      <put-attribute name="title" value="주의"/>
+      <put-attribute name="main" value="/error/exception/message.jsp"/>
+   </definition>
+   
+   <definition name="forbidden" extends="main">
+      <put-attribute name="title" value="접근 금지"/>
+      <put-attribute name="main" value="/error/exception/forbidden.jsp"/>
+   </definition>     
+
+  <!-- Test Page -->
+  
+   <definition name="test.form" extends="main">
+      <put-attribute name="title" value="테스트"/>
+      <put-attribute name="main" value="/test/form.jsp"/>
+   </definition>
+  
+</tiles-definitions>

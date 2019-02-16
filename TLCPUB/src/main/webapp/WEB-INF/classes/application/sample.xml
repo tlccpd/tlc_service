@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<gui-definition>
+   <colors>
+      <text>#000000</text>
+      <link normal="#000080" visited="#800080"/>
+      <default>${colors.text}</default>
+   </colors>
+   <rowsPerPage>15</rowsPerPage>
+   <buttons>
+      <name>OK,Cancel,Help</name>
+   </buttons>
+   <numberFormat pattern="###\,###.##"/>
+</gui-definition>
