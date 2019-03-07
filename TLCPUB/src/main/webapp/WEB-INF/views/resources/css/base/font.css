@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: "NanumGothic";
+	src: url('../font/NanumGothic.eot');
+	src:local(※), url('../font/NanumGothic.woff') format('../font/woff')
+}
+
+body{
+	font-family: 'NanumGothic','맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+	font-size: 14px;
+	line-height: 1.25em;
+}

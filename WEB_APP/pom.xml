@@ -219,6 +219,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>net.webapp</finalName>
+        <finalName>tlcpub</finalName>
     </build>
 </project>

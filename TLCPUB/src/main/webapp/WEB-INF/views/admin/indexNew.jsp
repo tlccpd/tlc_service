@@ -55,42 +55,42 @@
 <html class="no-js" lang="ko">
 <!--<![endif]-->
 <head>
-<title>TLCPUB</title>
+<title>강릉 원주 대학교  </title>
 
-<meta charset="utf-16" content="text/html">
+<meta charset="utf-8" content="text/html">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 
-<link rel="apple-touch-icon" href="/resources/images/favicon.png" />
-<link rel="shortcut icon" href="/resources/images/favicon.ico" />
+<link rel="apple-touch-icon" href="../resources/images/favicon.png" />
+<link rel="shortcut icon" href="../resources/images/favicon.ico" />
 
-<link rel="stylesheet" href="/resources/css/style.css" type="text/css" />
+<link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
 
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="/resources/js/dist/modernizr.js"></script>
-<script type="text/javascript" src="/resources/js/dist/swipe.js"></script>
-<script type="text/javascript" src="/resources/js/script.js"></script>
+<script type="text/javascript" src="../resources/js/dist/modernizr.js"></script>
+<script type="text/javascript" src="../resources/js/dist/swipe.js"></script>
+<script type="text/javascript" src="../resources/js/script.js"></script>
 
 
-<link rel="stylesheet" href="/resources/css/new/Base.css">
-<link rel="stylesheet" href="/resources/css/new/common.css">
-<link rel="stylesheet" href="/resources/css/new/layout.css">
+<link rel="stylesheet" href="../resources/css/new/Base.css">
+<link rel="stylesheet" href="../resources/css/new/common.css">
+<link rel="stylesheet" href="../resources/css/new/layout.css">
 
 	
-	<link rel="stylesheet" href="/resources/css/new/layout.main.css">
+	<link rel="stylesheet" href="../resources/css/new/layout.main.css">
 	
 	 
 
 
-<script type="text/javascript" src="/resources/js/new/hansei.func.datetime.js"></script>
-<script type="text/javascript" src="/resources/js/new/hansei.js"></script>
+<script type="text/javascript" src="../resources/js/new/hansei.func.datetime.js"></script>
+<script type="text/javascript" src="../resources/js/new/hansei.js"></script>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-<script type="text/javascript" src="/resources/js/new/jquery.ui.touch.js"></script>
+<script type="text/javascript" src="../resources/js/new/jquery.ui.touch.js"></script>
 
 <script type="text/javascript">
 	var global = {
@@ -107,13 +107,13 @@
 
 
 
-<script type="text/javascript" src="/resources/js/new/swipe.js"></script>
+<script type="text/javascript" src="../resources/js/new/swipe.js"></script>
 
 <style type="text/css">
 
 #mobile_header {
   z-index: 100;
-  background: #FFF url(/resources/application/images/topbg.png) top left repeat;
+  background: #FFF url(../resources/application/images/topbg.png) top left repeat;
      
   border-bottom: 3px solid #125081;
 }
@@ -172,13 +172,13 @@
 }
 
 #mobile_menu dl dt.over {
-	background: url('/resources/images/new/menu/arrow_b.png') 97% 50% no-repeat;
+	background: url('../resources/images/new/menu/arrow_b.png') 97% 50% no-repeat;
 	background-size: 28px 28px;
 }
 
 #mobile_menu dl dt {
 	padding: 5px 10px 5px 10px;
-	background: url('/resources/images/new/menu/arrow_r.png') 97% 50% no-repeat;
+	background: url('../resources/images/new/menu/arrow_r.png') 97% 50% no-repeat;
 	background-size: 28px 28px;
 	border-top: 1px solid #46434A;
 	border-bottom: 1px solid #46434A;
@@ -198,7 +198,7 @@
 	}
 	
 	function loginGoNew() {
-		alert("ë¡ê·¸ì¸íìì¼ í©ëë¤.");
+		alert("로그인하셔야 합니다.");
 		location.href = "/auth/loginNew.do"; 
 		return;
 	}
@@ -212,23 +212,23 @@
     }
 	
 	function myPageViewNothingMenu() {
-		alert("ì¤ì í ë©ë´ê° ì¡´ì¬íì§ ììµëë¤.");
+		alert("설정한 메뉴가 존재하지 않습니다.");
 		return;
 	}
 	
 	function goCheckLogin() {
-    //	alert("ë¡ê·¸ì¸íìì¼ í©ëë¤.");
+    //	alert("로그인하셔야 합니다.");
     	location.href = "/auth/loginNew.do";
     	return;
     }
     
     function goCheckProStuLogin() {
-    	alert("êµìë íìë§ ì´ì©í  ì ììµëë¤.");
+    	alert("교수나 학생만 이용할 수 있습니다.");
     	return;
     }
     
     function goCheckStuLogin() {
-    	alert("íìë§ ì´ì©í  ì ììµëë¤.");
+    	alert("학생만 이용할 수 있습니다.");
     	return;
     }
 
@@ -255,9 +255,9 @@
 </script>
 
 <div id="mobile_menu">
-	<ul class="title" style="background:url('/resources/images/sub/sub_back/submenu_logo.png'); background-repeat:no-repeat; background-size:70px 75px; background-position:right top;">
-		<li class="close" style="padding-bottom:20px"><a href="javascript:jsMenu();" title="CLOSE"><img src="/resources/images/main/main_back/new/sub/close.png" align="absmiddle"></a></li>
-		<li class="logo" style="padding-top:10px"><a href="/indexNew.do" title="GWNU MENU"><span style="letter-spacing:-1px">GWNU MENU</span></a></li>
+	<ul class="title" style="background:url('../resources/images/sub/sub_back/submenu_logo.png'); background-repeat:no-repeat; background-size:70px 75px; background-position:right top;">
+		<li class="close" style="padding-bottom:20px"><a href="javascript:jsMenu();" title="CLOSE"><img src="../resources/images/main/main_back/new/sub/close.png" align="middle"></a></li>
+		<li class="logo" style="padding-top:10px"><a href="../pay/indexNew.do" title="MENU"><span style="letter-spacing:0.5px; font-size:12px;font-family:batang"> ink : ℓ</span></a></li>
 	</ul>
 	
 	<ul style="clear:both;">
@@ -265,7 +265,11 @@
 		
 		<li class="hl login" style="background:#383838">
 		
-		<a href="/auth/loginNew.do" title="LOGIN" style="font-family:'dotum'; font-size:15px;">LOGIN</a>
+	
+<!--		 <a href="/auth/loginNew.do" title="LOGIN" style="font-family:'dotum'; font-size:15px;">LOGIN2</a> -->
+		<a href="http://m.gwnu.ac.kr/auth/loginNew.do" title="LOGIN" style="font-family:'dotum'; font-size:15px;">LOGIN</a> 
+		
+		
 		
 		</li>
 		
@@ -273,54 +277,60 @@
 	
 	<dl>
 		<dt>
-			<a href='#' title='INTRO' >
-			<img src='/resources/images/new/icon_01.png' title='TLC'> TLC  </a></dt>
+			<a href='#' title='소개' >
+			<img src='../resources/images/new/icon_01.png' title='소개'> TLC 소개 
+			</a>
+		</dt>
 		<dd>
 			<ul>
-				<li><a href="/intro/01/indexNew.do"> ABOUT</a></li>
-				<li><a href="/intro/02/indexNew.do"> NOTICE</a></li>
-				<li><a href="/intro/04/indexNew.do"> NOW & NEW </a></li>
+				<li><a href="../intro/01/indexNew.do"> 공지사항</a></li>
+				<li><a href="../intro/02/indexNew.do"> 일반(준회원)</a></li>
+				<li><a href="../intro/04/indexNew.do"> 프리미엄(정회원)</a></li>
+				<li><a href="../intro/06/indexNew.do"> 이달의 세미나</a></li>
+				<li><a href="../intro/03/indexNew.do"> 이달의 공연</a></li>
 			</ul>
 		</dd>
 	</dl>
 	
 	<dl>
 		<dt>
-			<a href='#' title='RSV'>
-				<img src='/resources/images/new/icon_02.png' title='ìíìë´'> 예약 & 확인 </a>
-		</dt>
+			<a href='#' title='예약'>
+				<img src='../resources/images/new/icon_02.png' title='작품검색'> 작품 검색	</a></dt>
 		<dd>
 			<ul>
-				<li><a href="/appBbsList.brd?sub_title=ìíê³µì§&re_bbs_setup_seq=25"> 예약하기 </a></li>
-				<li><a href="/ibsi/02/indexNew.do"> 내역 조회 </a></li>
+				<li><a href="../appBbsList.brd?sub_title=입학공지&re_bbs_setup_seq=25"> 상세 검색</a></li>
+				<li><a href="../ibsi/02/indexNew.do"> 이달의 추천작</a></li>
+				<li><a href="../ibsi/03/indexNew.do"> 이달의 우수작</a></li>
 			</ul>
 		</dd>
 	</dl>
 	<dl>
 		<dt>
-			<a href='#' title='WORKS'>
-				<img src='/resources/images/new/icon_03.png' title='ëí / ëíì'> 작품 조회 </a>
-		</dt>
+			<a href='#' title='마이페이지'>
+				<img src='../resources/images/new/icon_03.png' title='작품등록'> 작품 등록	</a></dt>
 		<dd>
 			<ul>
-				<li><a href="/board/new/indexNew.do" target='_self' > 최신작 </a></li>
-				<li><a href="/board/inter/indexNew.do" target='_self' > 인기작 </a></li>
-				<li><a href="/board/recom/indexNew.do" target='_self' > 추천작 </a></li>
+				<li><a href="../school/01/indexNew.do" target='_self'>  신규 등록</a></li>
+				<li><a href="../school/02/indexNew.do" target='_self'>  등록 수정</a></li>
 			</ul>
 		</dd>
 	</dl>
 	
 	<dl>
 		<dt>
-			<a href='#' title='MEMBER' >
-				<img src='/resources/images/new/icon_04.png' title='íì¬ì ë³´'> 멤버쉽 </a>
+			<a href='#' title='멤버쉽'>
+				<img src='../resources/images/new/icon_04.png' title='멥버쉽'> 멤버쉽
+			</a>
 		</dt>
 		
 		<dd>
 	        <ul>
-				<li><a href="/auth/loginNew.do"> 이달의 세미나 </a></li>
-	            <li><a href="/auth/loginNew.do"> 이달의 상영 </a></li>
-	            <li><a href="/auth/loginNew.do"> 멤버쉽 문의 </a></li>
+				<li><a href="../auth/loginNew.do"> 정회원 등록</a></li>
+	            <li><a href="../auth/loginNew.do"> 작품 구매내역</a></li>
+	            <li><a href="../auth/loginNew.do"> </a></li>
+	            <li><a href="../auth/loginNew.do"> 마이페이지</a></li>
+	            <li><a href="../auth/loginNew.do"> 학사일정안내</a></li>
+	            <li><a href="../auth/loginNew.do"> 강의계획서 조회</a></li>
 			</ul>
 	    </dd>
 		
@@ -328,25 +338,16 @@
 	
 	<dl>
 		<dt>
-			<a href='#' title='PRIVATE'>
-				<img src='/resources/images/new/icon_05.png' title='ADD_WORK'> 작품 등록 </a>
-			<dd>
-	        <ul>
-				<li><a href="/auth/loginNew.do"> 등록하기 </a></li>
-	            <li><a href="/auth/loginNew.do"> 저작권 내역 </a></li>
-	            <li><a href="/auth/loginNew.do"> 나의 작품 </a></li>
-			</ul>
-	    </dd>
-	    </dl>
-		<dl>
-		<dt>
-		<a href='#' title='PROCESS'>
-				<img src='/resources/images/new/icon_05.png' title='PROCESS'> 처리현황  </a>
+			<a href='#' title='정보광장' >
+				<img src='../resources/images/new/icon_05.png' title='정보광장'> 정보광장
+			</a>
 		</dt>
 		<dd>
-			<ul>				
-				<li><a href="/info/list_infoNew.do?sub_title=ì ë³´ê´ì¥" target='_self' /> 작품 </a></li>				
-				<li><a href="/boardListNew.brd?sub_title=ì ë³´í TIP&re_board_id=232"> 모임/세미나/상영 </a></li>				
+			<ul>
+				<li><a href="../info/list_noticeNew.do?sub_title=공지사항" target='_self'>  공지사항</a></li>
+				<li><a href="../info/list_infoNew.do?sub_title=정보광장" target='_self'>  정보광장</a></li>				
+				<li><a href="../boardListNew.brd?sub_title=정보화 TIP&re_board_id=232"> 정보화 TIP</a></li>
+				<li><a href="../info/wifiNew.do"> WIFI안내</a></li>
 			</ul>
 		</dd>
 	</dl>
@@ -354,8 +355,8 @@
 	<dl>
 		<dt>
 			
-			<a href="/auth/loginNew.do" title='ëìê´' />
-				<img src='/resources/images/new/icon_06.png' title='ëìê´'> 컨텐츠 추천작
+			<a href="/auth/loginNew.do" title='도서관'>
+				<img src='../resources/images/new/icon_06.png' title='도서관'> 도서관
 			</a>
 					
 		</dt>
@@ -363,8 +364,8 @@
 	
 	<dl>
 		<dt>
-			<a href="/schedule/appSchdulList.do" title='íì¬ì¼ì ' />
-				<img src='/resources/images/new/icon_07.png' title='íì¬ì¼ì '> íì¬ì¼ì 
+			<a href="/schedule/appSchdulList.do" title='학사일정'>
+				<img src='../resources/images/new/icon_07.png' title='학사일정'> 학사일정
 			</a>
 		</dt>
 	</dl>
@@ -372,16 +373,16 @@
 	
 	<dl>
 		<dt>
-			<a href="javascript:jobAppGo();" title='ì·¨ìì ë³´' style="padding-left:2px; padding-right:3px">
-				<img src='/resources/images/new/icon_09.png' title='ì·¨ìì ë³´' style="width:26px; height:28px"> ì·¨ìì ë³´
+			<a href="javascript:jobAppGo();" title='취업정보' style="padding-left:2px; padding-right:3px">
+				<img src='../resources/images/new/icon_09.png' title='취업정보' style="width:26px; height:28px"> 취업정보
 			</a>
 		</dt>
 	</dl>
 	
 	<dl>
 		<dt>
-			<a href="/intro/03/indexNew.do" title='ì°¾ìì¤ìëê¸¸' style="padding-left:2px; padding-right:3px">
-				<img src='/resources/images/new/icon_10.png' title='ì°¾ìì¤ìëê¸¸' style="width:26px; height:35px"> ì°¾ìì¤ìëê¸¸
+			<a href="/intro/03/indexNew.do" title='찾아오시는길' style="padding-left:2px; padding-right:3px">
+				<img src='../resources/images/new/icon_10.png' title='찾아오시는길' style="width:26px; height:35px"> 찾아오시는길
 			</a>
 		</dt>
 	</dl>
@@ -390,14 +391,14 @@
 		<form method="post">
 			<ul class="etc">
 				<li style="padding:3px">
-					<a href="/main/sitemapNew.do"><img src="/resources/images/new/main_menu_3.png" alt="ì ì²´ë³´ê¸°" style="width:100%; height:32px;" /></a>
+					<a href="/main/sitemapNew.do"><img src="../resources/images/new/main_menu_3.png" alt="전체보기" style="width:100%; height:32px;" /></a>
 				</li>
 				<li style="padding:3px">
-				 	<a href="/tutorial.jsp"><img src="/resources/images/new/main_menu_5.png" alt="íí ë¦¬ì¼ ë¤ìë³´ê¸°" style="width:100%; height:32px;" /></a>
+				 	<a href="/tutorial.jsp"><img src="../resources/images/new/main_menu_5.png" alt="튜토리얼 다시보기" style="width:100%; height:32px;" /></a>
 				</li>
 				<li style="padding:3px">
-				 	<a href="http://www.gwnu.ac.kr"><img src="/resources/images/new/main_menu_7.png" alt="pc ë²ì " style="width:100%; height:32px;" /></a>
-				</li>
+				 	<a href="http://www.gwnu.ac.kr"><img src="../resources/images/new/main_menu_7.png" alt="pc 버전" style="width:100%; height:32px;" /></a>
+				</l>
 			</ul>
 		</form>
 	
@@ -408,17 +409,17 @@
 </div>
 
 <div id="mobile_bg" class="main" style="border:none;" >
-	<img src="/resources/images/new/main_background.png" alt="ë°°ê²½ì¬ì§" />
+	<img src="../resources/images/new/main_background.png" alt="배경사진" />
 </div>
 
 <div id="mobile_area">	
-	<div id="mobile_header" style="background:url('/resources/images/main/main_back/new/top_background.png'); height:70px;">
+	<div id="mobile_header" style="background:url('../resources/images/main/main_back/new/top_background.png'); height:70px;">
 		<ul>
 			<li class="mh-left" >
-				<img src="/resources/images/main/main_back/btn_back_newA.png" alt="BACK" onclick="location.href='#';" class="h30" style="cursor:pointer; width:30px; height:30px;">
+				<img src="../resources/images/main/main_back/btn_back_newA.png" alt="BACK" onclick="location.href='#';" class="h30" style="cursor:pointer; width:30px; height:30px;">
 			</li>
 			<li class="mh-right">
-				<img src="/resources/images/main/main_back/btn_menu_newA.png" alt="MENU" id="btnAllMenu" class="h30" style="cursor:pointer; width:30px; height:30px;">
+				<img src="../resources/images/main/main_back/btn_menu_newA.png" alt="MENU" id="btnAllMenu" class="h30" style="cursor:pointer; width:30px; height:30px;">
 			</li>
 			<li class="mh-logo">
 				<img src="/resources/images/main/main_back/main_logo.png" alt="LOGO" onclick="location.href='/indexNew.do';" class="h50" style="cursor:pointer; width:168px; height:40px">
@@ -621,12 +622,12 @@
 				
                     var mypageItem = self.myPageItems[i];
 
-													if (i % 18 == 0) {        //ì¼ë¨ 14ë²ì íë² ì¤íëëê±°ì§       0 ì¼ë íë² ì í     
+													if (i % 18 == 0) {        //일단 14번에 한번 실행되는거징       0 일떄 한번 신행     
 													
 											//		output += '<div class="mypageSideItems mypageSideItems">';
 
 													   output += '<div class="mypageSideItems mypageSideItems" data-index="0" style="width:'+($(window).width())+'px; left: 0px; transition-duration: 300ms; -webkit-transition-duration: 300ms; -webkit-transform: translate(-'+($(window).width())+'px, 0px) translateZ(0px);">';
-														//ìì´í° ìì´í¨ë
+														//아이폰 아이패드
 														
 														output += '<div style="width:100%; height:80px;">   ';
 														
@@ -634,10 +635,10 @@
 														output += 		'<ul style="list-style-type:none">';
 														output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
 														output += 			'<li class="gangreung">';
-														output += 				'<span class="temperature_result">4.0Ë</span>';
+														output += 				'<span class="temperature_result">12.0˚</span>';
 														output += 			'</li>';
 														output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-														output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+														output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
 														output += 			'</li>';
 														output += 		'</ul>';
 														output += 	'</div>';
@@ -678,10 +679,10 @@
                 output += 		'<ul style="list-style-type:none">';
                 output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
                 output += 			'<li class="gangreung">';
-                output += 				'<span class="temperature_result">4.0Ë</span>';
+                output += 				'<span class="temperature_result">12.0˚</span>';
                 output += 			'</li>';
                 output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-                output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
                 output += 			'</li>';
                 output += 		'</ul>';
                 output += 	'</div>';
@@ -697,11 +698,11 @@
                 
 				output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
 				output += '<tr height="41px">';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px; height:41px;">ê³µì§ì¬í­</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">íì¬ì ë³´</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab4"><nobr><a href="javascript:tabOnOff(4);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">ì¥íì ë³´</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px; height:41px;">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab4"><nobr><a href="javascript:tabOnOff(4);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">장학정보</a></nobr></td>';
 				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">NEWS</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">íì¬ì ë³´</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px; height:41px;">행사정보</a></nobr></td>';
 								
 				output += '</tr>';
 				output += '</table>';
@@ -711,11 +712,11 @@
                 output += '<div id="mobile_main_notice">';
                 output += '	<div id="mobileBoardArea">';
                 
-				output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87103' style='color:#000000; font-size:14px; margin-left:3px'>íë´ ì¼ë¶ ì ë³´ìì¤í ìë¹ì¤ ì¤ì§ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87077' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ëíêµ ì¼ë°ì§ê³µë¬´ì(ê³µì 7ê¸ ëë 8ê¸) ì ìí¬ë§ì ëª¨ì§ ì¬ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87060' style='color:#000000; font-size:14px; margin-left:3px'>ìí ê³ì½ì§ì(ììì¬) ìë¥ì í í©ê²©ì ê³µê³  ë° ë©´ì  ì¼ì  </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87054' style='color:#000000; font-size:14px; margin-left:3px'>[ê°ë¦]ê°ë¦ìì£¼ëíêµ ìì°ê³¼íëí ìë¬¼íê³¼ íì ì¡°êµ ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87051' style='color:#000000; font-size:14px; margin-left:3px'>[í´ëêµìêµì¡ì] 2018íëë ãMeaning Making Bookã ì°ìì ì ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87045' style='color:#000000; font-size:14px; margin-left:3px'>íììíê´ ê¸°í¼ìì¤(ìí¥ê´-ë¯¼ì3ì°¨) ìì¤ì ëª¨ì§ ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87029' style='color:#000000; font-size:14px; margin-left:3px'>ì¤ìê¸°ì ê³ì½íê³¼(ì°ëì¤ë°ì´ì¤ì°ìíê³¼) ì§ì(ê³ì½ì§) ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87019' style='color:#000000; font-size:14px; margin-left:3px'> ê³µíêµì¡íì ì¼í° ì°êµ¬ì ì±ì©ê³µê³  </a>	</li></ul>";
-                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=87096' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ì´ë¬ë ê¸°ë§ê³ ì¬ ì¤ì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86968' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° í ëí  êµë¥ ìí ìë´(ê³ì)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86966' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° ë³µí ë° ìê°ì ì²­ ì¼ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86948' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­ì êµë¥ì ] 2019ë íêµ­ ì¤êµ­ì´ê³¼ ëíì ì¤êµ­ ì°ì ëìì ì ë° ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86904' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° ì±ì íì  ë° ì´ìì ì²­ ê¸°í ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86787' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ê°ì ìì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86473' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2019íëë 1íê¸° ì¬ìí ì ì²­ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86407' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2018íëë ì ê¸° ì¡¸ììì ì ì¡¸ìì¬ì  ìí ë° ì¡¸ì ì ì ì ì²­ ìë´</a>	</li></ul>";
-				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87116' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° êµ­ê°ì¥íê¸ â¡ì í ì¥íê¸ ì§ê¸ ìë£ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87042' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íµìì ì ìë ëíì ì¥íê¸ ì§ìëìì¬ ì ë° ìë´(1.8~2.8)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86997' style='color:#000000; font-size:14px; margin-left:3px'>2019ë 1íê¸° ëì´ì´ì¶ì ëíì íìê¸ìµì ì ì²­ ìë´(1ì°¨)(1.2~1.11)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86975' style='color:#000000; font-size:14px; margin-left:3px'>2019ëë ì ì£¼í¹ë³ìì¹ë ìë°ê¸° íìê¸ ëì¶ì´ì ì§ì(1.3~3.29)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86974' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íêµ­ì§ëìì¡ì±ì¥íì¬ë¨ ì ê·ì¥íì ì ì²­ìë´(1.3~1.9)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86955' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° 9~10ë¶ì ì¤ ê¸´ê¸ê²½ì ì¬ì ê³¤ëì ëì êµ­ê°â¡ì í ì¶ê° ì§ê¸ì ìí ì ì²­ ì ì ìë´(~2019.1.9.(ì)ê¹ì§)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86947' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° 12ì ê·¼ë¡ì¥íê¸ ì§ê¸ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86880' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë ëê³ë°©í ê·¼ë¡ì¥íì(êµ­ê°ê·¼ë¡) ì¶ê° ì ë° ê²°ê³¼ ìë¦¼</a>	</li></ul>";
-                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86957' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ë 2019ë ìë¬´ì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86921' style='color:#000000; font-size:14px; margin-left:3px'>ê°ì¬í©ëë¤, ì§ì ì ë í´ìì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86908' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¬í´ì GWNU 10ë ë´ì¤ ë°í</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86907' style='color:#000000; font-size:14px; margin-left:3px'>ì¬ì°ì¤ì¨ì¤í´ì¤í´ë¼í¸ë§ì£¼ë¦½ëí ê²½ì í êµì ì¥ì§ì ëë¬¸, ëª¨êµ ë°©ë¬¸</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86906' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼, 2018ë íêµ­ì§ì­ì¬íê°í¸íí ëê³íì ëí ì°ì í¬ì¤í°ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86855' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì ê´ë´ ëí, ì§ì­ì¬í ì±ì¥ ê¸°ë° êµ¬ì¶</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86854' style='color:#000000; font-size:14px; margin-left:3px'>4ì°¨ ì°ìíëª ì ëë¥¼ ìí ê°ë¦ìì£¼ëíêµ êµì¡ íì ê³¼ ì¤ì¥ê¸° ë°ì ê³í ìë¦½ ìí¬ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86852' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼ ê¹ìì£¼ êµì, íêµ­ê°í¸ê³¼íí ì°ìì¬ì¬ììì ìì</a>	</li></ul>";
-                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87090' style='color:#000000; font-size:14px; margin-left:3px'>[ì¤ìì ê±°ê´ë¦¬ììí ì ê±°ì°ìì]ì ê±°, ì ì¹ì ë ê°ì ì ìí ë¼ë¬¸ ê³µëª¨</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87011' style='color:#000000; font-size:14px; margin-left:3px'>2018 ì¤ìê¸°ì íë°© ìº í &apos;ì·¨ì¤ë¬ì ì¤ë¬´ì ë³µê¸°&quot;(ê¸°í/ë§ì¼í) ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86841' style='color:#000000; font-size:14px; margin-left:3px'>ë¬¸íë¤ìì± ì¦ì§ê³¼ ê°ì¹ íì° ë¬¸íì½íì¸ ã ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86781' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­íì¬ë¬´ì²]2019ëë êµ­í ëí(ì)ì ìì¹´ë°ë¯¸(1ì°¨) ê³¼ì (2019.1.29.~30. ëª¨ì§ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86778' style='color:#000000; font-size:14px; margin-left:3px'>[ë³ë¬´ì²­]2019ëë ì²­ì¶ìì°¬ ê¸°ìë¨(ë³ë¬´íë³´ìì) ì ë° ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86777' style='color:#000000; font-size:14px; margin-left:3px'>[íì±ì][ê³µëª¨ì ]ì²­ëìê° ì°¸ì¬ ì ìë¦¬3.1ì´ëìêµ­ê¸°ëê´ íë¡ì í¸ ì ì ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86451' style='color:#000000; font-size:14px; margin-left:3px'>GWNU 2018 Musica Academy&Festival ì²­ìëì ìí ììí ê°ìµ ìë¦¼ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86422' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¤ìê¸°ì íë°© 2ì¼ íë¡ê·¸ë¨&apos; 7íì°¨</a>	</li></ul>";
+				output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88285' style='color:#000000; font-size:14px; margin-left:3px'>[강릉경찰서]악성폭력 범죄(데이트폭력) 신고 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88266' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 조리원(계약직) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88258' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원(조리원, 미화원) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88236' style='color:#000000; font-size:14px; margin-left:3px'>【강릉원주대학교 박물관】  박물관 전시실 관람 및 탁본체험 운영 시간 변경 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88232' style='color:#000000; font-size:14px; margin-left:3px'>[교육역량개발원] 2019-1학기 학습동아리 모집 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88221' style='color:#000000; font-size:14px; margin-left:3px'>【어학원】 강릉,원주캠퍼스 근로장학생 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88208' style='color:#000000; font-size:14px; margin-left:3px'>단과대학통합행정실 휴직대체인력 채용 최종 합격자 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88173' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원 채용 최종합격자 발표</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88207' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 수강(변경) 신청 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88009' style='color:#000000; font-size:14px; margin-left:3px'>[국제교류원]2019-2020 중국 정부 초청 장학생 선발 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88002' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 OCU 개설교과목 목록안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87970' style='color:#000000; font-size:14px; margin-left:3px'>교시별 수업시간 기준표  알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87952' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 유사대체교과목 신청 안내(OCU 포함)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87919' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 시간표  공지(수강편람, 시간표 최종 자료 탑재) 오류 정정</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87844' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 신입생(편입생) 수강신청 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87722' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 공지(교과과정 이수기준표, 교육과정 이수 안내등) 변경사항 수시 업데이트</a>	</li></ul>";
+				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=88273' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 선발 결과 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87995' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 신청 안내(2.19~2.25)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87993' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 2월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87748' style='color:#000000; font-size:14px; margin-left:3px'>2019년 제10기 사회리더 대학생 멘토링 &quot;멘티를 모집합니다&quot;(1.23~2.20)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87704' style='color:#000000; font-size:14px; margin-left:3px'>2019년 울산인재육성재단 상반기 장학생 선발 안내(2.18~3.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87548' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 1월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87517' style='color:#000000; font-size:14px; margin-left:3px'>2019년 1학기 푸른등대 기부장학사업 신규장학생 신청 안내(~2.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87345' style='color:#000000; font-size:14px; margin-left:3px'>[교외] 2019년 동암장학회 장학생 선발 안내(~2.8)</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88278' style='color:#000000; font-size:14px; margin-left:3px'>신입생 모두에게 장미 한 송이</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88191' style='color:#000000; font-size:14px; margin-left:3px'>치의학과 졸업생 치과의사시험 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88185' style='color:#000000; font-size:14px; margin-left:3px'>전기공학과 박철원 교수팀, 전력계통보호제어연구회 논문 대상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88181' style='color:#000000; font-size:14px; margin-left:3px'>동해안해양바이오산업창조인재양성사업단, 해단식</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88148' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 학위수여식 열려</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88147' style='color:#000000; font-size:14px; margin-left:3px'>간호학과, 학과발전기금 1억 기부 약정 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88106' style='color:#000000; font-size:14px; margin-left:3px'>간호학과 4학년 국가고시 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88099' style='color:#000000; font-size:14px; margin-left:3px'>정보통계학과 정동빈 교수, 한국전자상거래학회 11대 회장 취임</a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88284' style='color:#000000; font-size:14px; margin-left:3px'>[대전광역시]2019 대청호대덕뮤직페시티벌 [전국 청소년가요제] 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88283' style='color:#000000; font-size:14px; margin-left:3px'>[법제처]2019년 법제처 국민법제관 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88282' style='color:#000000; font-size:14px; margin-left:3px'>[한국과학창의재단]2019년 1학기 함성소리, 알락달락 행복한 교실 참가 대학생 동이리 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88281' style='color:#000000; font-size:14px; margin-left:3px'>[강원지방경찰청]보이스피싱 예방을 위한 &quot;영상 포스터 공모전&quot; 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88059' style='color:#000000; font-size:14px; margin-left:3px'>2019년 농업법인 취업지원 사업 농업법인 및 인턴 모집 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88035' style='color:#000000; font-size:14px; margin-left:3px'>[기상청]2019년 제3회 기후시그널8.5 웹툰 공모전 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88034' style='color:#000000; font-size:14px; margin-left:3px'>[과학기술정보통신부]디지털 성범죄 피해방지 아이디어 및 R&D 기획 공모전 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88030' style='color:#000000; font-size:14px; margin-left:3px'>[교육부]2019년 자유학기 수기 공모전 안내</a>	</li></ul>";
                 
                 output += '	</div>';
                 output += '</div>';
@@ -728,11 +729,11 @@
 
 
 
-//íë©´ì ì¶ë ¥íë í¨ì
+//화면에 출력하는 함수
                 $('.swipe-wrap').html(output);
         
 				
-		//ìì´ì½ ê°¯ìì ë°ë¼ ì¸ë±ì¤ ë²í¼ì íì±í ìí¨ë¤.		
+		//아이콘 갯수에 따라 인덱스 버튼을 활성화 시킨다.		
 				if(self.myPageItems.length <= 18) {
                 	$("#position a:eq(2)").css("display", "none");
                 }
@@ -793,10 +794,10 @@
                 output += 		'<ul style="list-style-type:none">';
                 output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
                 output += 			'<li class="gangreung">';
-                output += 				'<span class="temperature_result">4.0Ë</span>';
+                output += 				'<span class="temperature_result">12.0˚</span>';
                 output += 			'</li>';
                 output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-                output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
                 output += 			'</li>';
                 output += 		'</ul>';
                 output += 	'</div>';
@@ -808,9 +809,9 @@
                 
                 output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
 				output += '<tr height="41px">';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">ê³µì§ì¬í­</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">íì¬ì ë³´</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">ì¥íì ë³´</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">장학정보</a></nobr></td>';
 				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">NEWS</a></nobr></td>';
 				output += '</tr>';
 				output += '</table>';
@@ -820,11 +821,11 @@
                 output += '<div id="mobile_main_notice">';
                 output += '	<div id="mobileBoardArea">';
                 
-                output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87103' style='color:#000000; font-size:14px; margin-left:3px'>íë´ ì¼ë¶ ì ë³´ìì¤í ìë¹ì¤ ì¤ì§ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87077' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ëíêµ ì¼ë°ì§ê³µë¬´ì(ê³µì 7ê¸ ëë 8ê¸) ì ìí¬ë§ì ëª¨ì§ ì¬ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87060' style='color:#000000; font-size:14px; margin-left:3px'>ìí ê³ì½ì§ì(ììì¬) ìë¥ì í í©ê²©ì ê³µê³  ë° ë©´ì  ì¼ì  </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87054' style='color:#000000; font-size:14px; margin-left:3px'>[ê°ë¦]ê°ë¦ìì£¼ëíêµ ìì°ê³¼íëí ìë¬¼íê³¼ íì ì¡°êµ ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87051' style='color:#000000; font-size:14px; margin-left:3px'>[í´ëêµìêµì¡ì] 2018íëë ãMeaning Making Bookã ì°ìì ì ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87045' style='color:#000000; font-size:14px; margin-left:3px'>íììíê´ ê¸°í¼ìì¤(ìí¥ê´-ë¯¼ì3ì°¨) ìì¤ì ëª¨ì§ ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87029' style='color:#000000; font-size:14px; margin-left:3px'>ì¤ìê¸°ì ê³ì½íê³¼(ì°ëì¤ë°ì´ì¤ì°ìíê³¼) ì§ì(ê³ì½ì§) ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87019' style='color:#000000; font-size:14px; margin-left:3px'> ê³µíêµì¡íì ì¼í° ì°êµ¬ì ì±ì©ê³µê³  </a>	</li></ul>";
-                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=87096' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ì´ë¬ë ê¸°ë§ê³ ì¬ ì¤ì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86968' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° í ëí  êµë¥ ìí ìë´(ê³ì)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86966' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° ë³µí ë° ìê°ì ì²­ ì¼ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86948' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­ì êµë¥ì ] 2019ë íêµ­ ì¤êµ­ì´ê³¼ ëíì ì¤êµ­ ì°ì ëìì ì ë° ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86904' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° ì±ì íì  ë° ì´ìì ì²­ ê¸°í ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86787' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ê°ì ìì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86473' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2019íëë 1íê¸° ì¬ìí ì ì²­ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86407' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2018íëë ì ê¸° ì¡¸ììì ì ì¡¸ìì¬ì  ìí ë° ì¡¸ì ì ì ì ì²­ ìë´</a>	</li></ul>";
-				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87116' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° êµ­ê°ì¥íê¸ â¡ì í ì¥íê¸ ì§ê¸ ìë£ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87042' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íµìì ì ìë ëíì ì¥íê¸ ì§ìëìì¬ ì ë° ìë´(1.8~2.8)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86997' style='color:#000000; font-size:14px; margin-left:3px'>2019ë 1íê¸° ëì´ì´ì¶ì ëíì íìê¸ìµì ì ì²­ ìë´(1ì°¨)(1.2~1.11)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86975' style='color:#000000; font-size:14px; margin-left:3px'>2019ëë ì ì£¼í¹ë³ìì¹ë ìë°ê¸° íìê¸ ëì¶ì´ì ì§ì(1.3~3.29)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86974' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íêµ­ì§ëìì¡ì±ì¥íì¬ë¨ ì ê·ì¥íì ì ì²­ìë´(1.3~1.9)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86955' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° 9~10ë¶ì ì¤ ê¸´ê¸ê²½ì ì¬ì ê³¤ëì ëì êµ­ê°â¡ì í ì¶ê° ì§ê¸ì ìí ì ì²­ ì ì ìë´(~2019.1.9.(ì)ê¹ì§)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86947' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° 12ì ê·¼ë¡ì¥íê¸ ì§ê¸ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86880' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë ëê³ë°©í ê·¼ë¡ì¥íì(êµ­ê°ê·¼ë¡) ì¶ê° ì ë° ê²°ê³¼ ìë¦¼</a>	</li></ul>";
-                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86957' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ë 2019ë ìë¬´ì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86921' style='color:#000000; font-size:14px; margin-left:3px'>ê°ì¬í©ëë¤, ì§ì ì ë í´ìì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86908' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¬í´ì GWNU 10ë ë´ì¤ ë°í</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86907' style='color:#000000; font-size:14px; margin-left:3px'>ì¬ì°ì¤ì¨ì¤í´ì¤í´ë¼í¸ë§ì£¼ë¦½ëí ê²½ì í êµì ì¥ì§ì ëë¬¸, ëª¨êµ ë°©ë¬¸</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86906' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼, 2018ë íêµ­ì§ì­ì¬íê°í¸íí ëê³íì ëí ì°ì í¬ì¤í°ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86855' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì ê´ë´ ëí, ì§ì­ì¬í ì±ì¥ ê¸°ë° êµ¬ì¶</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86854' style='color:#000000; font-size:14px; margin-left:3px'>4ì°¨ ì°ìíëª ì ëë¥¼ ìí ê°ë¦ìì£¼ëíêµ êµì¡ íì ê³¼ ì¤ì¥ê¸° ë°ì ê³í ìë¦½ ìí¬ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86852' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼ ê¹ìì£¼ êµì, íêµ­ê°í¸ê³¼íí ì°ìì¬ì¬ììì ìì</a>	</li></ul>";
-                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87090' style='color:#000000; font-size:14px; margin-left:3px'>[ì¤ìì ê±°ê´ë¦¬ììí ì ê±°ì°ìì]ì ê±°, ì ì¹ì ë ê°ì ì ìí ë¼ë¬¸ ê³µëª¨</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87011' style='color:#000000; font-size:14px; margin-left:3px'>2018 ì¤ìê¸°ì íë°© ìº í &apos;ì·¨ì¤ë¬ì ì¤ë¬´ì ë³µê¸°&quot;(ê¸°í/ë§ì¼í) ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86841' style='color:#000000; font-size:14px; margin-left:3px'>ë¬¸íë¤ìì± ì¦ì§ê³¼ ê°ì¹ íì° ë¬¸íì½íì¸ ã ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86781' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­íì¬ë¬´ì²]2019ëë êµ­í ëí(ì)ì ìì¹´ë°ë¯¸(1ì°¨) ê³¼ì (2019.1.29.~30. ëª¨ì§ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86778' style='color:#000000; font-size:14px; margin-left:3px'>[ë³ë¬´ì²­]2019ëë ì²­ì¶ìì°¬ ê¸°ìë¨(ë³ë¬´íë³´ìì) ì ë° ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86777' style='color:#000000; font-size:14px; margin-left:3px'>[íì±ì][ê³µëª¨ì ]ì²­ëìê° ì°¸ì¬ ì ìë¦¬3.1ì´ëìêµ­ê¸°ëê´ íë¡ì í¸ ì ì ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86451' style='color:#000000; font-size:14px; margin-left:3px'>GWNU 2018 Musica Academy&Festival ì²­ìëì ìí ììí ê°ìµ ìë¦¼ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86422' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¤ìê¸°ì íë°© 2ì¼ íë¡ê·¸ë¨&apos; 7íì°¨</a>	</li></ul>";
+               output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88285' style='color:#000000; font-size:14px; margin-left:3px'>[강릉경찰서]악성폭력 범죄(데이트폭력) 신고 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88266' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 조리원(계약직) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88258' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원(조리원, 미화원) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88236' style='color:#000000; font-size:14px; margin-left:3px'>【강릉원주대학교 박물관】  박물관 전시실 관람 및 탁본체험 운영 시간 변경 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88232' style='color:#000000; font-size:14px; margin-left:3px'>[교육역량개발원] 2019-1학기 학습동아리 모집 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88221' style='color:#000000; font-size:14px; margin-left:3px'>【어학원】 강릉,원주캠퍼스 근로장학생 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88208' style='color:#000000; font-size:14px; margin-left:3px'>단과대학통합행정실 휴직대체인력 채용 최종 합격자 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88173' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원 채용 최종합격자 발표</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88207' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 수강(변경) 신청 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88009' style='color:#000000; font-size:14px; margin-left:3px'>[국제교류원]2019-2020 중국 정부 초청 장학생 선발 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88002' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 OCU 개설교과목 목록안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87970' style='color:#000000; font-size:14px; margin-left:3px'>교시별 수업시간 기준표  알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87952' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 유사대체교과목 신청 안내(OCU 포함)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87919' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 시간표  공지(수강편람, 시간표 최종 자료 탑재) 오류 정정</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87844' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 신입생(편입생) 수강신청 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87722' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 공지(교과과정 이수기준표, 교육과정 이수 안내등) 변경사항 수시 업데이트</a>	</li></ul>";
+				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=88273' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 선발 결과 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87995' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 신청 안내(2.19~2.25)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87993' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 2월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87748' style='color:#000000; font-size:14px; margin-left:3px'>2019년 제10기 사회리더 대학생 멘토링 &quot;멘티를 모집합니다&quot;(1.23~2.20)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87704' style='color:#000000; font-size:14px; margin-left:3px'>2019년 울산인재육성재단 상반기 장학생 선발 안내(2.18~3.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87548' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 1월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87517' style='color:#000000; font-size:14px; margin-left:3px'>2019년 1학기 푸른등대 기부장학사업 신규장학생 신청 안내(~2.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87345' style='color:#000000; font-size:14px; margin-left:3px'>[교외] 2019년 동암장학회 장학생 선발 안내(~2.8)</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88278' style='color:#000000; font-size:14px; margin-left:3px'>신입생 모두에게 장미 한 송이</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88191' style='color:#000000; font-size:14px; margin-left:3px'>치의학과 졸업생 치과의사시험 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88185' style='color:#000000; font-size:14px; margin-left:3px'>전기공학과 박철원 교수팀, 전력계통보호제어연구회 논문 대상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88181' style='color:#000000; font-size:14px; margin-left:3px'>동해안해양바이오산업창조인재양성사업단, 해단식</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88148' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 학위수여식 열려</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88147' style='color:#000000; font-size:14px; margin-left:3px'>간호학과, 학과발전기금 1억 기부 약정 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88106' style='color:#000000; font-size:14px; margin-left:3px'>간호학과 4학년 국가고시 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88099' style='color:#000000; font-size:14px; margin-left:3px'>정보통계학과 정동빈 교수, 한국전자상거래학회 11대 회장 취임</a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88284' style='color:#000000; font-size:14px; margin-left:3px'>[대전광역시]2019 대청호대덕뮤직페시티벌 [전국 청소년가요제] 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88283' style='color:#000000; font-size:14px; margin-left:3px'>[법제처]2019년 법제처 국민법제관 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88282' style='color:#000000; font-size:14px; margin-left:3px'>[한국과학창의재단]2019년 1학기 함성소리, 알락달락 행복한 교실 참가 대학생 동이리 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88281' style='color:#000000; font-size:14px; margin-left:3px'>[강원지방경찰청]보이스피싱 예방을 위한 &quot;영상 포스터 공모전&quot; 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88059' style='color:#000000; font-size:14px; margin-left:3px'>2019년 농업법인 취업지원 사업 농업법인 및 인턴 모집 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88035' style='color:#000000; font-size:14px; margin-left:3px'>[기상청]2019년 제3회 기후시그널8.5 웹툰 공모전 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88034' style='color:#000000; font-size:14px; margin-left:3px'>[과학기술정보통신부]디지털 성범죄 피해방지 아이디어 및 R&D 기획 공모전 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88030' style='color:#000000; font-size:14px; margin-left:3px'>[교육부]2019년 자유학기 수기 공모전 안내</a>	</li></ul>";
                 
                 output += '	</div>';
                 output += '</div>';
@@ -866,10 +867,10 @@
                         output += 		'<ul style="list-style-type:none">';
                         output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
                         output += 			'<li class="gangreung">';
-                        output += 				'<span class="temperature_result">4.0Ë</span>';
+                        output += 				'<span class="temperature_result">12.0˚</span>';
                         output += 			'</li>';
                         output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-                        output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+                        output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
                         output += 			'</li>';
                         output += 		'</ul>';
                         output += 	'</div>';
@@ -937,7 +938,7 @@
 						}
 					}
 				});
-                slider.slide(1); // ì¤ì  ë²í¼ í´ë¦­ì ë©ì¸2ë¨íë©´ì¼ë¡ ì´ëí¨!
+                slider.slide(1); // 설정 버튼 클릭시 메인2단화면으로 이동함!
             },
 			drawSettingCompleteView: function () {
                 var self = this;
@@ -953,10 +954,10 @@
                 output += 		'<ul style="list-style-type:none">';
                 output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
                 output += 			'<li class="gangreung">';
-                output += 				'<span class="temperature_result">4.0Ë</span>';
+                output += 				'<span class="temperature_result">12.0˚</span>';
                 output += 			'</li>';
                 output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-                output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+                output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
                 output += 			'</li>';
                 output += 		'</ul>';
                 output += 	'</div>';
@@ -968,10 +969,10 @@
                 
                 output += '<table id="tabOnOffArea" style="border-top:0px; margin:0px; padding:0px">';
 				output += '<tr height="41px">';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">ê³µì§ì¬í­</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">íì¬ì ë³´</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px" class="mobileTab4"><nobr><a href="javascript:tabOnOff(4);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">ì¥íì ë³´</a></nobr></td>';
-				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">ì¥íì ë³´</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab0"><nobr><a href="javascript:tabOnOff(0);" style="padding:9px 11px 10px 11px; font-weight:bold; color:#ae0059; border-bottom:3px solid #ae0059; font-size:15px">공지사항</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab1"><nobr><a href="javascript:tabOnOff(1);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">학사정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px" class="mobileTab4"><nobr><a href="javascript:tabOnOff(4);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">장학정보</a></nobr></td>';
+				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab2"><nobr><a href="javascript:tabOnOff(2);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">장학정보</a></nobr></td>';
 				output +=	'<td style="border:0px; padding:0px; padding-right:7px;" class="mobileTab3"><nobr><a href="javascript:tabOnOff(3);" style="padding:9px 11px 12px 11px; font-weight:bold; font-size:15px">NEWS</a></nobr></td>';
 				output += '</tr>';
 				output += '</table>';
@@ -985,11 +986,11 @@
 				
 				output += '	<div id="mobileBoardArea">';
                 
-                output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87103' style='color:#000000; font-size:14px; margin-left:3px'>íë´ ì¼ë¶ ì ë³´ìì¤í ìë¹ì¤ ì¤ì§ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87077' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ëíêµ ì¼ë°ì§ê³µë¬´ì(ê³µì 7ê¸ ëë 8ê¸) ì ìí¬ë§ì ëª¨ì§ ì¬ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87060' style='color:#000000; font-size:14px; margin-left:3px'>ìí ê³ì½ì§ì(ììì¬) ìë¥ì í í©ê²©ì ê³µê³  ë° ë©´ì  ì¼ì  </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87054' style='color:#000000; font-size:14px; margin-left:3px'>[ê°ë¦]ê°ë¦ìì£¼ëíêµ ìì°ê³¼íëí ìë¬¼íê³¼ íì ì¡°êµ ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87051' style='color:#000000; font-size:14px; margin-left:3px'>[í´ëêµìêµì¡ì] 2018íëë ãMeaning Making Bookã ì°ìì ì ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87045' style='color:#000000; font-size:14px; margin-left:3px'>íììíê´ ê¸°í¼ìì¤(ìí¥ê´-ë¯¼ì3ì°¨) ìì¤ì ëª¨ì§ ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87029' style='color:#000000; font-size:14px; margin-left:3px'>ì¤ìê¸°ì ê³ì½íê³¼(ì°ëì¤ë°ì´ì¤ì°ìíê³¼) ì§ì(ê³ì½ì§) ì±ì© ê³µê³ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ê³µì§ì¬í­&re_bbs_setup_seq=39&re_bbs_artcl_seq=87019' style='color:#000000; font-size:14px; margin-left:3px'> ê³µíêµì¡íì ì¼í° ì°êµ¬ì ì±ì©ê³µê³  </a>	</li></ul>";
-                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=87096' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ì´ë¬ë ê¸°ë§ê³ ì¬ ì¤ì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86968' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° í ëí  êµë¥ ìí ìë´(ê³ì)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86966' style='color:#000000; font-size:14px; margin-left:3px'>2019íëë 1íê¸° ë³µí ë° ìê°ì ì²­ ì¼ì  ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86948' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­ì êµë¥ì ] 2019ë íêµ­ ì¤êµ­ì´ê³¼ ëíì ì¤êµ­ ì°ì ëìì ì ë° ìë´ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86904' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° ì±ì íì  ë° ì´ìì ì²­ ê¸°í ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86787' style='color:#000000; font-size:14px; margin-left:3px'>[ì´ë¬ë] 2018íëë ê²¨ì¸ê³ì íê¸° ê°ì ìì ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86473' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2019íëë 1íê¸° ì¬ìí ì ì²­ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=38&re_bbs_artcl_seq=86407' style='color:#000000; font-size:14px; margin-left:3px'>[ì ì²´] 2018íëë ì ê¸° ì¡¸ììì ì ì¡¸ìì¬ì  ìí ë° ì¡¸ì ì ì ì ì²­ ìë´</a>	</li></ul>";
-				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87116' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° êµ­ê°ì¥íê¸ â¡ì í ì¥íê¸ ì§ê¸ ìë£ ìë¦¼</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=87042' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íµìì ì ìë ëíì ì¥íê¸ ì§ìëìì¬ ì ë° ìë´(1.8~2.8)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86997' style='color:#000000; font-size:14px; margin-left:3px'>2019ë 1íê¸° ëì´ì´ì¶ì ëíì íìê¸ìµì ì ì²­ ìë´(1ì°¨)(1.2~1.11)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86975' style='color:#000000; font-size:14px; margin-left:3px'>2019ëë ì ì£¼í¹ë³ìì¹ë ìë°ê¸° íìê¸ ëì¶ì´ì ì§ì(1.3~3.29)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86974' style='color:#000000; font-size:14px; margin-left:3px'>2019ë íêµ­ì§ëìì¡ì±ì¥íì¬ë¨ ì ê·ì¥íì ì ì²­ìë´(1.3~1.9)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86955' style='color:#000000; font-size:14px; margin-left:3px'>2018.2íê¸° 9~10ë¶ì ì¤ ê¸´ê¸ê²½ì ì¬ì ê³¤ëì ëì êµ­ê°â¡ì í ì¶ê° ì§ê¸ì ìí ì ì²­ ì ì ìë´(~2019.1.9.(ì)ê¹ì§)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86947' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë 2íê¸° 12ì ê·¼ë¡ì¥íê¸ ì§ê¸ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=ì¥íì ë³´&re_bbs_setup_seq=37&re_bbs_artcl_seq=86880' style='color:#000000; font-size:14px; margin-left:3px'>2018íëë ëê³ë°©í ê·¼ë¡ì¥íì(êµ­ê°ê·¼ë¡) ì¶ê° ì ë° ê²°ê³¼ ìë¦¼</a>	</li></ul>";
-                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86957' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì£¼ë 2019ë ìë¬´ì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86921' style='color:#000000; font-size:14px; margin-left:3px'>ê°ì¬í©ëë¤, ì§ì ì ë í´ìì ì´ë ¤ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86908' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¬í´ì GWNU 10ë ë´ì¤ ë°í</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86907' style='color:#000000; font-size:14px; margin-left:3px'>ì¬ì°ì¤ì¨ì¤í´ì¤í´ë¼í¸ë§ì£¼ë¦½ëí ê²½ì í êµì ì¥ì§ì ëë¬¸, ëª¨êµ ë°©ë¬¸</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86906' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼, 2018ë íêµ­ì§ì­ì¬íê°í¸íí ëê³íì ëí ì°ì í¬ì¤í°ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86855' style='color:#000000; font-size:14px; margin-left:3px'>ê°ë¦ìì ê´ë´ ëí, ì§ì­ì¬í ì±ì¥ ê¸°ë° êµ¬ì¶</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86854' style='color:#000000; font-size:14px; margin-left:3px'>4ì°¨ ì°ìíëª ì ëë¥¼ ìí ê°ë¦ìì£¼ëíêµ êµì¡ íì ê³¼ ì¤ì¥ê¸° ë°ì ê³í ìë¦½ ìí¬ì</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU ë´ì¤&re_bbs_setup_seq=36&re_bbs_artcl_seq=86852' style='color:#000000; font-size:14px; margin-left:3px'>ê°í¸íê³¼ ê¹ìì£¼ êµì, íêµ­ê°í¸ê³¼íí ì°ìì¬ì¬ììì ìì</a>	</li></ul>";
-                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87090' style='color:#000000; font-size:14px; margin-left:3px'>[ì¤ìì ê±°ê´ë¦¬ììí ì ê±°ì°ìì]ì ê±°, ì ì¹ì ë ê°ì ì ìí ë¼ë¬¸ ê³µëª¨</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=87011' style='color:#000000; font-size:14px; margin-left:3px'>2018 ì¤ìê¸°ì íë°© ìº í &apos;ì·¨ì¤ë¬ì ì¤ë¬´ì ë³µê¸°&quot;(ê¸°í/ë§ì¼í) ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86841' style='color:#000000; font-size:14px; margin-left:3px'>ë¬¸íë¤ìì± ì¦ì§ê³¼ ê°ì¹ íì° ë¬¸íì½íì¸ ã ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86781' style='color:#000000; font-size:14px; margin-left:3px'>[êµ­íì¬ë¬´ì²]2019ëë êµ­í ëí(ì)ì ìì¹´ë°ë¯¸(1ì°¨) ê³¼ì (2019.1.29.~30. ëª¨ì§ ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86778' style='color:#000000; font-size:14px; margin-left:3px'>[ë³ë¬´ì²­]2019ëë ì²­ì¶ìì°¬ ê¸°ìë¨(ë³ë¬´íë³´ìì) ì ë° ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86777' style='color:#000000; font-size:14px; margin-left:3px'>[íì±ì][ê³µëª¨ì ]ì²­ëìê° ì°¸ì¬ ì ìë¦¬3.1ì´ëìêµ­ê¸°ëê´ íë¡ì í¸ ì ì ê³µëª¨ì  ìë´</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86451' style='color:#000000; font-size:14px; margin-left:3px'>GWNU 2018 Musica Academy&Festival ì²­ìëì ìí ììí ê°ìµ ìë¦¼ </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=íì¬ì ë³´&re_bbs_setup_seq=33&re_bbs_artcl_seq=86422' style='color:#000000; font-size:14px; margin-left:3px'>2018ë ì¤ìê¸°ì íë°© 2ì¼ íë¡ê·¸ë¨&apos; 7íì°¨</a>	</li></ul>";
+                output += "<ul id='board0' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px;'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88285' style='color:#000000; font-size:14px; margin-left:3px'>[강릉경찰서]악성폭력 범죄(데이트폭력) 신고 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88266' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 조리원(계약직) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88258' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원(조리원, 미화원) 신규채용 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88236' style='color:#000000; font-size:14px; margin-left:3px'>【강릉원주대학교 박물관】  박물관 전시실 관람 및 탁본체험 운영 시간 변경 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88232' style='color:#000000; font-size:14px; margin-left:3px'>[교육역량개발원] 2019-1학기 학습동아리 모집 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88221' style='color:#000000; font-size:14px; margin-left:3px'>【어학원】 강릉,원주캠퍼스 근로장학생 모집</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88208' style='color:#000000; font-size:14px; margin-left:3px'>단과대학통합행정실 휴직대체인력 채용 최종 합격자 공고</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=공지사항&re_bbs_setup_seq=39&re_bbs_artcl_seq=88173' style='color:#000000; font-size:14px; margin-left:3px'>학생생활관 계약직 직원 채용 최종합격자 발표</a>	</li></ul>";
+                output += "<ul id='board1' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88207' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 수강(변경) 신청 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88009' style='color:#000000; font-size:14px; margin-left:3px'>[국제교류원]2019-2020 중국 정부 초청 장학생 선발 안내 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=88002' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 OCU 개설교과목 목록안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87970' style='color:#000000; font-size:14px; margin-left:3px'>교시별 수업시간 기준표  알림 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87952' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 유사대체교과목 신청 안내(OCU 포함)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87919' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 시간표  공지(수강편람, 시간표 최종 자료 탑재) 오류 정정</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87844' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 신입생(편입생) 수강신청 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=학사정보&re_bbs_setup_seq=38&re_bbs_artcl_seq=87722' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 개설교과목 공지(교과과정 이수기준표, 교육과정 이수 안내등) 변경사항 수시 업데이트</a>	</li></ul>";
+				output += "<ul id='board4' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=88273' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 선발 결과 알림</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87995' style='color:#000000; font-size:14px; margin-left:3px'>2019학년도 1학기 근로장학생 신청 안내(2.19~2.25)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87993' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 2월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87748' style='color:#000000; font-size:14px; margin-left:3px'>2019년 제10기 사회리더 대학생 멘토링 &quot;멘티를 모집합니다&quot;(1.23~2.20)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87704' style='color:#000000; font-size:14px; margin-left:3px'>2019년 울산인재육성재단 상반기 장학생 선발 안내(2.18~3.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87548' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 동계방학 1월 근로장학금 지급 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87517' style='color:#000000; font-size:14px; margin-left:3px'>2019년 1학기 푸른등대 기부장학사업 신규장학생 신청 안내(~2.15)</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=장학정보&re_bbs_setup_seq=37&re_bbs_artcl_seq=87345' style='color:#000000; font-size:14px; margin-left:3px'>[교외] 2019년 동암장학회 장학생 선발 안내(~2.8)</a>	</li></ul>";
+                output += "<ul id='board2' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88278' style='color:#000000; font-size:14px; margin-left:3px'>신입생 모두에게 장미 한 송이</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88191' style='color:#000000; font-size:14px; margin-left:3px'>치의학과 졸업생 치과의사시험 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88185' style='color:#000000; font-size:14px; margin-left:3px'>전기공학과 박철원 교수팀, 전력계통보호제어연구회 논문 대상 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88181' style='color:#000000; font-size:14px; margin-left:3px'>동해안해양바이오산업창조인재양성사업단, 해단식</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88148' style='color:#000000; font-size:14px; margin-left:3px'>2018학년도 학위수여식 열려</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88147' style='color:#000000; font-size:14px; margin-left:3px'>간호학과, 학과발전기금 1억 기부 약정 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88106' style='color:#000000; font-size:14px; margin-left:3px'>간호학과 4학년 국가고시 전원 합격</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=GWNU 뉴스&re_bbs_setup_seq=36&re_bbs_artcl_seq=88099' style='color:#000000; font-size:14px; margin-left:3px'>정보통계학과 정동빈 교수, 한국전자상거래학회 11대 회장 취임</a>	</li></ul>";
+                output += "<ul id='board3' style='background:#ffffff; margin:0px; padding:0px 0px 10px 0px; display:none'>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88284' style='color:#000000; font-size:14px; margin-left:3px'>[대전광역시]2019 대청호대덕뮤직페시티벌 [전국 청소년가요제] 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88283' style='color:#000000; font-size:14px; margin-left:3px'>[법제처]2019년 법제처 국민법제관 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88282' style='color:#000000; font-size:14px; margin-left:3px'>[한국과학창의재단]2019년 1학기 함성소리, 알락달락 행복한 교실 참가 대학생 동이리 모집 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88281' style='color:#000000; font-size:14px; margin-left:3px'>[강원지방경찰청]보이스피싱 예방을 위한 &quot;영상 포스터 공모전&quot; 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88059' style='color:#000000; font-size:14px; margin-left:3px'>2019년 농업법인 취업지원 사업 농업법인 및 인턴 모집 </a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88035' style='color:#000000; font-size:14px; margin-left:3px'>[기상청]2019년 제3회 기후시그널8.5 웹툰 공모전 개최 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88034' style='color:#000000; font-size:14px; margin-left:3px'>[과학기술정보통신부]디지털 성범죄 피해방지 아이디어 및 R&D 기획 공모전 안내</a>	</li>	<li style='border-bottom:1px solid #eeeeee;'>		<a href='/appBbsDetail.brd?sub_title=행사정보&re_bbs_setup_seq=33&re_bbs_artcl_seq=88030' style='color:#000000; font-size:14px; margin-left:3px'>[교육부]2019년 자유학기 수기 공모전 안내</a>	</li></ul>";
                 
                 output += '	</div>';
                 output += '</div>';
@@ -1021,10 +1022,10 @@
                         output += 		'<ul style="list-style-type:none">';
                         output += 			'<li style="float:left; padding-left:7px; padding-top:10px;"><img src="/resources/images/main/main_back/new/cloud_new.png" style="width:46px; height:35px"></li>';
                         output += 			'<li class="gangreung">';
-                        output += 				'<span class="temperature_result">4.0Ë</span>';
+                        output += 				'<span class="temperature_result">12.0˚</span>';
                         output += 			'</li>';
                         output += 			'<li style="float:left; padding-top:14px; line-height:120%">';
-                        output += 				'<span class="campus_name">ê°ë¦ìº í¼ì¤</span><br/><span class="nalssi">êµ¬ë¦ ë§ì</span>';
+                        output += 				'<span class="campus_name">강릉캠퍼스</span><br/><span class="nalssi">구름 많음</span>';
                         output += 			'</li>';
                         output += 		'</ul>';
                         output += 	'</div>';
@@ -1095,7 +1096,7 @@
 						}
 					}
 				});
-                slider.slide(1); // ì¤ì  ë²í¼ í´ë¦­ì ë©ì¸2ë¨íë©´ì¼ë¡ ì´ëí¨!
+                slider.slide(1); // 설정 버튼 클릭시 메인2단화면으로 이동함!
             },
             bindButton: function () {
                 var self = this;
@@ -1138,11 +1139,11 @@
 							}
 							
 							if(data.success == "false"){
-								alert("ì ì© ì¤í¨!");
+								alert("적용 실패!");
 								return;
 							}
 						}, error:function(data){
-							alert("ì ì© ì¤í¨!");
+							alert("적용 실패!");
 							return;
 						}
 					});
@@ -1184,7 +1185,7 @@
     });
 
 	function isCommUseAbleCheck() {
-		alert("í´ëì¸ì eì°¸ë°ì ëí ì´ì©ê¶íì´ ììµëë¤.");
+		alert("해람인의 e참뜰에 대한 이용권한이 없습니다.");
 		return;
 	}
 
@@ -1250,7 +1251,11 @@
 			chk.checked = true;
 		}
 	}
+
+
 </script>
+
+
 
 <div id="slider" class="swipe mypageSlides" style="height:100%;">
     <div class="swipe-wrap">
@@ -1264,6 +1269,8 @@
 	
 
 </div>
+
+
 
 
 
