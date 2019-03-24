@@ -14,7 +14,8 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
---><web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+--><web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                       
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
   <!-- ======================== Introduction ============================== -->
   <!-- This document defines default values for *all* web applications      -->
@@ -428,7 +429,7 @@
         <filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
         <async-supported>true</async-supported>
     </filter>
-
+  
   <!-- A filter that sets character encoding that is used to decode -->
   <!-- parameters in a POST request -->
 
@@ -439,7 +440,7 @@
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
-        <async-supported>true</async-supported>
+       <!--  <async-supported>true</async-supported> -->
     </filter>
 
 
@@ -4650,6 +4651,7 @@
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
+        <welcome-file>indexNew.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

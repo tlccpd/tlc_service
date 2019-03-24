@@ -37,11 +37,11 @@
    </listener>
 
    <listener>
-      <listener-class>com.store.comp.user.web.listener.LogoutListener</listener-class>
+      <listener-class>com.tlcpub.net.usr.web.listener.LogoutListener</listener-class>
    </listener>
 
    <listener>
-      <listener-class>com.store.comp.user.web.listener.LoginListener</listener-class>
+      <listener-class>com.tlcpub.net.usr.web.listener.LoginListener</listener-class>
    </listener>
 
   <!-- 3. Filter -->
@@ -57,7 +57,7 @@
 
    <filter-mapping>
       <filter-name>encodingFilter</filter-name>
-      <url-pattern>*.html</url-pattern>
+      <url-pattern>*.jsp</url-pattern>
    </filter-mapping>
 
    <filter>
@@ -71,12 +71,12 @@
 
    <filter-mapping>
       <filter-name>filterToBeanProxy</filter-name>
-      <url-pattern>*.html</url-pattern>
+      <url-pattern>*.jsp</url-pattern>
    </filter-mapping>
 
    <filter>
       <filter-name>accessProtectFilter</filter-name>
-      <filter-class>com.company.core.web.filter.AccessProtectFilter</filter-class>
+      <filter-class>com.tlcpub.net.core.web.filter.AccessProtectFilter</filter-class>
    </filter>
 
    <filter-mapping>
@@ -100,12 +100,12 @@
 
    <servlet-mapping>
       <servlet-name>spring-dispatcher</servlet-name>
-      <url-pattern>*.html</url-pattern>
+      <url-pattern>*.jsp</url-pattern>
    </servlet-mapping>
 
    <servlet>
       <servlet-name>controlServlet</servlet-name>
-      <servlet-class>com.store.comp.control.servlet.ControlServlet</servlet-class>
+      <servlet-class>com.tlcpub.net.ctl.servlet.ControlServlet</servlet-class>
       <init-param>
          <param-name>accessFiltering</param-name>
          <param-value>${control.accessFiltering}</param-value>
@@ -124,7 +124,7 @@
 
    <servlet>
       <servlet-name>deliveryServlet</servlet-name>
-      <servlet-class>com.store.comp.control.servlet.FileDeliveryServlet</servlet-class>
+      <servlet-class>com.tlcpub.net.ctl.servlet.FileDeliveryServlet</servlet-class>
       <init-param>
          <param-name>fileLocation</param-name>
          <param-value>${delivery.file.location}</param-value>
@@ -160,7 +160,8 @@
   <!-- 5. welcome-file -->
 
    <welcome-file-list>
-      <welcome-file>index</welcome-file>
+      <welcome-file>indexNew.jsp</welcome-file>
+      <welcome-file>index.jsp</welcome-file>            
    </welcome-file-list>
 
   <!-- 6. session-config -->
