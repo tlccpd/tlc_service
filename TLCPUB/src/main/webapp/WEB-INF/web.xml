@@ -30,6 +30,11 @@
   <listener>
     <listener-class>com.tlcpub.net.usr.web.listener.LoginListener</listener-class>
   </listener>
+    <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    <!-- <async-supported>true</async-supported> -->
+  </filter>  
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -40,7 +45,7 @@
   </filter>
   <filter-mapping>
     <filter-name>encodingFilter</filter-name>
-    <url-pattern>*.html</url-pattern>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter>
     <filter-name>filterToBeanProxy</filter-name>
@@ -52,7 +57,7 @@
   </filter>
   <filter-mapping>
     <filter-name>filterToBeanProxy</filter-name>
-    <url-pattern>*.html</url-pattern>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter>
     <filter-name>accessProtectFilter</filter-name>
@@ -60,7 +65,7 @@
   </filter>
   <filter-mapping>
     <filter-name>accessProtectFilter</filter-name>
-    <url-pattern>*.jsp</url-pattern>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <servlet>
     <servlet-name>spring-dispatcher</servlet-name>
@@ -75,7 +80,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>spring-dispatcher</servlet-name>
-    <url-pattern>*.html</url-pattern>
+    <url-pattern>/servlet/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>controlServlet</servlet-name>
@@ -123,8 +128,8 @@
     <servlet-name>deliveryServlet</servlet-name>
     <url-pattern>${delivery.transport.uri}</url-pattern>
   </servlet-mapping>
-  <welcome-file-list>
-    <welcome-file>index</welcome-file>
+  <welcome-file-list>    
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   <session-config>
     <session-timeout>20</session-timeout>
@@ -174,8 +179,8 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  <servlet-mapping>
+  <!-- <servlet-mapping>
     <servlet-name>appServlet</servlet-name>
-    <url-pattern>*.jsp</url-pattern>
-  </servlet-mapping>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping> -->
 </web-app>
