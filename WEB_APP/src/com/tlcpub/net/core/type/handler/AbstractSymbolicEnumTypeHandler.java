@@ -2,8 +2,6 @@ package com.tlcpub.net.core.type.handler;
 
 
 import java.beans.ParameterDescriptor;
-import java.lang.reflect.Parameter;
-import java.sql.ParameterMetaData;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.EnumSet;
@@ -11,12 +9,9 @@ import java.util.Iterator;
 
 import javax.servlet.jsp.jstl.sql.Result;
 
-import org.apache.commons.httpclient.util.ParameterParser;
-import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.tlcpub.net.core.type.Symbolic;
-import com.tlcpub.net.core.web.servlet.ParameterInjectionServlet;
 
 
 public abstract class AbstractSymbolicEnumTypeHandler {
