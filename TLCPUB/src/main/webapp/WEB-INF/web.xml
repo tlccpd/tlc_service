@@ -11,10 +11,10 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-         classpath:/config/spring/app-*.xml
+         classpath:/spring/app-*.xml
          classpath:/company-core-context.xml
          classpath:/comp-control-context.xml
-         classpath:/comp-user-context.xml
+         <!-- classpath:/comp-user-context.xml -->
       </param-value>
   </context-param>
   <context-param>
@@ -73,7 +73,7 @@
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>
-            classpath:/config/spring/web-mvc.xml
+            classpath:/spring/web-mvc.xml
          </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
@@ -95,10 +95,10 @@
     </init-param>
     <load-on-startup>2</load-on-startup>
   </servlet>
-  <servlet-mapping>
+  <!-- <servlet-mapping>
     <servlet-name>controlServlet</servlet-name>
     <url-pattern>${control.uri}</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <servlet-name>deliveryServlet</servlet-name>
     <servlet-class>com.tlcpub.net.ctl.servlet.FileDeliveryServlet</servlet-class>
@@ -110,24 +110,24 @@
       <param-name>fileMaxSize</param-name>
       <param-value>${delivery.file.maxSize}</param-value>
     </init-param>
-    <init-param>
+    <!-- <init-param>
       <param-name>transportUri</param-name>
       <param-value>${delivery.transport.uri}</param-value>
     </init-param>
     <init-param>
       <param-name>receiveUri</param-name>
       <param-value>${delivery.receive.uri}</param-value>
-    </init-param>
+    </init-param>-->
     <init-param>
       <param-name>port</param-name>
       <param-value>${remote.port}</param-value>
     </init-param>
     <load-on-startup>3</load-on-startup>
   </servlet>
-  <servlet-mapping>
+  <!-- <servlet-mapping>
     <servlet-name>deliveryServlet</servlet-name>
     <url-pattern>${delivery.transport.uri}</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <welcome-file-list>    
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>

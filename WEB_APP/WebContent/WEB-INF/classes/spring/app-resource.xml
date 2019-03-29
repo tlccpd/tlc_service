@@ -11,12 +11,12 @@
 
   <!-- Crypto -->
 
-   <bean id="cipherAES" class="com.company.core.crypto.CipherTemplate">
+   <bean id="cipherAES" class="com.tlcpub.net.core.crypto.CipherTemplate">
       <property name="algorithm" value="AES"/>
       <property name="secretKey" value="lf0hr1aercdl8vlzitunhm200"/>
    </bean>
 
-   <bean id="digesterMD5" class="com.company.core.crypto.DigesterTemplate">
+   <bean id="digesterMD5" class="com.tlcpub.net.core.crypto.DigesterTemplate">
       <property name="algorithm" value="MD5"/>
    </bean>
 
@@ -39,17 +39,17 @@
 
    <bean id="options" class="com.store.web.front.form.EnumOptionTemplate"/>
 
-   <bean id="codeOrder" class="com.company.core.web.form.IntegerRangeOptionTemplate">
+   <bean id="codeOrder" class="com.tlcpub.net.core.web.form.IntegerRangeOptionTemplate">
       <property name="from" value="1"/>
       <property name="to" value="10"/>
    </bean>
 
-   <bean id="charRange" class="com.company.core.web.form.CharRangeOptionTemplate">
+   <bean id="charRange" class="com.tlcpub.net.core.web.form.CharRangeOptionTemplate">
       <property name="from" value="A"/>
       <property name="to" value="F"/>
    </bean>
 
-   <bean id="mapOptions" class="com.company.core.web.form.ObjectOptionTemplate">
+   <bean id="mapOptions" class="com.tlcpub.net.core.web.form.ObjectOptionTemplate">
         <property name="options">
            <map>
                <entry>
